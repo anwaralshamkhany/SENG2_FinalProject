@@ -13,7 +13,7 @@ private:
 	string memory;
 	string clockspeed;
 	string length;
-	string tdp;
+	int tdp;
 public:
 	GPU();
 	GPU(const string name, const string price, const string gpu,const string memory, const string clockspeed, const string length, const string tdp);
@@ -21,7 +21,7 @@ public:
 	string getMemory();
 	string getClockspeed();
 	string getLength();
-	string getTDP();
+	int getTDP();
 
 	void setGPU(const string gpu);
 	void setMemory(const string memory);
@@ -35,7 +35,7 @@ GPU::GPU()
 	this->gpu = "";
 	this->clockspeed = "";
 	this->length = "";
-	this->tdp = "";
+	this->tdp = 0;
 }
 GPU::GPU(const string name, const string price, const string gpu,const string memory, const string clockspeed, const string length, const string tdp)
 {
@@ -63,7 +63,7 @@ string GPU::getLength()
 {
 	return length;
 }
-string GPU::getTDP()
+int GPU::getTDP()
 {
 	return tdp;
 }
@@ -86,7 +86,7 @@ void GPU::setLength(const string length)
 }
 void GPU::setTDP(const string tdp)
 {
-	this->tdp = tdp;
+	this->tdp = stoi(tdp);
 }
 
 #endif

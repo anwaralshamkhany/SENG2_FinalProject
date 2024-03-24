@@ -46,11 +46,12 @@ Storage::Storage(const string name, const string price, const string capacity, c
 	setName(name);
 	setPrice(price);
 	setCapacity(capacity);
-	setPPG(ppg);
+	setPPG(ppg); 
 	setType(type);
 	setForm(form);
 	setInterface(interface);
 }
+
 string Storage::getCapacity()
 {
 	return capacity;

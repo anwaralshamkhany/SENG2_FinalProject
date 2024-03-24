@@ -18,7 +18,7 @@ private:
 	string latency;
 public:
 	Ram();
-	Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color, const string latency);
+	Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color);
 	string getSpeed();
 	string getCapacity();
 	string getModules();
@@ -43,7 +43,7 @@ Ram::Ram()
 	this->color = "";
 	this->latency = "";
 }
-Ram::Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color, const string latency)
+Ram::Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color)
 {
 	setName(name);
 	setPrice(price);
@@ -52,7 +52,7 @@ Ram::Ram(const string name,const string price,const string speed,const string ca
 	setModules(modules);
 	setPPG(ppg);
 	setColor(color);
-	setLatency(latency);
+	//setLatency(latency);
 }
 string Ram::getSpeed()
 {
