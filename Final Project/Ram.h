@@ -15,24 +15,21 @@ private:
 	string modules;
 	string ppg;
 	string color;
-	string latency;
 public:
 	Ram();
-	Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color, const string latency);
+	Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color);
 	string getSpeed();
 	string getCapacity();
 	string getModules();
 	string getPPG();
 	string getColor();
-	string getLatency();
 
 	void setSpeed(const string speed);
 	void setCapacity(const string capacity);
 	void setModules(const string modules);
 	void setPPG(const string ppg);
 	void setColor(const string color);
-	void setLatency(const string latency);
-
+	void Display();
 };
 
 Ram::Ram()
@@ -40,10 +37,9 @@ Ram::Ram()
 	this->speed = "";
 	this->modules = "";
 	this->ppg = "";
-	this->color = "";
-	this->latency = "";
+	this->color = "";	
 }
-Ram::Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color, const string latency)
+Ram::Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color)
 {
 	setName(name);
 	setPrice(price);
@@ -51,8 +47,7 @@ Ram::Ram(const string name,const string price,const string speed,const string ca
 	setCapacity(capacity);
 	setModules(modules);
 	setPPG(ppg);
-	setColor(color);
-	setLatency(latency);
+	setColor(color);	
 }
 string Ram::getSpeed()
 {
@@ -73,10 +68,6 @@ string Ram::getPPG()
 string Ram::getColor()
 {
 	return color;
-}
-string Ram::getLatency()
-{
-	return latency;
 }
 
 void Ram::setSpeed(const string speed)
@@ -99,9 +90,9 @@ void Ram::setColor(const string color)
 {
 	this->color = color;
 }
-void Ram::setLatency(const string latency)
+void Ram::Display()
 {
-	this->latency = latency;
+	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Modules:" << modules << "Gb  Speed:" << speed << "Mhz  " << "Price/GB:$" << ppg << "  Colour:" << color << endl;
 }
 
 #endif

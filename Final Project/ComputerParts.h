@@ -1,7 +1,6 @@
 #pragma once
 #ifndef COMPUTERPARTS_H
 #define COMPUTERPARTS_H
-
 #include <string>
 #include <iostream>
 using namespace std;
@@ -10,13 +9,13 @@ class ComputerParts
 {
 protected:
 	string name;
-	string price;
+	double price;
 
 public:
 	ComputerParts();
 	ComputerParts(const string name, const string price);
 	string getName();
-	string getPrice();
+	double getPrice();
 	void setName(const string name);
 	void setPrice(const string price);
 	void Display();
@@ -26,7 +25,7 @@ public:
 ComputerParts::ComputerParts()
 {
 	name = "";
-	price = "";
+	price = 0;
 }
 
 ComputerParts::ComputerParts(const string name,const string price)
@@ -40,7 +39,7 @@ string ComputerParts::getName()
 	return name;
 }
 
-string ComputerParts::getPrice()
+double ComputerParts::getPrice()
 {
 	return price;
 }
@@ -50,7 +49,7 @@ void ComputerParts::setName(const string name)
 }
 void ComputerParts::setPrice(const string price)
 {
-	this->price = price;
+	this->price = stoi(price);
 }
 
 void ComputerParts::Display()

@@ -27,7 +27,7 @@ public:
 	void setColor(const string color);
 	void setPanel(const string panel);
 	void setVolume(const string volume);
-
+	void Display();
 };
 
 Case::Case()
@@ -80,7 +80,10 @@ void Case::setVolume(const string volume)
 {
 	this->volume = volume;
 }
-
+void Case::Display()
+{
+	cout << name << "  Price:$" << price << "  Form-Factor:" << size << "  Colour:" << color << "  Side Panel:" << panel << "  Volume:" << volume << "L" << endl;
+}
 
 
 #endif

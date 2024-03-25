@@ -11,7 +11,7 @@ class PSU : public ComputerParts
 private:
 	string size;
 	string rating;
-	string wattage;
+	int wattage;
 	string modular;
 	string color;
 
@@ -21,7 +21,7 @@ public:
 
 	string getSize();
 	string getRating();
-	string getWattage();
+	int getWattage();
 	string getModular();
 	string getColor();
 
@@ -30,13 +30,14 @@ public:
 	void setWattage(const string wattage);
 	void setModular(const string modular);
 	void setColor(const string color);
+	void Display();
 };
 
 PSU::PSU()
 {
 	this->size = "";
 	this->rating = "";
-	this->wattage = "";
+	this->wattage = 0;
 	this->modular = "";
 	this->color = "";
 }
@@ -59,7 +60,7 @@ string PSU::getRating()
 {
 	return rating;
 }
-string PSU::getWattage()
+int PSU::getWattage()
 {
 	return wattage;
 }
@@ -82,7 +83,7 @@ void PSU::setRating(const string rating)
 }
 void PSU::setWattage(const string wattage)
 {
-	this->wattage = wattage;
+	this->wattage = stoi(wattage);
 }
 void PSU::setModular(const string modular)
 {
@@ -92,6 +93,9 @@ void PSU::setColor(const string color)
 {
 	this->color = color;
 }
-
+void PSU::Display()
+{
+	cout << name << "  Price:$" << price << "  Form-Factor:" << size << "  Efficiency:" << rating << "  Wattage:" << wattage << "w  Modularity:" << modular << "  Colour:" << color<<endl;
+}
 
 #endif

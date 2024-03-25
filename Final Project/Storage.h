@@ -13,25 +13,26 @@ private:
 	string capacity;
 	string ppg;
 	string type;
+	string cache;
 	string form;
 	string interface;
-
 public:
 	Storage();
-	Storage(const string name,const string price,const string capacity, const string ppg, const string type, const string form, const string interface);
+	Storage(const string name,const string price,const string capacity, const string ppg, const string type,const string cache, const string form, const string interface);
 	string getCapacity();
 	string getPPG();
 	string getType();
+	string getCache();
 	string getForm();
 	string getInterface();
 
 	void setCapacity(const string capacity);
 	void setPPG(const string ppg);
 	void setType(const string type);
+	void setCache(const string cache);
 	void setForm(const string form);
 	void setInterface(const string interface);
-
-
+	void Display();
 };
 Storage::Storage()
 {
@@ -41,16 +42,18 @@ Storage::Storage()
 	this->form = "";
 	this->interface = "";
 }
-Storage::Storage(const string name, const string price, const string capacity, const string ppg, const string type, const string form, const string interface)
+Storage::Storage(const string name, const string price, const string capacity, const string ppg, const string type,const string cache, const string form, const string interface)
 {
 	setName(name);
 	setPrice(price);
 	setCapacity(capacity);
-	setPPG(ppg);
+	setPPG(ppg); 
 	setType(type);
+	setCache(cache);
 	setForm(form);
 	setInterface(interface);
 }
+
 string Storage::getCapacity()
 {
 	return capacity;
@@ -62,6 +65,10 @@ string Storage::getPPG()
 string Storage::getType()
 {
 	return type;
+}
+string Storage::getCache()
+{
+	return cache;
 }
 string Storage::getForm()
 {
@@ -84,6 +91,10 @@ void Storage::setType(const string type)
 {
 	this->type = type;
 }
+void Storage::setCache(const string cache)
+{
+	this->cache = cache;
+}
 void Storage::setForm(const string form)
 {
 	this->form = form;
@@ -92,6 +103,9 @@ void Storage::setInterface(const string interface)
 {
 	this->interface = interface;
 }
-
+void Storage::Display()
+{
+	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Price/Gb:$" << ppg << "  Type: " << type <<"  Cache: "<< cache << "mb  Form-Factor: " << form << "  Interface: " << interface << endl;
+}
 
 #endif
