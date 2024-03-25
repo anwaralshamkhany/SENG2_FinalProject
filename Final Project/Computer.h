@@ -106,5 +106,16 @@ void Computer::setPSU(const PSU psu)
 {
 	this->psu = psu;
 }
+void Computer::Display()
+{
+	cpu.Display();
+	mobo.Display();
+	cooler.Display();
+	ram.Display();
+	storage.Display();
+	gpu.Display();
+	psu.Display();
+	Case1.Display();
+}
 
 #endif

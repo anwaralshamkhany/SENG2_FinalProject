@@ -136,7 +136,7 @@ void ReadRam()
     ramf.close();
     for (int i = 0; i < Ramdata.size(); i++)
     {
-        Ram temp(Ramdata[i][0], Ramdata[i][1], Ramdata[i][2], Ramdata[i][3], Ramdata[i][4], Ramdata[i][5], Ramdata[i][6]);
+        Ram temp(Ramdata[i][0], Ramdata[i][1], Ramdata[i][2], Ramdata[i][3], Ramdata[i][4], Ramdata[i][5], Ramdata[i][6],Ramdata[i][7]);
         ram.push_back(temp);
     }
 }
@@ -315,9 +315,5 @@ int main() {
         }
         }        
     }
-    
-
-
-
     return 0;
 }
