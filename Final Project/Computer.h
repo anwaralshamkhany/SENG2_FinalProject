@@ -21,6 +21,8 @@ private:
 	Case Case1;
 	PSU psu;
 public:
+	Computer();
+	Computer(const CPU cpu, const Motherboard mobo, const Cooler cooler, const Ram ram, const Storage storage, const GPU gpu, const Case Case1, const PSU psu);
 	CPU getCPU();
 	Motherboard getMobo();
 	Cooler getCooler();
@@ -40,7 +42,36 @@ public:
 	void setPSU(const PSU psu);
 	void Display();
 };
-
+Computer::Computer()
+{
+	CPU cpu;
+	Motherboard mobo;
+	Cooler cooler;
+	Ram ram;
+	Storage storage;
+	GPU gpu;
+	Case case1;
+	PSU psu;
+	this->cpu = cpu;
+	this->mobo = mobo;
+	this->cooler = cooler;
+	this->ram = ram;
+	this->storage = storage;
+	this->gpu = gpu;
+	this->Case1 = case1;
+	this->psu = psu;
+}
+Computer::Computer(const CPU cpu, const Motherboard mobo, const Cooler cooler, const Ram ram, const Storage storage, const GPU gpu, const Case Case1, const PSU psu)
+{
+	setCPU(cpu);
+	setMobo(mobo);
+	setCooler(cooler);
+	setRam(ram);
+	setstorage(storage);
+	setGPU(gpu);
+	setCase(Case1);
+	setPSU(psu);
+}
 CPU Computer::getCPU()
 {
 	return cpu;
