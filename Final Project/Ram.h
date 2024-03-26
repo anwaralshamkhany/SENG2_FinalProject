@@ -18,7 +18,7 @@ private:
 	bool ddr5;
 public:
 	Ram();
-	Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color,const string DDR5);
+	Ram(const string name, const string price, const string speed, const string capacity, const string modules, const string ppg, const string color, const string DDR5);
 	string getSpeed();
 	string getCapacity();
 	string getModules();
@@ -39,9 +39,9 @@ Ram::Ram()
 	this->speed = "";
 	this->modules = "";
 	this->ppg = "";
-	this->color = "";	
+	this->color = "";
 }
-Ram::Ram(const string name,const string price,const string speed,const string capacity, const string modules, const string ppg, const string color,const string DDR5)
+Ram::Ram(const string name, const string price, const string speed, const string capacity, const string modules, const string ppg, const string color, const string DDR5)
 {
 	setName(name);
 	setPrice(price);
@@ -49,7 +49,7 @@ Ram::Ram(const string name,const string price,const string speed,const string ca
 	setCapacity(capacity);
 	setModules(modules);
 	setPPG(ppg);
-	setColor(color);	
+	setColor(color);
 	setDDR5(DDR5);
 }
 string Ram::getSpeed()
@@ -99,7 +99,7 @@ void Ram::setDDR5(const string DDR5)
 }
 void Ram::Display()
 {
-	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Modules:" << modules << "Gb  "<<(ddr5?"DDR5":"DDR4") << "Speed:" << speed << "Mhz  " << "Price/GB:$" << ppg << "  Colour:" << color << endl;
+	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Modules:" << modules << "Gb  " << (ddr5 ? "DDR5" : "DDR4") << "Speed:" << speed << "Mhz  " << "Price/GB:$" << ppg << "  Colour:" << color << endl;
 }
 
 #endif

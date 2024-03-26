@@ -15,7 +15,7 @@ private:
 
 public:
 	Cooler();
-	Cooler(const string name, const string price, const string rpm,const string noise,const string color, const string AIO, const string size);
+	Cooler(const string name, const string price, const string rpm, const string noise, const string color, const string AIO, const string size);
 
 	string getRPM();
 	string getNoise();
@@ -41,7 +41,7 @@ Cooler::Cooler()
 	this->size = "";
 	this->price = 0;
 }
-Cooler::Cooler(const string name, const string price, const string RPM,const string noise,const string color, const string AIO, const string size)
+Cooler::Cooler(const string name, const string price, const string RPM, const string noise, const string color, const string AIO, const string size)
 {
 	setName(name);
 	setPrice(price);
@@ -95,6 +95,6 @@ void Cooler::setSize(const string size)
 
 void Cooler::Display()
 {
-	cout << name << "  Price:$" << price << "  Fan RPM:" << RPM << "  Noise Level: " << noise << "db  Colour:" << color << "  Cooler Type: " << (AIO ? "Liquid Cooler ": "Tower Cooler") <<(AIO ? "":" Height ") << size << "mm" << (AIO ? " Radiator" : "") << endl;
+	cout << name << "  Price:$" << price << "  Fan RPM:" << RPM << "  Noise Level: " << noise << "db  Colour:" << color << "  Cooler Type: " << (AIO ? "Liquid Cooler " : "Tower Cooler") << (AIO ? "" : " Height ") << size << "mm" << (AIO ? " Radiator" : "") << endl;
 }
 #endif 

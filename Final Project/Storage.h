@@ -18,7 +18,7 @@ private:
 	string interface;
 public:
 	Storage();
-	Storage(const string name,const string price,const string capacity, const string ppg, const string type,const string cache, const string form, const string interface);
+	Storage(const string name, const string price, const string capacity, const string ppg, const string type, const string cache, const string form, const string interface);
 	string getCapacity();
 	string getPPG();
 	string getType();
@@ -42,12 +42,12 @@ Storage::Storage()
 	this->form = "";
 	this->interface = "";
 }
-Storage::Storage(const string name, const string price, const string capacity, const string ppg, const string type,const string cache, const string form, const string interface)
+Storage::Storage(const string name, const string price, const string capacity, const string ppg, const string type, const string cache, const string form, const string interface)
 {
 	setName(name);
 	setPrice(price);
 	setCapacity(capacity);
-	setPPG(ppg); 
+	setPPG(ppg);
 	setType(type);
 	setCache(cache);
 	setForm(form);
@@ -105,7 +105,7 @@ void Storage::setInterface(const string interface)
 }
 void Storage::Display()
 {
-	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Price/Gb:$" << ppg << "  Type: " << type <<"  Cache: "<< cache << "mb  Form-Factor: " << form << "  Interface: " << interface << endl;
+	cout << name << "  Price:$" << price << "  Capacity:" << capacity << "Gb  Price/Gb:$" << ppg << "  Type: " << type << "  Cache: " << cache << "mb  Form-Factor: " << form << "  Interface: " << interface << endl;
 }
 
 #endif

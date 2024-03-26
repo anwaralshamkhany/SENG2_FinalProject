@@ -65,9 +65,8 @@ void ReadCPU()
     // Close the file
     cpuf.close();
     for (unsigned int i = 0; i < CPUdata.size(); i++)
-    {        
-        CPU temp(CPUdata[i][0], CPUdata[i][1], CPUdata[i][2], CPUdata[i][3], CPUdata[i][4], CPUdata[i][5],CPUdata[i][6]);
-        temp.Display();
+    {
+        CPU temp(CPUdata[i][0], CPUdata[i][1], CPUdata[i][2], CPUdata[i][3], CPUdata[i][4], CPUdata[i][5], CPUdata[i][6]);        
         CPUs.push_back(temp);
     }
 }
@@ -90,7 +89,7 @@ void ReadCooler()
     // Close the file
     coolerf.close();
     for (unsigned int i = 0; i < Coolerdata.size(); i++)
-    {        
+    {
         Cooler temp(Coolerdata[i][0], Coolerdata[i][1], Coolerdata[i][2], Coolerdata[i][3], Coolerdata[i][4], Coolerdata[i][5], Coolerdata[i][6]);
         Coolers.push_back(temp);
     }
@@ -114,8 +113,8 @@ void ReadMobo()
     // Close the file
     mobof.close();
     for (unsigned int i = 0; i < Mobodata.size(); i++)
-    {        
-        Motherboard temp(Mobodata[i][0], Mobodata[i][1], Mobodata[i][2], Mobodata[i][3], Mobodata[i][4], Mobodata[i][5], Mobodata[i][6]);       
+    {
+        Motherboard temp(Mobodata[i][0], Mobodata[i][1], Mobodata[i][2], Mobodata[i][3], Mobodata[i][4], Mobodata[i][5], Mobodata[i][6]);
         Mobo.push_back(temp);
     }
 }
@@ -138,7 +137,7 @@ void ReadRam()
     ramf.close();
     for (unsigned int i = 0; i < Ramdata.size(); i++)
     {
-        Ram temp(Ramdata[i][0], Ramdata[i][1], Ramdata[i][2], Ramdata[i][3], Ramdata[i][4], Ramdata[i][5], Ramdata[i][6],Ramdata[i][7]);
+        Ram temp(Ramdata[i][0], Ramdata[i][1], Ramdata[i][2], Ramdata[i][3], Ramdata[i][4], Ramdata[i][5], Ramdata[i][6], Ramdata[i][7]);
         ram.push_back(temp);
     }
 }
@@ -246,7 +245,7 @@ void Mainmenu()
 void Prebuiltmenu()
 {
     cout << "Prebuilt Selection" << endl;
-    cout << "1. Gaming" << endl << "2. Editing" << endl << "3. Office"<<endl<<"4. Exit"<<endl;
+    cout << "1. Gaming" << endl << "2. Editing" << endl << "3. Office" << endl << "4. Exit" << endl;
     cout << "Input: ";
 }
 
@@ -263,21 +262,32 @@ int main() {
 
 
     Computer c1;
+    /*
     for (int i = 0; i < 10; i++)
     {
-       
+        CPUs[i].Display();
+        Coolers[i].Display();
+        Mobo[i].Display();
+        ram[i].Display();
+        storage[i].Display();
+        psus[i].Display();
+        gpus[i].Display();
+        Cases[i].Display();
+        cout << endl;
     }
-    //c1.setCPU(CPUs[0]);
-    //c1.setMobo(Mobo[2]);
+    */
+    c1.
+    c1.setCPU(CPUs[0]);
+    c1.setMobo(Mobo[2]);
 
     /*
     int menuchoice1=10;
     int menuchoice2 = 10;
     bool sessionactive = true;
-    
+
     while (sessionactive)
     {
-        
+
         while (!menuchoice1 <= 3 && !menuchoice1 >= 0)
         {
             Mainmenu();
@@ -291,7 +301,7 @@ int main() {
                 cout << "That is an invalid input Try Again " << endl;
             }
         }
-        
+
         switch (menuchoice1)
         {
         case 1:
@@ -308,7 +318,7 @@ int main() {
                 {
                     menuchoice2 = 10;
                     menuchoice1 = 10;
-                    break;                    
+                    break;
                 }
                 else
                 {
@@ -327,7 +337,7 @@ int main() {
             sessionactive = false;
             break;
         }
-        }        
+        }
     }
     */
     return 0;

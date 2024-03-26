@@ -21,6 +21,8 @@ private:
 	Case Case1;
 	PSU psu;
 public:
+	Computer();
+	Computer(const CPU cpu, const Motherboard mobo, const Cooler cooler, const Ram ram, const Storage storage, const GPU gpu, const Case Case1, const PSU psu);
 	CPU getCPU();
 	Motherboard getMobo();
 	Cooler getCooler();
@@ -40,7 +42,16 @@ public:
 	void setPSU(const PSU psu);
 	void Display();
 };
+Computer::Computer()
+{
+	this->cpu;
 
+}
+Computer::Computer(const CPU cpu, const Motherboard mobo, const Cooler cooler, const Ram ram, const Storage storage, const GPU gpu, const Case Case1, const PSU psu)
+{
+
+
+}
 CPU Computer::getCPU()
 {
 	return cpu;
@@ -76,26 +87,25 @@ PSU Computer::getPSU()
 
 void Computer::setCPU(CPU cpu)
 {
-	if (!(cpu.getSocket() == mobo.getSocket()))
-	{
-		cout << "This CPU is incompatible with your Motherboard" << endl;
-	}
-	else
+	if (mobo.getSocket() == "")
 	{
 		this->cpu = cpu;
 	}
+	if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This CPU is incompatible with your Motherboard" << endl;
+	}	
 }
 void Computer::setMobo(Motherboard mobo)
 {
-	if (!(cpu.getSocket() == mobo.getSocket()))
-	{
-		cout << "This Motherboard is incompatible with your CPU" << endl;
-	}
-	else
+	if (cpu.getSocket() == "")
 	{
 		this->mobo = mobo;
 	}
-
+	else if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This Motherboard is incompatible with your CPU" << endl;
+	}
 }
 void Computer::setCooler(const Cooler cooler)
 {

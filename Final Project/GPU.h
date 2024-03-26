@@ -16,7 +16,7 @@ private:
 	int tdp;
 public:
 	GPU();
-	GPU(const string name, const string price, const string gpu,const string memory, const string clockspeed, const string length, const string tdp);
+	GPU(const string name, const string price, const string gpu, const string memory, const string clockspeed, const string length, const string tdp);
 	string getGPU();
 	string getMemory();
 	string getClockspeed();
@@ -38,7 +38,7 @@ GPU::GPU()
 	this->length = "";
 	this->tdp = 0;
 }
-GPU::GPU(const string name, const string price, const string gpu,const string memory, const string clockspeed, const string length, const string tdp)
+GPU::GPU(const string name, const string price, const string gpu, const string memory, const string clockspeed, const string length, const string tdp)
 {
 	setName(name);
 	setPrice(price);

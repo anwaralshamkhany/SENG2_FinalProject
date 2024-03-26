@@ -14,7 +14,7 @@ private:
     string socket;
 public:
     CPU();
-    CPU(const string name, const string price, const string cores, const string clockspeed, const string TDP, const string graphics,const string socket);
+    CPU(const string name, const string price, const string cores, const string clockspeed, const string TDP, const string graphics, const string socket);
     string getCores();
     string getClockspeed();
     int getTDP();
@@ -36,7 +36,7 @@ CPU::CPU() {
     this->graphics = false;
 }
 
-CPU::CPU(const string name, const string price, const string cores, const string clockspeed, const string TDP, const string graphics,const string socket) {
+CPU::CPU(const string name, const string price, const string cores, const string clockspeed, const string TDP, const string graphics, const string socket) {
 
     setName(name);
     setPrice(price);
@@ -78,9 +78,9 @@ void CPU::setClockspeed(const string clockspeed)
 
 void CPU::setTDP(const string TDP)
 {
-        this->TDP = stoi(TDP);
+    this->TDP = stoi(TDP);
 }
-void CPU::setGraphics(const string graphics) 
+void CPU::setGraphics(const string graphics)
 {
 
     this->graphics = stoi(graphics);
@@ -91,7 +91,7 @@ void CPU::setSocket(const string socket)
 }
 void CPU::Display()
 {
-    cout << name << "  Price:$" << price << "  Cores:" << cores << "  Clockspeed:" << clockspeed << "Ghz  TDP:" << TDP << "w  Integrated Graphics: " << (graphics ? "Yes":"No") << endl;
+    cout << name << "  Price:$" << price << "  Cores:" << cores << "  Clockspeed:" << clockspeed << "Ghz  Socket:" << socket << "  TDP:" << TDP << "w  Integrated Graphics: " << (graphics ? "Yes" : "No") << endl;
 }
 
 #endif
