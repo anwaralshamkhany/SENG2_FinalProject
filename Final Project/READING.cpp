@@ -267,8 +267,8 @@ int main() {
     {
        
     }
-    //c1.setCPU(CPUs[0]);
-    //c1.setMobo(Mobo[2]);
+    c1.setCPU(CPUs[0]);
+    c1.setMobo(Mobo[2]);
 
     /*
     int menuchoice1=10;

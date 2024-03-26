@@ -76,26 +76,25 @@ PSU Computer::getPSU()
 
 void Computer::setCPU(CPU cpu)
 {
-	if (!(cpu.getSocket() == mobo.getSocket()))
-	{
-		cout << "This CPU is incompatible with your Motherboard" << endl;
-	}
-	else
+	if (mobo.getSocket() == "")
 	{
 		this->cpu = cpu;
 	}
+	else if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This CPU is incompatible with your Motherboard" << endl;
+	}	
 }
 void Computer::setMobo(Motherboard mobo)
 {
-	if (!(cpu.getSocket() == mobo.getSocket()))
-	{
-		cout << "This Motherboard is incompatible with your CPU" << endl;
-	}
-	else
+	if (cpu.getSocket() == "")
 	{
 		this->mobo = mobo;
 	}
-
+	else if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This Motherboard is incompatible with your CPU" << endl;
+	}
 }
 void Computer::setCooler(const Cooler cooler)
 {
@@ -132,5 +131,4 @@ void Computer::Display()
 	psu.Display();
 	Case1.Display();
 }
-
 #endif
