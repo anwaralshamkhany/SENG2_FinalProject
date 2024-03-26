@@ -65,9 +65,8 @@ void ReadCPU()
     // Close the file
     cpuf.close();
     for (unsigned int i = 0; i < CPUdata.size(); i++)
-    {        
-        CPU temp(CPUdata[i][0], CPUdata[i][1], CPUdata[i][2], CPUdata[i][3], CPUdata[i][4], CPUdata[i][5],CPUdata[i][6]);
-        temp.Display();    
+    {
+        CPU temp(CPUdata[i][0], CPUdata[i][1], CPUdata[i][2], CPUdata[i][3], CPUdata[i][4], CPUdata[i][5], CPUdata[i][6]);        
         CPUs.push_back(temp);
     }
 }
@@ -262,14 +261,10 @@ int main()
     ReadGPU();
     ReadCase();
 
-
     Computer c1;
-    for (int i = 0; i < 10; i++)
-    {
-        CPUs[i].Display();
-    }
-    //c1.setCPU(CPUs[0]);
-    //c1.setMobo(Mobo[2]);
+    c1.setCPU(CPUs[0]);
+    c1.setMobo(Mobo[2]);
+
     /*
     for (int i = 0; i < 10; i++)
     {
@@ -295,9 +290,13 @@ int main()
     while (sessionactive)
     {
         
-
     while (sessionactive)
     {
+    while (sessionactive)
+    {
+    while (sessionactive)
+    {
+
         while (!menuchoice1 <= 3 && !menuchoice1 >= 0)
         {
             Mainmenu();
@@ -311,6 +310,7 @@ int main()
                 cout << "That is an invalid input Try Again " << endl;
             }
         }
+
         switch (menuchoice1)
         {
         case 1:
@@ -327,10 +327,7 @@ int main()
                 {
                     menuchoice2 = 10;
                     menuchoice1 = 10;
-                    break;        
-
                     break;
-
                 }
                 else
                 {
@@ -349,7 +346,6 @@ int main()
             sessionactive = false;
             break;
         }
-        }        
         }
     }
     */
