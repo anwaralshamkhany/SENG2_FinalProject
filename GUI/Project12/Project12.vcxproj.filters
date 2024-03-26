@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Reading.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyForm.h" />
+    <ClInclude Include="CPU.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerParts.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Case.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cooler.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="GPU.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Motherboard.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="PSU.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ram.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Storage.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{2feda6c6-4d9a-4080-a8f8-9ff532cbbbb1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
