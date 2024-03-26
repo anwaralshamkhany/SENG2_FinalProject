@@ -206,7 +206,7 @@ int main() {
 
 
 
-    for (int i = 0; i < CPUdata.size(); i++)
+    /*for (int i = 0; i < CPUdata.size(); i++)
     {
         int j = 0;
         CPU temp(CPUdata[i][j], CPUdata[i][j + 1], CPUdata[i][j + 2], CPUdata[i][j + 3], CPUdata[i][j + 4], CPUdata[i][j + 5]);
@@ -249,7 +249,7 @@ int main() {
         cout << "i ";     
         Case temp(Casedata[i][0], Casedata[i][1], Casedata[i][2], Casedata[i][3], Casedata[i][4], Casedata[i][5]);
         //Cases.push_back(temp);
-    }
+    }*/
 
     CPUs[0].Display();
     cout << Coolers[0].getColor();
