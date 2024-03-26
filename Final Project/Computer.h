@@ -74,13 +74,28 @@ PSU Computer::getPSU()
 	return psu;
 }
 
-void Computer::setCPU(const CPU cpu)
+void Computer::setCPU(CPU cpu)
 {
-	this->cpu = cpu;
+	if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This CPU is incompatible with your Motherboard" << endl;
+	}
+	else
+	{
+		this->cpu = cpu;
+	}
 }
-void Computer::setMobo(const Motherboard mobo)
+void Computer::setMobo(Motherboard mobo)
 {
-	this->mobo = mobo;
+	if (!(cpu.getSocket() == mobo.getSocket()))
+	{
+		cout << "This Motherboard is incompatible with your CPU" << endl;
+	}
+	else
+	{
+		this->mobo = mobo;
+	}
+
 }
 void Computer::setCooler(const Cooler cooler)
 {

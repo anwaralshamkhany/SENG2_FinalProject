@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include "Computer.h"
 #include "CPU.h"
 #include "Cooler.h"
 #include "Motherboard.h"
@@ -47,7 +48,10 @@ void ReadCPU()
 {
     // Open the CSV file
     ifstream cpuf("CPU.csv");
-
+    if (!cpuf.is_open())
+    {
+        cout << "opening failed" << endl;
+    }
     // Vectors to store data for each column
 
     string line;
@@ -60,10 +64,10 @@ void ReadCPU()
     }
     // Close the file
     cpuf.close();
-    for (int i = 0; i < CPUdata.size(); i++)
-    {
-        int j = 0;
-        CPU temp(CPUdata[i][j], CPUdata[i][j + 1], CPUdata[i][j + 2], CPUdata[i][j + 3], CPUdata[i][j + 4], CPUdata[i][j + 5]);
+    for (unsigned int i = 0; i < CPUdata.size(); i++)
+    {        
+        CPU temp(CPUdata[i][0], CPUdata[i][1], CPUdata[i][2], CPUdata[i][3], CPUdata[i][4], CPUdata[i][5],CPUdata[i][6]);
+        temp.Display();
         CPUs.push_back(temp);
     }
 }
@@ -85,10 +89,9 @@ void ReadCooler()
     }
     // Close the file
     coolerf.close();
-    for (int i = 0; i < Coolerdata.size(); i++)
-    {
-        int j = 0;
-        Cooler temp(Coolerdata[i][j], Coolerdata[i][j + 1], Coolerdata[i][j + 2], Coolerdata[i][j + 3], Coolerdata[i][j + 4], Coolerdata[i][j + 5], Coolerdata[i][j + 6]);
+    for (unsigned int i = 0; i < Coolerdata.size(); i++)
+    {        
+        Cooler temp(Coolerdata[i][0], Coolerdata[i][1], Coolerdata[i][2], Coolerdata[i][3], Coolerdata[i][4], Coolerdata[i][5], Coolerdata[i][6]);
         Coolers.push_back(temp);
     }
 }
@@ -110,10 +113,9 @@ void ReadMobo()
     }
     // Close the file
     mobof.close();
-    for (int i = 0; i < Mobodata.size(); i++)
-    {
-        int j = 0;
-        Motherboard temp(Mobodata[i][j], Mobodata[i][j + 1], Mobodata[i][j + 2], Mobodata[i][j + 3], Mobodata[i][j + 4], Mobodata[i][j + 5], Mobodata[i][j + 6]);
+    for (unsigned int i = 0; i < Mobodata.size(); i++)
+    {        
+        Motherboard temp(Mobodata[i][0], Mobodata[i][1], Mobodata[i][2], Mobodata[i][3], Mobodata[i][4], Mobodata[i][5], Mobodata[i][6]);       
         Mobo.push_back(temp);
     }
 }
@@ -134,7 +136,7 @@ void ReadRam()
     }
     // Close the file
     ramf.close();
-    for (int i = 0; i < Ramdata.size(); i++)
+    for (unsigned int i = 0; i < Ramdata.size(); i++)
     {
         Ram temp(Ramdata[i][0], Ramdata[i][1], Ramdata[i][2], Ramdata[i][3], Ramdata[i][4], Ramdata[i][5], Ramdata[i][6],Ramdata[i][7]);
         ram.push_back(temp);
@@ -158,7 +160,7 @@ void ReadStorage()
     }
     // Close the file
     Storagef.close();
-    for (int i = 0; i < Storagedata.size(); i++)
+    for (unsigned int i = 0; i < Storagedata.size(); i++)
     {
         Storage temp(Storagedata[i][0], Storagedata[i][1], Storagedata[i][2], Storagedata[i][3], Storagedata[i][4], Storagedata[i][5], Storagedata[i][6], Storagedata[i][7]);
         storage.push_back(temp);
@@ -181,7 +183,7 @@ void ReadPSU()
     }
     // Close the file
     PSUf.close();
-    for (int i = 0; i < PSUdata.size(); i++)
+    for (unsigned int i = 0; i < PSUdata.size(); i++)
     {
         PSU temp(PSUdata[i][0], PSUdata[i][1], PSUdata[i][2], PSUdata[i][3], PSUdata[i][4], PSUdata[i][5], PSUdata[i][6]);
         psus.push_back(temp);
@@ -205,7 +207,7 @@ void ReadGPU()
     }
     // Close the file
     GPUf.close();
-    for (int i = 0; i < GPUdata.size(); i++)
+    for (unsigned int i = 0; i < GPUdata.size(); i++)
     {
         GPU temp(GPUdata[i][0], GPUdata[i][1], GPUdata[i][2], GPUdata[i][3], GPUdata[i][4], GPUdata[i][5], GPUdata[i][6]);
         gpus.push_back(temp);
@@ -229,7 +231,7 @@ void ReadCase()
     }
     // Close the file
     Casef.close();
-    for (int i = 0; i < Casedata.size(); i++)
+    for (unsigned int i = 0; i < Casedata.size(); i++)
     {
         Case temp(Casedata[i][0], Casedata[i][1], Casedata[i][2], Casedata[i][3], Casedata[i][4], Casedata[i][5]);
         Cases.push_back(temp);
@@ -249,6 +251,7 @@ void Prebuiltmenu()
 }
 
 int main() {
+
     ReadCPU();
     ReadCooler();
     ReadMobo();
@@ -257,6 +260,17 @@ int main() {
     ReadPSU();
     ReadGPU();
     ReadCase();
+
+
+    Computer c1;
+    for (int i = 0; i < 10; i++)
+    {
+       
+    }
+    //c1.setCPU(CPUs[0]);
+    //c1.setMobo(Mobo[2]);
+
+    /*
     int menuchoice1=10;
     int menuchoice2 = 10;
     bool sessionactive = true;
@@ -315,5 +329,6 @@ int main() {
         }
         }        
     }
+    */
     return 0;
 }

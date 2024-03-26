@@ -50,7 +50,7 @@ Ram::Ram(const string name,const string price,const string speed,const string ca
 	setModules(modules);
 	setPPG(ppg);
 	setColor(color);	
-	setDDR5(DDR5)
+	setDDR5(DDR5);
 }
 string Ram::getSpeed()
 {
@@ -95,7 +95,7 @@ void Ram::setColor(const string color)
 }
 void Ram::setDDR5(const string DDR5)
 {
-	this->ddr5 = DDR5;
+	this->ddr5 = stoi(DDR5);
 }
 void Ram::Display()
 {
