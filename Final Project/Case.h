@@ -84,6 +84,4 @@ void Case::Display()
 {
 	cout << name << "  Price:$" << price << "  Form-Factor:" << size << "  Colour:" << color << "  Side Panel:" << panel << "  Volume:" << volume << "L" << endl;
 }
-
-
 #endif

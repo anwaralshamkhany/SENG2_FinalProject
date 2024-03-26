@@ -10,7 +10,6 @@ class ComputerParts
 protected:
 	string name;
 	double price;
-
 public:
 	ComputerParts();
 	ComputerParts(const string name, const string price);

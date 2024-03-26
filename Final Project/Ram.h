@@ -37,9 +37,11 @@ public:
 Ram::Ram()
 {
 	this->speed = "";
+	this->capacity = "";
 	this->modules = "";
 	this->ppg = "";
 	this->color = "";
+	this->ddr5 = false;
 }
 Ram::Ram(const string name, const string price, const string speed, const string capacity, const string modules, const string ppg, const string color, const string DDR5)
 {

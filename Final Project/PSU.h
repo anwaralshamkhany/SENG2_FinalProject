@@ -97,9 +97,5 @@ void PSU::Display()
 {
 	cout << name << "  Price:$" << price << "  Form-Factor:" << size << "  Efficiency:" << rating << "  Wattage:" << wattage << "w  Modularity:" << modular << "  Colour:" << color<<endl;
 }
-void PSU::Display()
-{
-	cout << name << "  Price:$" << price << "  Form-Factor:" << size << "  Efficiency:" << rating << "  Wattage:" << wattage << "w  Modularity:" << modular << "  Colour:" << color << endl;
-}
 
 #endif
