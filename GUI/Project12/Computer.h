@@ -34,6 +34,7 @@ public:
 	GPU getGPU();
 	Case getCase();
 	PSU getPSU();
+	int getTotalPrice();
 	//declare mutator functions for the Computer class
 	void setCPU(const CPU cpu);
 	void setMobo(const Motherboard mobo);
@@ -108,7 +109,11 @@ PSU Computer::getPSU()
 {
 	return psu;
 }
+int Computer::getTotalPrice()
+{
+	return cpu.getPrice() + mobo.getPrice() + cooler.getPrice() + ram.getPrice() + storage.getPrice() + gpu.getPrice() + Case1.getPrice() + psu.getPrice();
 
+}
 void Computer::setCPU(CPU cpu)
 {
 	if (mobo.getSocket() == "")

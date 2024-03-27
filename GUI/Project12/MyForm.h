@@ -32,7 +32,7 @@ namespace Project12 {
 	std::vector<Ram>ram;
 	std::vector<std::vector<std::string>>Casedata;
 	std::vector<Case>cases;
-	//Computer c1(CPUs[0], mobo[24], Coolers[8], ram[2], storage[5], gpus[3], cases[2], psu[3]);
+	//
 
 	/// <summary>
 	/// Summary for MyForm
@@ -41,21 +41,22 @@ namespace Project12 {
 	{
 	public:
 		MyForm()
-		{	
-			
-			InitializeComponent();
-			//Display();
+		{				
+			InitializeComponent();			
 
 			ReadCPU(CPUdata,CPUs);			
-			/*ReadGPU(GPUdata, gpus);
+			ReadGPU(GPUdata, gpus);
 			ReadCooler(Coolerdata,Coolers);
 			ReadPSU(PSUdata,psu);
 			ReadRam(Ramdata,ram);
 			ReadCase(Casedata,cases);
 			ReadStorage(Storagedata,storage);
 			ReadMobo(Mobodata,mobo);			
-			*/
-			PopulateDataGridView(dataGridView1);			
+			
+			PopulateDataGridView(dataGridView1, CPUdata);
+			PopulateDataGridView(dataGridView2, GPUdata);
+			PopulateDataGridView(dataGridView3, Ramdata);
+			PopulateDataGridView(motherboards, Mobodata);
 		}
 
 	protected:
@@ -224,17 +225,19 @@ namespace Project12 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(256, 72);
+			this->label1->Location = System::Drawing::Point(192, 58);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(180, 17);
+			this->label1->Size = System::Drawing::Size(139, 13);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Welcome to PC Part Picker!";
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(301, 123);
+			this->button1->Location = System::Drawing::Point(226, 100);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(93, 43);
+			this->button1->Size = System::Drawing::Size(70, 35);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Pre-Builds";
 			this->button1->UseVisualStyleBackColor = true;
@@ -242,9 +245,10 @@ namespace Project12 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(286, 198);
+			this->button2->Location = System::Drawing::Point(214, 161);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(141, 46);
+			this->button2->Size = System::Drawing::Size(106, 37);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Make Your Own";
 			this->button2->UseVisualStyleBackColor = true;
@@ -259,16 +263,18 @@ namespace Project12 {
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(982, 553);
+			this->panel1->Size = System::Drawing::Size(1541, 613);
 			this->panel1->TabIndex = 3;
 			this->panel1->Visible = false;
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(259, 309);
+			this->button6->Location = System::Drawing::Point(194, 251);
+			this->button6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(120, 23);
+			this->button6->Size = System::Drawing::Size(90, 19);
 			this->button6->TabIndex = 4;
 			this->button6->Text = L"Go Back";
 			this->button6->UseVisualStyleBackColor = true;
@@ -276,27 +282,30 @@ namespace Project12 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(275, 172);
+			this->button5->Location = System::Drawing::Point(206, 140);
+			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(87, 48);
+			this->button5->Size = System::Drawing::Size(65, 39);
 			this->button5->TabIndex = 3;
 			this->button5->Text = L"Editing";
 			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(275, 238);
+			this->button4->Location = System::Drawing::Point(206, 193);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(87, 48);
+			this->button4->Size = System::Drawing::Size(65, 39);
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"Office";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(275, 108);
+			this->button3->Location = System::Drawing::Point(206, 88);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(87, 48);
+			this->button3->Size = System::Drawing::Size(65, 39);
 			this->button3->TabIndex = 1;
 			this->button3->Text = L"Gaming";
 			this->button3->UseVisualStyleBackColor = true;
@@ -304,9 +313,10 @@ namespace Project12 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(256, 72);
+			this->label2->Location = System::Drawing::Point(192, 58);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(150, 17);
+			this->label2->Size = System::Drawing::Size(111, 13);
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Choose your Pre-Build";
 			// 
@@ -329,8 +339,9 @@ namespace Project12 {
 			this->panel2->Controls->Add(this->label3);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel2->Location = System::Drawing::Point(0, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(982, 553);
+			this->panel2->Size = System::Drawing::Size(1541, 613);
 			this->panel2->TabIndex = 4;
 			this->panel2->Visible = false;
 			// 
@@ -341,25 +352,28 @@ namespace Project12 {
 			this->panel5->Controls->Add(this->dataGridView3);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel5->Location = System::Drawing::Point(0, 0);
+			this->panel5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(982, 553);
+			this->panel5->Size = System::Drawing::Size(1541, 613);
 			this->panel5->TabIndex = 14;
 			this->panel5->Visible = false;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(441, 18);
+			this->label4->Location = System::Drawing::Point(684, 9);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(38, 17);
+			this->label4->Size = System::Drawing::Size(31, 13);
 			this->label4->TabIndex = 2;
 			this->label4->Text = L"RAM";
 			// 
 			// button19
 			// 
-			this->button19->Location = System::Drawing::Point(12, 11);
+			this->button19->Location = System::Drawing::Point(662, 568);
+			this->button19->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(115, 30);
+			this->button19->Size = System::Drawing::Size(103, 45);
 			this->button19->TabIndex = 1;
 			this->button19->Text = L"Go Back";
 			this->button19->UseVisualStyleBackColor = true;
@@ -374,12 +388,14 @@ namespace Project12 {
 				this->Column13,
 					this->Column14, this->Column15, this->Column16, this->Column17, this->Column18, this->Column19
 			});
-			this->dataGridView3->Location = System::Drawing::Point(1, 47);
+			this->dataGridView3->Location = System::Drawing::Point(10, 38);
+			this->dataGridView3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dataGridView3->Name = L"dataGridView3";
 			this->dataGridView3->RowHeadersWidth = 51;
 			this->dataGridView3->RowTemplate->Height = 24;
-			this->dataGridView3->Size = System::Drawing::Size(1029, 304);
+			this->dataGridView3->Size = System::Drawing::Size(1517, 526);
 			this->dataGridView3->TabIndex = 0;
+			this->dataGridView3->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView3_CellContentClick);
 			// 
 			// Column13
 			// 
@@ -429,16 +445,18 @@ namespace Project12 {
 			this->MotherBoardPanel->Controls->Add(this->motherboards);
 			this->MotherBoardPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->MotherBoardPanel->Location = System::Drawing::Point(0, 0);
+			this->MotherBoardPanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MotherBoardPanel->Name = L"MotherBoardPanel";
-			this->MotherBoardPanel->Size = System::Drawing::Size(982, 553);
+			this->MotherBoardPanel->Size = System::Drawing::Size(1541, 613);
 			this->MotherBoardPanel->TabIndex = 13;
 			this->MotherBoardPanel->Visible = false;
 			// 
 			// button20
 			// 
-			this->button20->Location = System::Drawing::Point(283, 332);
+			this->button20->Location = System::Drawing::Point(212, 270);
+			this->button20->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(155, 34);
+			this->button20->Size = System::Drawing::Size(116, 28);
 			this->button20->TabIndex = 1;
 			this->button20->Text = L"Go Back";
 			this->button20->UseVisualStyleBackColor = true;
@@ -455,11 +473,12 @@ namespace Project12 {
 				this->Column21,
 					this->Column22, this->Column23, this->Column24, this->Column25, this->Column26, this->Column27
 			});
-			this->motherboards->Location = System::Drawing::Point(0, 37);
+			this->motherboards->Location = System::Drawing::Point(0, 30);
+			this->motherboards->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->motherboards->Name = L"motherboards";
 			this->motherboards->RowHeadersWidth = 51;
 			this->motherboards->RowTemplate->Height = 24;
-			this->motherboards->Size = System::Drawing::Size(982, 238);
+			this->motherboards->Size = System::Drawing::Size(1541, 193);
 			this->motherboards->TabIndex = 0;
 			// 
 			// Column21
@@ -517,16 +536,18 @@ namespace Project12 {
 			this->panel4->Controls->Add(this->dataGridView2);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel4->Location = System::Drawing::Point(0, 0);
+			this->panel4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(982, 553);
+			this->panel4->Size = System::Drawing::Size(1541, 613);
 			this->panel4->TabIndex = 12;
 			this->panel4->Visible = false;
 			// 
 			// button18
 			// 
-			this->button18->Location = System::Drawing::Point(267, 352);
+			this->button18->Location = System::Drawing::Point(200, 286);
+			this->button18->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(159, 36);
+			this->button18->Size = System::Drawing::Size(119, 29);
 			this->button18->TabIndex = 1;
 			this->button18->Text = L"Go Back";
 			this->button18->UseVisualStyleBackColor = true;
@@ -541,11 +562,12 @@ namespace Project12 {
 				this->Column7,
 					this->Column8, this->Column9, this->Column10, this->Column11, this->Column12
 			});
-			this->dataGridView2->Location = System::Drawing::Point(0, 25);
+			this->dataGridView2->Location = System::Drawing::Point(0, 20);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(717, 254);
+			this->dataGridView2->Size = System::Drawing::Size(538, 206);
 			this->dataGridView2->TabIndex = 0;
 			// 
 			// Column7
@@ -594,16 +616,18 @@ namespace Project12 {
 			this->panel3->Controls->Add(this->dataGridView1);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel3->Location = System::Drawing::Point(0, 0);
+			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(982, 553);
+			this->panel3->Size = System::Drawing::Size(1541, 613);
 			this->panel3->TabIndex = 11;
 			this->panel3->Visible = false;
 			// 
 			// button17
 			// 
-			this->button17->Location = System::Drawing::Point(239, 363);
+			this->button17->Location = System::Drawing::Point(179, 295);
+			this->button17->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(161, 33);
+			this->button17->Size = System::Drawing::Size(121, 27);
 			this->button17->TabIndex = 1;
 			this->button17->Text = L"Go Back";
 			this->button17->UseVisualStyleBackColor = true;
@@ -619,11 +643,12 @@ namespace Project12 {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6
 			});
-			this->dataGridView1->Location = System::Drawing::Point(3, 25);
+			this->dataGridView1->Location = System::Drawing::Point(2, 20);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(716, 206);
+			this->dataGridView1->Size = System::Drawing::Size(537, 167);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// Column1
@@ -671,9 +696,10 @@ namespace Project12 {
 			// 
 			// button16
 			// 
-			this->button16->Location = System::Drawing::Point(259, 327);
+			this->button16->Location = System::Drawing::Point(194, 266);
+			this->button16->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(99, 39);
+			this->button16->Size = System::Drawing::Size(74, 32);
 			this->button16->TabIndex = 10;
 			this->button16->Text = L"Go Back";
 			this->button16->UseVisualStyleBackColor = true;
@@ -681,54 +707,60 @@ namespace Project12 {
 			// 
 			// button15
 			// 
-			this->button15->Location = System::Drawing::Point(463, 218);
+			this->button15->Location = System::Drawing::Point(347, 177);
+			this->button15->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(99, 39);
+			this->button15->Size = System::Drawing::Size(74, 32);
 			this->button15->TabIndex = 9;
 			this->button15->Text = L"Case";
 			this->button15->UseVisualStyleBackColor = true;
 			// 
 			// button14
 			// 
-			this->button14->Location = System::Drawing::Point(463, 136);
+			this->button14->Location = System::Drawing::Point(347, 110);
+			this->button14->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(99, 39);
+			this->button14->Size = System::Drawing::Size(74, 32);
 			this->button14->TabIndex = 8;
 			this->button14->Text = L"PSU";
 			this->button14->UseVisualStyleBackColor = true;
 			// 
 			// button13
 			// 
-			this->button13->Location = System::Drawing::Point(463, 61);
+			this->button13->Location = System::Drawing::Point(347, 50);
+			this->button13->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(99, 39);
+			this->button13->Size = System::Drawing::Size(74, 32);
 			this->button13->TabIndex = 7;
 			this->button13->Text = L"CPU Cooler";
 			this->button13->UseVisualStyleBackColor = true;
 			// 
 			// button12
 			// 
-			this->button12->Location = System::Drawing::Point(259, 218);
+			this->button12->Location = System::Drawing::Point(194, 177);
+			this->button12->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(99, 39);
+			this->button12->Size = System::Drawing::Size(74, 32);
 			this->button12->TabIndex = 6;
 			this->button12->Text = L"Cooler";
 			this->button12->UseVisualStyleBackColor = true;
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(259, 136);
+			this->button11->Location = System::Drawing::Point(194, 110);
+			this->button11->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(99, 39);
+			this->button11->Size = System::Drawing::Size(74, 32);
 			this->button11->TabIndex = 5;
 			this->button11->Text = L"Storage";
 			this->button11->UseVisualStyleBackColor = true;
 			// 
 			// button10
 			// 
-			this->button10->Location = System::Drawing::Point(259, 61);
+			this->button10->Location = System::Drawing::Point(194, 50);
+			this->button10->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(115, 39);
+			this->button10->Size = System::Drawing::Size(86, 32);
 			this->button10->TabIndex = 4;
 			this->button10->Text = L"Motherboard";
 			this->button10->UseVisualStyleBackColor = true;
@@ -736,9 +768,10 @@ namespace Project12 {
 			// 
 			// button9
 			// 
-			this->button9->Location = System::Drawing::Point(59, 218);
+			this->button9->Location = System::Drawing::Point(44, 177);
+			this->button9->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(99, 39);
+			this->button9->Size = System::Drawing::Size(74, 32);
 			this->button9->TabIndex = 3;
 			this->button9->Text = L"RAM";
 			this->button9->UseVisualStyleBackColor = true;
@@ -746,9 +779,10 @@ namespace Project12 {
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(59, 141);
+			this->button8->Location = System::Drawing::Point(44, 115);
+			this->button8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(99, 39);
+			this->button8->Size = System::Drawing::Size(74, 32);
 			this->button8->TabIndex = 2;
 			this->button8->Text = L"GPU";
 			this->button8->UseVisualStyleBackColor = true;
@@ -756,9 +790,10 @@ namespace Project12 {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(59, 61);
+			this->button7->Location = System::Drawing::Point(44, 50);
+			this->button7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(99, 39);
+			this->button7->Size = System::Drawing::Size(74, 32);
 			this->button7->TabIndex = 1;
 			this->button7->Text = L"CPU";
 			this->button7->UseVisualStyleBackColor = true;
@@ -767,24 +802,26 @@ namespace Project12 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(283, 28);
+			this->label3->Location = System::Drawing::Point(212, 23);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(82, 17);
+			this->label3->Size = System::Drawing::Size(62, 13);
 			this->label3->TabIndex = 0;
 			this->label3->Text = L"PC Part List";
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Honeydew;
-			this->ClientSize = System::Drawing::Size(982, 553);
+			this->ClientSize = System::Drawing::Size(1541, 613);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyForm";
 			this->Text = L"PC Part Picker";
 			this->panel1->ResumeLayout(false);
@@ -830,7 +867,7 @@ namespace Project12 {
 			panel3->Hide();
 		}
 
-	private:System::Void PopulateDataGridView(DataGridView^ dataGridView1)
+	private:System::Void PopulateDataGridView(DataGridView^ dataGridView1,std::vector<std::vector<std::string>>Data)
 	{
 		// Sample data vectors
 		//std::vector<std::string> row1Data = CPUdata[0];
@@ -838,17 +875,17 @@ namespace Project12 {
 		dataGridView1->Rows->Clear();
 
 		// Iterate over each vector<string> in CPUdata
-		for (int i = 0; i < CPUdata.size(); i++)
+		for (int i = 0; i < Data.size(); i++)
 		{
 			// Create a new DataGridViewRow for each entry in CPUdata
 			DataGridViewRow^ row = gcnew DataGridViewRow();
 			row->CreateCells(dataGridView1); // Prepare the row to have cells like dataGridView1
 
 			// Now fill in the cells with values from CPUdata
-			for (int j = 0; j < CPUdata[i].size() && j < row->Cells->Count; j++)
+			for (int j = 0; j < Data[i].size() && j < row->Cells->Count; j++)
 			{
 				// Add the data to each cell
-				row->Cells[j]->Value = gcnew System::String(CPUdata[i][j].c_str());
+				row->Cells[j]->Value = gcnew System::String(Data[i][j].c_str());
 			}
 
 			// After setting all the cells for the row, add the row to the DataGridView
@@ -861,20 +898,7 @@ namespace Project12 {
 		
 	}
 
-		   // Assume OutputLabel is the name of the Label on your form.
-		   
-/*private: System::Void Display()
-{
-	if (CPUdata.size() > 0 && CPUdata[0].size() > 0)
-	{
-		
-		OutputLabel->Text = gcnew System::String((CPUs[0].getCores()).c_str());
-	}
-	else
-	{
-		OutputLabel->Text = "CPU data is not available or empty.";
-	}
-}*/
+		   // Assume OutputLabel is the name of the Label on your form.  
 
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	panel4->Show();
@@ -906,6 +930,8 @@ private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ 
 }
 
 
+private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
 };
 
 }
