@@ -61,15 +61,13 @@ void ReadCPU(std::vector<vector<string>>& CPUdata,std::vector<CPU>& CPUs)
     }
 }
 
-void ReadCooler()
+void ReadCooler(std::vector<std::vector<std::string>>& Coolerdata,std::vector<Cooler>& Coolers)
 {
-    vector<vector<string>>Coolerdata;
-    vector<Cooler>Coolers;
     // Open the CSV file    
     ifstream coolerf("Cooler.csv");
 
     // Vectors to store data for each column   
-    string line;
+    std::string line;
 
     // Read data line by line
     while (getline(coolerf, line)) {
@@ -87,16 +85,14 @@ void ReadCooler()
     }
 }
 
-void ReadMobo()
+void ReadMobo(std::vector<std::vector<std::string>>&Mobodata,std::vector<Motherboard>&Mobo)
 {
-    vector<vector<string>>Mobodata;
-    vector<Motherboard>Mobo;
     // Open the CSV file
     ifstream mobof("Motherboard.csv");
 
     // Vectors to store data for each column
 
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(mobof, line)) {
         // Split the line into tokens based on comma delimiter
@@ -113,15 +109,13 @@ void ReadMobo()
     }
 }
 
-void ReadRam()
+void ReadRam(std::vector<std::vector<std::string>>& Ramdata,std::vector<Ram>&ram)
 {
-    vector<vector<string>>Ramdata;
-    vector<Ram>ram;
     // Open the CSV file
     ifstream ramf("Ram.csv");
 
     // Vectors to store data for each column
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(ramf, line)) {
         // Split the line into tokens based on comma delimiter
@@ -138,16 +132,14 @@ void ReadRam()
     }
 }
 
-void ReadStorage()
+void ReadStorage(std::vector<std::vector<std::string>>&Storagedata,std::vector<Storage>&storage)
 {
-    vector<vector<string>>Storagedata;
-    vector<Storage>storage;
     // Open the CSV file
     ifstream Storagef("HardDrive.csv");
 
     // Vectors to store data for each column
 
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(Storagef, line)) {
         // Split the line into tokens based on comma delimiter
@@ -164,15 +156,13 @@ void ReadStorage()
     }
 }
 
-void ReadPSU()
+void ReadPSU(std::vector<std::vector<std::string>>&PSUdata,std::vector<PSU>& psus)
 {
-    vector<vector<string>>PSUdata;
-    vector<PSU>psus;
     // Open the CSV file
     ifstream PSUf("Power Supply.csv");
     // Vectors to store data for each column
 
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(PSUf, line)) {
         // Split the line into tokens based on comma delimiter
@@ -189,16 +179,14 @@ void ReadPSU()
     }
 }
 
-void ReadGPU()
+void ReadGPU(std::vector<std::vector<std::string>>& GPUdata,std::vector<GPU>&gpus )
 {
-    vector<vector<string>>GPUdata;
-    vector<GPU>gpus;
     // Open the CSV file
     ifstream GPUf("GPU.csv");
 
     // Vectors to store data for each column
 
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(GPUf, line)) {
         // Split the line into tokens based on comma delimiter
@@ -215,16 +203,12 @@ void ReadGPU()
     }
 }
 
-void ReadCase()
+void ReadCase(std::vector<std::vector<std::string>>& Casedata,std::vector<Case>Cases)
 {
-    vector<vector<string>>Casedata;
-    vector<Case>Cases;
     // Open the CSV file
     ifstream Casef("Case.csv");
-
     // Vectors to store data for each column
-
-    string line;
+    std::string line;
     // Read data line by line
     while (getline(Casef, line)) {
         // Split the line into tokens based on comma delimiter
@@ -240,5 +224,7 @@ void ReadCase()
         Cases.push_back(temp);
     }
 }
+
+
 
 #endif
