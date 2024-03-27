@@ -3,7 +3,7 @@
 #include <string>
 #include "Reading.h"
 #include "CPU.h"
-
+#include <msclr/marshal_cppstd.h>
 
 namespace Project12 {
 
@@ -14,6 +14,9 @@ namespace Project12 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Collections::Generic;
+	
+	std::vector<std::vector<std::string>>CPUdata;
+	std::vector<CPU>CPUs;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -21,20 +24,21 @@ namespace Project12 {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+		MyForm()
 		{	
-			std::vector<vector<string>>CPUdata;
-			std::vector<CPU>CPUs;
+			
 			InitializeComponent();
 
 			ReadCPU(CPUdata,CPUs);
-			/*ReadGPU();
-			ReadCooler();
+			ReadGPU();
+			Display();
+			
+			/*ReadCooler();
 			ReadPSU();
 			ReadRam();
 			ReadCase();
 			ReadStorage();
-			ReadMobo();*/
+			ReadMobo(); */
 			//CPUs[0].Display();
 			PopulateDataGridView();			
 		}
@@ -80,6 +84,8 @@ namespace Project12 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
 	private: System::Windows::Forms::Button^ button17;
+
+	private: System::Windows::Forms::Label^ OutputLabel;
 	protected:
 
 
@@ -126,6 +132,7 @@ namespace Project12 {
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->OutputLabel = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
@@ -137,7 +144,7 @@ namespace Project12 {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(256, 72);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(171, 16);
+			this->label1->Size = System::Drawing::Size(180, 17);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Welcome to PC Part Picker!";
 			// 
@@ -217,7 +224,7 @@ namespace Project12 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(259, 72);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(141, 16);
+			this->label2->Size = System::Drawing::Size(150, 17);
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Choose your Pre-Build";
 			// 
@@ -244,6 +251,7 @@ namespace Project12 {
 			// 
 			// panel3
 			// 
+			this->panel3->Controls->Add(this->OutputLabel);
 			this->panel3->Controls->Add(this->button17);
 			this->panel3->Controls->Add(this->dataGridView1);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -279,7 +287,6 @@ namespace Project12 {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(716, 206);
 			this->dataGridView1->TabIndex = 0;
-			
 			// 
 			// Column1
 			// 
@@ -421,9 +428,18 @@ namespace Project12 {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(283, 28);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(75, 16);
+			this->label3->Size = System::Drawing::Size(82, 17);
 			this->label3->TabIndex = 0;
 			this->label3->Text = L"PC Part List";
+			// 
+			// OutputLabel
+			// 
+			this->OutputLabel->AutoSize = true;
+			this->OutputLabel->Location = System::Drawing::Point(473, 299);
+			this->OutputLabel->Name = L"OutputLabel";
+			this->OutputLabel->Size = System::Drawing::Size(35, 17);
+			this->OutputLabel->TabIndex = 2;
+			this->OutputLabel->Text = L"Text";
 			// 
 			// MyForm
 			// 
@@ -442,6 +458,7 @@ namespace Project12 {
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->panel3->ResumeLayout(false);
+			this->panel3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -519,5 +536,21 @@ namespace Project12 {
 		dataGridView1->Rows->Add(row);
 		*/
 	}
+
+		   // Assume OutputLabel is the name of the Label on your form.
+private: System::Void Display()
+{
+	if (CPUdata.size() > 0 && CPUdata[0].size() > 0)
+	{
+		// Convert std::string to System::String
+		OutputLabel->Text = gcnew System::String(CPUdata[0][0].c_str());
+	}
+	else
+	{
+		OutputLabel->Text = "CPU data is not available or empty.";
+	}
+}
+
 };
+
 }

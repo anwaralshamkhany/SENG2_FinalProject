@@ -12,6 +12,7 @@
 class Computer
 {
 private:
+	//define the data fields for the Computer class
 	CPU cpu;
 	Motherboard mobo;
 	Cooler cooler;
@@ -21,8 +22,10 @@ private:
 	Case Case1;
 	PSU psu;
 public:
+	//declare a no-arg constructor and a regular constructor for the Computer class
 	Computer();
 	Computer(const CPU cpu, const Motherboard mobo, const Cooler cooler, const Ram ram, const Storage storage, const GPU gpu, const Case Case1, const PSU psu);
+	//declare accessor functions for the computer class
 	CPU getCPU();
 	Motherboard getMobo();
 	Cooler getCooler();
@@ -31,7 +34,7 @@ public:
 	GPU getGPU();
 	Case getCase();
 	PSU getPSU();
-
+	//declare mutator functions for the Computer class
 	void setCPU(const CPU cpu);
 	void setMobo(const Motherboard mobo);
 	void setCooler(const Cooler cooler);
@@ -40,6 +43,7 @@ public:
 	void setGPU(const GPU gpu);
 	void setCase(const Case Case1);
 	void setPSU(const PSU psu);
+	//declare the display function for the computer class
 	void Display();
 };
 Computer::Computer()

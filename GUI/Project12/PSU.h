@@ -10,6 +10,7 @@ using namespace std;
 class PSU : public ComputerParts
 {
 private:
+	//declare the data fields for the PSU class
 	string size;
 	string rating;
 	string wattage;
@@ -17,22 +18,23 @@ private:
 	string color;
 
 public:
+	//declare the no-arg and regular constructor for the PSU class
 	PSU();
 	PSU(const string name, const string price, const string size, const string rating, const string wattage, const string modular, const string color);
-
+	//declare accessor functions for the PSU class
 	string getSize();
 	string getRating();
 	string getWattage();
 	string getModular();
 	string getColor();
-
+	//declare Mutator functions for the PSU class
 	void setSize(const string size);
 	void setRating(const string rating);
 	void setWattage(const string wattage);
 	void setModular(const string modular);
 	void setColor(const string color);
 };
-
+//define the constructors for the PSU class
 PSU::PSU()
 {
 	this->size = "";
@@ -43,6 +45,7 @@ PSU::PSU()
 }
 PSU::PSU(const string name, const string price, const string size, const string rating, const string wattage, const string modular, const string color)
 {
+	//use the set functions to redefine the data fields
 	setName(name);
 	setPrice(price);
 	setSize(size);
@@ -51,7 +54,7 @@ PSU::PSU(const string name, const string price, const string size, const string 
 	setModular(modular);
 	setColor(color);
 }
-
+//define the Accessor functions for the PSU class
 string PSU::getSize()
 {
 	return size;
@@ -72,7 +75,7 @@ string PSU::getColor()
 {
 	return color;
 }
-
+//define the Mutator functions for the PSU class
 void PSU::setSize(const string size)
 {
 	this->size = size;

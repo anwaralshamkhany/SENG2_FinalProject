@@ -18,7 +18,7 @@
 #include "Case.h"
 using namespace std;
 
-
+//this function take a string which is a whole line of a CSV file, and splits it into pieces based on the ',' character
 vector<string> split(const string& s, char delimiter)
 {
     vector<string> tokens;
