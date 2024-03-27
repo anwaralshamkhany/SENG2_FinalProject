@@ -121,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="Reading.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.h" />
@@ -130,6 +129,7 @@
     <ClInclude Include="Computer.h" />
     <ClInclude Include="Cooler.h" />
     <ClInclude Include="GPU.h" />
+    <ClInclude Include="Reading.h" />
     <ClInclude Include="Storage.h" />
     <ClInclude Include="Ram.h" />
     <ClInclude Include="PSU.h" />

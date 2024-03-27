@@ -1,6 +1,10 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "Reading.h"
+#include "CPU.h"
+
+
 namespace Project12 {
 
 	using namespace System;
@@ -18,12 +22,21 @@ namespace Project12 {
 	{
 	public:
 		MyForm(void)
-		{
+		{	
+			std::vector<vector<string>>CPUdata;
+			std::vector<CPU>CPUs;
 			InitializeComponent();
-			PopulateDataGridView();
-			//
-			//TODO: Add the constructor code here
-			//
+
+			ReadCPU(CPUdata,CPUs);
+			/*ReadGPU();
+			ReadCooler();
+			ReadPSU();
+			ReadRam();
+			ReadCase();
+			ReadStorage();
+			ReadMobo();*/
+			//CPUs[0].Display();
+			PopulateDataGridView();			
 		}
 
 	protected:
@@ -68,6 +81,7 @@ namespace Project12 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
 	private: System::Windows::Forms::Button^ button17;
 	protected:
+
 
 	private:
 		/// <summary>
