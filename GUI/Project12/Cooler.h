@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-class Cooler :ComputerParts
+class Cooler :public ComputerParts
 {
 private:
 	string RPM;
