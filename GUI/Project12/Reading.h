@@ -225,19 +225,19 @@ void ReadCase(std::vector<std::vector<std::string>>& Casedata,std::vector<Case>C
     }
 }
 
-void CreatePresets(vector<Computer>computers,vector<CPU>cpus,vector<Motherboard>mobo,vector<Cooler>cooler,vector<GPU>gpu,vector<Storage>storage,vector<Ram>ram,vector<Case>cases,vector<PSU>psu)
-{
-    
-   Computer Gaming2();
-   Computer Gaming3();
-   Computer Office1(cpus[44], mobo[0], cooler[23], ram[8], storage[14], gpu[14], cases[8], psu[0]);
-   computers.push_back(Office1);
-   Computer Editing2();
-   Computer Editing3();
-   Computer Office2();
-   Computer Office3();
-    
+void CreatePresets(vector<Computer>& computers, const vector<CPU>& cpus, const vector<Motherboard>& mobo, const vector<Cooler>& cooler, const vector<GPU>& gpu, const vector<Storage>& storage, const vector<Ram>& ram, const vector<Case>& cases, const vector<PSU>& psu) {
+    // Ensure all vectors have enough elements before accessing them
+    if (cpus.size() > 44 && mobo.size() > 0 && cooler.size() > 23 && ram.size() > 8 && storage.size() > 14 && gpu.size() > 14 && cases.size() > 8 && psu.size() > 0) {
+        Computer Office1(cpus[44], mobo[0], cooler[23], ram[8], storage[14], gpu[14], cases[8], psu[0]);
+        computers.push_back(Office1);
+    }
+    else {
+        // Handle the error: vectors do not contain enough elements
+    }
+
+    // Create other computers similarly, ensuring vectors have enough elements
 }
+
 
 
 #endif

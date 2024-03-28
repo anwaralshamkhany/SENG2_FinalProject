@@ -63,7 +63,7 @@ namespace Project12 {
 			ReadCase(Casedata, cases);
 			ReadStorage(Storagedata, storage);
 			ReadMobo(Mobodata, mobo);
-			//CreatePresets(Computers,CPUs,mobo,Coolers,gpus,storage,ram,cases,psu);
+			CreatePresets(Computers,CPUs,mobo,Coolers,gpus,storage,ram,cases,psu);
 			
 			AddDataGridView(CPUGrid, CPUdata);
 			AddDataGridView(GPUGrid, GPUdata);
