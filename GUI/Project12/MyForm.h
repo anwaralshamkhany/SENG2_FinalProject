@@ -2,9 +2,16 @@
 #include <vector>
 #include <string>
 #include "Reading.h"
-#include "CPU.h"
 #include "Computer.h"
-#include <msclr/marshal_cppstd.h>
+#include "CPU.h"
+#include "Motherboard.h"
+#include "Cooler.h"
+#include "Ram.h"
+#include "Storage.h"
+#include "GPU.h"
+#include "Case.h"
+#include "PSU.h"
+
 
 namespace Project12 {
 
@@ -16,6 +23,10 @@ namespace Project12 {
 	using namespace System::Drawing;
 	using namespace System::Collections::Generic;
 
+
+	/////////////////////////////////////////////////////////////////
+	///////////2D VECTORS WITH ALL DATA FOR ALL COMPONENTS///////////
+	/////////////////////////////////////////////////////////////////
 	std::vector<std::vector<std::string>>CPUdata;
 	std::vector<CPU>CPUs;
 	std::vector<std::vector<std::string>>Mobodata;
@@ -32,18 +43,18 @@ namespace Project12 {
 	std::vector<Ram>ram;
 	std::vector<std::vector<std::string>>Casedata;
 	std::vector<Case>cases;
-	//
+	std::vector<Computer>Computers;
+	
+	
 
-	/// <summary>
-	/// Summary for MyForm
-	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm()
+		MyForm() // MAIN FUNCTION 
 		{
-			InitializeComponent();
+			InitializeComponent(); //Initializaton and declaration of all GUI elements
 
+			
 			ReadCPU(CPUdata, CPUs);
 			ReadGPU(GPUdata, gpus);
 			ReadCooler(Coolerdata, Coolers);
@@ -52,24 +63,19 @@ namespace Project12 {
 			ReadCase(Casedata, cases);
 			ReadStorage(Storagedata, storage);
 			ReadMobo(Mobodata, mobo);
-
-			PopulateDataGridView(CPUGrid, CPUdata);
-			PopulateDataGridView(GPUGrid, GPUdata);
-			PopulateDataGridView(RAMGrid, Ramdata);
-			PopulateDataGridView(MotherboardGrid, Mobodata);
-			PopulateDataGridView(StorageGrid, Storagedata);
-			PopulateDataGridView(CoolerGrid, Coolerdata);
-			PopulateDataGridView(PSUGrid, PSUdata);
-			PopulateDataGridView(CaseGrid, Casedata);
-
-
+			//CreatePresets(Computers,CPUs,mobo,Coolers,gpus,storage,ram,cases,psu);
 			
+			AddDataGridView(CPUGrid, CPUdata);
+			AddDataGridView(GPUGrid, GPUdata);
+			AddDataGridView(RAMGrid, Ramdata);
+			AddDataGridView(MotherboardGrid, Mobodata);
+			AddDataGridView(StorageGrid, Storagedata);
+			AddDataGridView(CoolerGrid, Coolerdata);
+			AddDataGridView(PSUGrid, PSUdata);
+			AddDataGridView(CaseGrid, Casedata);			
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
 		~MyForm()
 		{
 			if (components)
@@ -206,9 +212,7 @@ namespace Project12 {
 
 
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
+		
 		System::ComponentModel::Container^ components;
 
 ///////////////////////////////////////////////////////////////////
@@ -231,6 +235,27 @@ namespace Project12 {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->button23 = (gcnew System::Windows::Forms::Button());
+			this->CaseGrid = (gcnew System::Windows::Forms::DataGridView());
+			this->Column48 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column49 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column50 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column51 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column52 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column53 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->button13 = (gcnew System::Windows::Forms::Button());
+			this->PSUGrid = (gcnew System::Windows::Forms::DataGridView());
+			this->Column41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column46 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column47 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->button22 = (gcnew System::Windows::Forms::Button());
@@ -253,27 +278,6 @@ namespace Project12 {
 			this->Column31 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->PSUGrid = (gcnew System::Windows::Forms::DataGridView());
-			this->Column41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column46 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column47 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->panel9 = (gcnew System::Windows::Forms::Panel());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button23 = (gcnew System::Windows::Forms::Button());
-			this->CaseGrid = (gcnew System::Windows::Forms::DataGridView());
-			this->Column48 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column49 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column50 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column51 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column52 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column53 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->MotherBoardPanel = (gcnew System::Windows::Forms::Panel());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->button20 = (gcnew System::Windows::Forms::Button());
@@ -328,14 +332,14 @@ namespace Project12 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
+			this->panel9->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CaseGrid))->BeginInit();
+			this->panel8->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PSUGrid))->BeginInit();
 			this->panel7->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CoolerGrid))->BeginInit();
 			this->panel6->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->StorageGrid))->BeginInit();
-			this->panel8->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PSUGrid))->BeginInit();
-			this->panel9->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CaseGrid))->BeginInit();
 			this->MotherBoardPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MotherboardGrid))->BeginInit();
 			this->panel5->SuspendLayout();
@@ -351,7 +355,7 @@ namespace Project12 {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(394, 68);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(171, 16);
+			this->label1->Size = System::Drawing::Size(180, 17);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Welcome to PC Part Picker!";
 			// 
@@ -431,7 +435,7 @@ namespace Project12 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(406, 40);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(141, 16);
+			this->label2->Size = System::Drawing::Size(150, 17);
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Choose your Pre-Build";
 			// 
@@ -462,6 +466,194 @@ namespace Project12 {
 			this->panel2->TabIndex = 4;
 			this->panel2->Visible = false;
 			// 
+			// panel9
+			// 
+			this->panel9->Controls->Add(this->label10);
+			this->panel9->Controls->Add(this->button23);
+			this->panel9->Controls->Add(this->CaseGrid);
+			this->panel9->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel9->Location = System::Drawing::Point(0, 0);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(978, 549);
+			this->panel9->TabIndex = 18;
+			this->panel9->Visible = false;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(425, 18);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(40, 17);
+			this->label10->TabIndex = 2;
+			this->label10->Text = L"Case";
+			// 
+			// button23
+			// 
+			this->button23->Location = System::Drawing::Point(12, 5);
+			this->button23->Name = L"button23";
+			this->button23->Size = System::Drawing::Size(93, 31);
+			this->button23->TabIndex = 1;
+			this->button23->Text = L"Go Back";
+			this->button23->UseVisualStyleBackColor = true;
+			this->button23->Click += gcnew System::EventHandler(this, &MyForm::button23_Click);
+			// 
+			// CaseGrid
+			// 
+			this->CaseGrid->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->CaseGrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->CaseGrid->BackgroundColor = System::Drawing::Color::Indigo;
+			this->CaseGrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->CaseGrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->Column48, this->Column49,
+					this->Column50, this->Column51, this->Column52, this->Column53
+			});
+			this->CaseGrid->Location = System::Drawing::Point(1, 42);
+			this->CaseGrid->Name = L"CaseGrid";
+			this->CaseGrid->RowHeadersWidth = 51;
+			this->CaseGrid->RowTemplate->Height = 24;
+			this->CaseGrid->Size = System::Drawing::Size(1000, 400);
+			this->CaseGrid->TabIndex = 0;
+			this->CaseGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::CaseGrid_CellContentClick);
+			// 
+			// Column48
+			// 
+			this->Column48->HeaderText = L"Name";
+			this->Column48->MinimumWidth = 6;
+			this->Column48->Name = L"Column48";
+			this->Column48->ReadOnly = true;
+			// 
+			// Column49
+			// 
+			this->Column49->HeaderText = L"Price";
+			this->Column49->MinimumWidth = 6;
+			this->Column49->Name = L"Column49";
+			this->Column49->ReadOnly = true;
+			// 
+			// Column50
+			// 
+			this->Column50->HeaderText = L"Size";
+			this->Column50->MinimumWidth = 6;
+			this->Column50->Name = L"Column50";
+			this->Column50->ReadOnly = true;
+			// 
+			// Column51
+			// 
+			this->Column51->HeaderText = L"Colour";
+			this->Column51->MinimumWidth = 6;
+			this->Column51->Name = L"Column51";
+			this->Column51->ReadOnly = true;
+			// 
+			// Column52
+			// 
+			this->Column52->HeaderText = L"Panel";
+			this->Column52->MinimumWidth = 6;
+			this->Column52->Name = L"Column52";
+			this->Column52->ReadOnly = true;
+			// 
+			// Column53
+			// 
+			this->Column53->HeaderText = L"Volume";
+			this->Column53->MinimumWidth = 6;
+			this->Column53->Name = L"Column53";
+			this->Column53->ReadOnly = true;
+			// 
+			// panel8
+			// 
+			this->panel8->Controls->Add(this->label11);
+			this->panel8->Controls->Add(this->button13);
+			this->panel8->Controls->Add(this->PSUGrid);
+			this->panel8->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel8->Location = System::Drawing::Point(0, 0);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(978, 549);
+			this->panel8->TabIndex = 17;
+			this->panel8->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(406, 20);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(36, 17);
+			this->label11->TabIndex = 2;
+			this->label11->Text = L"PSU";
+			// 
+			// button13
+			// 
+			this->button13->Location = System::Drawing::Point(15, 15);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(109, 26);
+			this->button13->TabIndex = 1;
+			this->button13->Text = L"Go Back";
+			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
+			// 
+			// PSUGrid
+			// 
+			this->PSUGrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->PSUGrid->BackgroundColor = System::Drawing::Color::MediumSlateBlue;
+			this->PSUGrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->PSUGrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Column41, this->Column42,
+					this->Column43, this->Column44, this->Column45, this->Column46, this->Column47
+			});
+			this->PSUGrid->Location = System::Drawing::Point(0, 47);
+			this->PSUGrid->Name = L"PSUGrid";
+			this->PSUGrid->RowHeadersWidth = 51;
+			this->PSUGrid->RowTemplate->Height = 24;
+			this->PSUGrid->Size = System::Drawing::Size(1000, 400);
+			this->PSUGrid->TabIndex = 0;
+			// 
+			// Column41
+			// 
+			this->Column41->HeaderText = L"Name";
+			this->Column41->MinimumWidth = 6;
+			this->Column41->Name = L"Column41";
+			this->Column41->ReadOnly = true;
+			// 
+			// Column42
+			// 
+			this->Column42->HeaderText = L"Price";
+			this->Column42->MinimumWidth = 6;
+			this->Column42->Name = L"Column42";
+			this->Column42->ReadOnly = true;
+			// 
+			// Column43
+			// 
+			this->Column43->HeaderText = L"Size";
+			this->Column43->MinimumWidth = 6;
+			this->Column43->Name = L"Column43";
+			this->Column43->ReadOnly = true;
+			// 
+			// Column44
+			// 
+			this->Column44->HeaderText = L"Rating";
+			this->Column44->MinimumWidth = 6;
+			this->Column44->Name = L"Column44";
+			this->Column44->ReadOnly = true;
+			// 
+			// Column45
+			// 
+			this->Column45->HeaderText = L"Wattage";
+			this->Column45->MinimumWidth = 6;
+			this->Column45->Name = L"Column45";
+			this->Column45->ReadOnly = true;
+			// 
+			// Column46
+			// 
+			this->Column46->HeaderText = L"Modular";
+			this->Column46->MinimumWidth = 6;
+			this->Column46->Name = L"Column46";
+			this->Column46->ReadOnly = true;
+			// 
+			// Column47
+			// 
+			this->Column47->HeaderText = L"Colour";
+			this->Column47->MinimumWidth = 6;
+			this->Column47->Name = L"Column47";
+			this->Column47->ReadOnly = true;
+			// 
 			// panel7
 			// 
 			this->panel7->Controls->Add(this->label7);
@@ -479,7 +671,7 @@ namespace Project12 {
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(446, 20);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(47, 16);
+			this->label7->Size = System::Drawing::Size(49, 17);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Cooler";
 			// 
@@ -575,7 +767,7 @@ namespace Project12 {
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(435, 17);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(55, 16);
+			this->label5->Size = System::Drawing::Size(58, 17);
 			this->label5->TabIndex = 2;
 			this->label5->Text = L"Storage";
 			// 
@@ -661,193 +853,6 @@ namespace Project12 {
 			this->Column33->Name = L"Column33";
 			this->Column33->ReadOnly = true;
 			// 
-			// panel8
-			// 
-			this->panel8->Controls->Add(this->label11);
-			this->panel8->Controls->Add(this->button13);
-			this->panel8->Controls->Add(this->PSUGrid);
-			this->panel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel8->Location = System::Drawing::Point(0, 0);
-			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(978, 549);
-			this->panel8->TabIndex = 17;
-			this->panel8->Visible = false;
-			// 
-			// label11
-			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(406, 20);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(35, 16);
-			this->label11->TabIndex = 2;
-			this->label11->Text = L"PSU";
-			// 
-			// button13
-			// 
-			this->button13->Location = System::Drawing::Point(15, 15);
-			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(109, 26);
-			this->button13->TabIndex = 1;
-			this->button13->Text = L"Go Back";
-			this->button13->UseVisualStyleBackColor = true;
-			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
-			// 
-			// PSUGrid
-			// 
-			this->PSUGrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->PSUGrid->BackgroundColor = System::Drawing::Color::MediumSlateBlue;
-			this->PSUGrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->PSUGrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
-				this->Column41, this->Column42,
-					this->Column43, this->Column44, this->Column45, this->Column46, this->Column47
-			});
-			this->PSUGrid->Location = System::Drawing::Point(0, 47);
-			this->PSUGrid->Name = L"PSUGrid";
-			this->PSUGrid->RowHeadersWidth = 51;
-			this->PSUGrid->RowTemplate->Height = 24;
-			this->PSUGrid->Size = System::Drawing::Size(1000, 400);
-			this->PSUGrid->TabIndex = 0;
-			// 
-			// Column41
-			// 
-			this->Column41->HeaderText = L"Name";
-			this->Column41->MinimumWidth = 6;
-			this->Column41->Name = L"Column41";
-			this->Column41->ReadOnly = true;
-			// 
-			// Column42
-			// 
-			this->Column42->HeaderText = L"Price";
-			this->Column42->MinimumWidth = 6;
-			this->Column42->Name = L"Column42";
-			this->Column42->ReadOnly = true;
-			// 
-			// Column43
-			// 
-			this->Column43->HeaderText = L"Size";
-			this->Column43->MinimumWidth = 6;
-			this->Column43->Name = L"Column43";
-			this->Column43->ReadOnly = true;
-			// 
-			// Column44
-			// 
-			this->Column44->HeaderText = L"Rating";
-			this->Column44->MinimumWidth = 6;
-			this->Column44->Name = L"Column44";
-			this->Column44->ReadOnly = true;
-			// 
-			// Column45
-			// 
-			this->Column45->HeaderText = L"Wattage";
-			this->Column45->MinimumWidth = 6;
-			this->Column45->Name = L"Column45";
-			this->Column45->ReadOnly = true;
-			// 
-			// Column46
-			// 
-			this->Column46->HeaderText = L"Modular";
-			this->Column46->MinimumWidth = 6;
-			this->Column46->Name = L"Column46";
-			this->Column46->ReadOnly = true;
-			// 
-			// Column47
-			// 
-			this->Column47->HeaderText = L"Colour";
-			this->Column47->MinimumWidth = 6;
-			this->Column47->Name = L"Column47";
-			this->Column47->ReadOnly = true;
-			// 
-			// panel9
-			// 
-			this->panel9->Controls->Add(this->label10);
-			this->panel9->Controls->Add(this->button23);
-			this->panel9->Controls->Add(this->CaseGrid);
-			this->panel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel9->Location = System::Drawing::Point(0, 0);
-			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(978, 549);
-			this->panel9->TabIndex = 18;
-			this->panel9->Visible = false;
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(425, 18);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(39, 16);
-			this->label10->TabIndex = 2;
-			this->label10->Text = L"Case";
-			// 
-			// button23
-			// 
-			this->button23->Location = System::Drawing::Point(12, 5);
-			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(93, 31);
-			this->button23->TabIndex = 1;
-			this->button23->Text = L"Go Back";
-			this->button23->UseVisualStyleBackColor = true;
-			this->button23->Click += gcnew System::EventHandler(this, &MyForm::button23_Click);
-			// 
-			// CaseGrid
-			// 
-			this->CaseGrid->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->CaseGrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->CaseGrid->BackgroundColor = System::Drawing::Color::Indigo;
-			this->CaseGrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->CaseGrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
-				this->Column48, this->Column49,
-					this->Column50, this->Column51, this->Column52, this->Column53
-			});
-			this->CaseGrid->Location = System::Drawing::Point(1, 42);
-			this->CaseGrid->Name = L"CaseGrid";
-			this->CaseGrid->RowHeadersWidth = 51;
-			this->CaseGrid->RowTemplate->Height = 24;
-			this->CaseGrid->Size = System::Drawing::Size(1000, 400);
-			this->CaseGrid->TabIndex = 0;
-			// 
-			// Column48
-			// 
-			this->Column48->HeaderText = L"Name";
-			this->Column48->MinimumWidth = 6;
-			this->Column48->Name = L"Column48";
-			this->Column48->ReadOnly = true;
-			// 
-			// Column49
-			// 
-			this->Column49->HeaderText = L"Price";
-			this->Column49->MinimumWidth = 6;
-			this->Column49->Name = L"Column49";
-			this->Column49->ReadOnly = true;
-			// 
-			// Column50
-			// 
-			this->Column50->HeaderText = L"Size";
-			this->Column50->MinimumWidth = 6;
-			this->Column50->Name = L"Column50";
-			this->Column50->ReadOnly = true;
-			// 
-			// Column51
-			// 
-			this->Column51->HeaderText = L"Colour";
-			this->Column51->MinimumWidth = 6;
-			this->Column51->Name = L"Column51";
-			this->Column51->ReadOnly = true;
-			// 
-			// Column52
-			// 
-			this->Column52->HeaderText = L"Panel";
-			this->Column52->MinimumWidth = 6;
-			this->Column52->Name = L"Column52";
-			this->Column52->ReadOnly = true;
-			// 
-			// Column53
-			// 
-			this->Column53->HeaderText = L"Volume";
-			this->Column53->MinimumWidth = 6;
-			this->Column53->Name = L"Column53";
-			this->Column53->ReadOnly = true;
-			// 
 			// MotherBoardPanel
 			// 
 			this->MotherBoardPanel->Controls->Add(this->label9);
@@ -865,7 +870,7 @@ namespace Project12 {
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(406, 20);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(84, 16);
+			this->label9->Size = System::Drawing::Size(89, 17);
 			this->label9->TabIndex = 2;
 			this->label9->Text = L"Motherboard";
 			// 
@@ -963,7 +968,7 @@ namespace Project12 {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(441, 18);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(37, 16);
+			this->label4->Size = System::Drawing::Size(38, 17);
 			this->label4->TabIndex = 2;
 			this->label4->Text = L"RAM";
 			// 
@@ -1118,7 +1123,7 @@ namespace Project12 {
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(437, 17);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(36, 16);
+			this->label8->Size = System::Drawing::Size(38, 17);
 			this->label8->TabIndex = 2;
 			this->label8->Text = L"GPU";
 			// 
@@ -1139,7 +1144,7 @@ namespace Project12 {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(437, 19);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(35, 16);
+			this->label6->Size = System::Drawing::Size(36, 17);
 			this->label6->TabIndex = 2;
 			this->label6->Text = L"CPU";
 			// 
@@ -1309,7 +1314,7 @@ namespace Project12 {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(436, 26);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(75, 16);
+			this->label3->Size = System::Drawing::Size(82, 17);
 			this->label3->TabIndex = 0;
 			this->label3->Text = L"PC Part List";
 			// 
@@ -1331,18 +1336,18 @@ namespace Project12 {
 			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
+			this->panel9->ResumeLayout(false);
+			this->panel9->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CaseGrid))->EndInit();
+			this->panel8->ResumeLayout(false);
+			this->panel8->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PSUGrid))->EndInit();
 			this->panel7->ResumeLayout(false);
 			this->panel7->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CoolerGrid))->EndInit();
 			this->panel6->ResumeLayout(false);
 			this->panel6->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->StorageGrid))->EndInit();
-			this->panel8->ResumeLayout(false);
-			this->panel8->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PSUGrid))->EndInit();
-			this->panel9->ResumeLayout(false);
-			this->panel9->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CaseGrid))->EndInit();
 			this->MotherBoardPanel->ResumeLayout(false);
 			this->MotherBoardPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MotherboardGrid))->EndInit();
@@ -1357,6 +1362,7 @@ namespace Project12 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CPUGrid))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1382,7 +1388,7 @@ namespace Project12 {
 		panel3->Hide();
 	}
 
-	private:System::Void PopulateDataGridView(DataGridView^ dataGridView1, std::vector<std::vector<std::string>>Data)
+	private:System::Void AddDataGridView(DataGridView^ dataGridView1, std::vector<std::vector<std::string>>Data)
 	{
 		
 		// Clear existing rows if necessary
@@ -1406,7 +1412,7 @@ namespace Project12 {
 			dataGridView1->Rows->Add(row);
 		}
 
-		// Add data to DataGridView horizontally
+		
 	}
 
 
@@ -1464,6 +1470,8 @@ namespace Project12 {
 	private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
 		panel9->Hide();
 	}
-	};
+	private: System::Void CaseGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+};
 
 }

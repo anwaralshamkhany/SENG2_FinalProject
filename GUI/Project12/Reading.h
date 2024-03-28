@@ -225,6 +225,19 @@ void ReadCase(std::vector<std::vector<std::string>>& Casedata,std::vector<Case>C
     }
 }
 
+void CreatePresets(vector<Computer>computers,vector<CPU>cpus,vector<Motherboard>mobo,vector<Cooler>cooler,vector<GPU>gpu,vector<Storage>storage,vector<Ram>ram,vector<Case>cases,vector<PSU>psu)
+{
+    
+   Computer Gaming2();
+   Computer Gaming3();
+   Computer Office1(cpus[44], mobo[0], cooler[23], ram[8], storage[14], gpu[14], cases[8], psu[0]);
+   computers.push_back(Office1);
+   Computer Editing2();
+   Computer Editing3();
+   Computer Office2();
+   Computer Office3();
+    
+}
 
 
 #endif
