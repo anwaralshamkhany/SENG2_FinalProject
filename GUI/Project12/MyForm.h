@@ -45,7 +45,15 @@ namespace Project12 {
 	std::vector<Case>cases;
 	std::vector<Computer>Computers;
 	
-	
+	//Selected Components
+	CPU selectedCPU;
+	GPU selectedGPU;
+	Ram selectedRAM;
+	Motherboard selectedMobo;
+	Cooler selectedCooler;
+	PSU selectedPSU;
+	Storage selectedStorage;
+	Case selectedCase;
 
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -73,6 +81,7 @@ namespace Project12 {
 			AddDataGridView(CoolerGrid, Coolerdata);
 			AddDataGridView(PSUGrid, PSUdata);
 			AddDataGridView(CaseGrid, Casedata);			
+
 
 			
 			
@@ -255,7 +264,25 @@ private: System::Windows::Forms::Label^ label15;
 
 private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::PictureBox^ pictureBox2;
-private: System::Windows::Forms::Panel^ panel11;
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label25;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::PictureBox^ pictureBox3;
+private: System::Windows::Forms::TabPage^ tabPage13;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::TabPage^ tabPage14;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::TabPage^ tabPage15;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Button^ button25;
+private: System::Windows::Forms::Button^ button26;
+private: System::Windows::Forms::Button^ button27;
+
+
 
 
 
@@ -288,6 +315,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->button16 = (gcnew System::Windows::Forms::Button());
 			this->button15 = (gcnew System::Windows::Forms::Button());
 			this->button14 = (gcnew System::Windows::Forms::Button());
@@ -422,11 +450,27 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->panel11 = (gcnew System::Windows::Forms::Panel());
+			this->tabPage13 = (gcnew System::Windows::Forms::TabPage());
+			this->button25 = (gcnew System::Windows::Forms::Button());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->tabPage14 = (gcnew System::Windows::Forms::TabPage());
+			this->button26 = (gcnew System::Windows::Forms::Button());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->tabPage15 = (gcnew System::Windows::Forms::TabPage());
+			this->button27 = (gcnew System::Windows::Forms::Button());
+			this->label32 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->cartPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CartGrid))->BeginInit();
 			this->panel9->SuspendLayout();
@@ -463,7 +507,11 @@ private: System::Windows::Forms::Panel^ panel11;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
 			this->splitContainer1->Panel1->SuspendLayout();
+			this->splitContainer1->Panel2->SuspendLayout();
 			this->splitContainer1->SuspendLayout();
+			this->tabPage13->SuspendLayout();
+			this->tabPage14->SuspendLayout();
+			this->tabPage15->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -534,6 +582,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			// button5
 			// 
+			this->button5->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button5->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button5->Location = System::Drawing::Point(376, 219);
@@ -541,10 +590,12 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->button5->Size = System::Drawing::Size(178, 69);
 			this->button5->TabIndex = 3;
 			this->button5->Text = L"Editing";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button4->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button4->Location = System::Drawing::Point(376, 319);
@@ -552,10 +603,12 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->button4->Size = System::Drawing::Size(178, 72);
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"Office";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button3->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->Location = System::Drawing::Point(376, 112);
@@ -563,14 +616,15 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->button3->Size = System::Drawing::Size(178, 68);
 			this->button3->TabIndex = 1;
 			this->button3->Text = L"Gaming";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(304, 46);
+			this->label2->Location = System::Drawing::Point(289, 53);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(353, 34);
 			this->label2->TabIndex = 0;
@@ -591,6 +645,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->groupBox1->BackColor = System::Drawing::SystemColors::Control;
 			this->groupBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->groupBox1->Controls->Add(this->pictureBox3);
 			this->groupBox1->Controls->Add(this->button16);
 			this->groupBox1->Controls->Add(this->button15);
 			this->groupBox1->Controls->Add(this->button14);
@@ -608,6 +663,17 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->groupBox1->Size = System::Drawing::Size(679, 503);
 			this->groupBox1->TabIndex = 11;
 			this->groupBox1->TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(455, 286);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(176, 167);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox3->TabIndex = 11;
+			this->pictureBox3->TabStop = false;
 			// 
 			// button16
 			// 
@@ -673,7 +739,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->button10->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button10->Location = System::Drawing::Point(249, 88);
+			this->button10->Location = System::Drawing::Point(32, 194);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(150, 60);
 			this->button10->TabIndex = 4;
@@ -685,7 +751,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->button9->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button9->Location = System::Drawing::Point(32, 308);
+			this->button9->Location = System::Drawing::Point(249, 88);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(150, 60);
 			this->button9->TabIndex = 3;
@@ -697,7 +763,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->button8->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button8->Location = System::Drawing::Point(32, 194);
+			this->button8->Location = System::Drawing::Point(32, 308);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(150, 60);
 			this->button8->TabIndex = 2;
@@ -746,11 +812,11 @@ private: System::Windows::Forms::Panel^ panel11;
 			// button24
 			// 
 			this->button24->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button24->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button24->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button24->Location = System::Drawing::Point(395, 10);
+			this->button24->Location = System::Drawing::Point(366, 7);
 			this->button24->Name = L"button24";
-			this->button24->Size = System::Drawing::Size(147, 32);
+			this->button24->Size = System::Drawing::Size(168, 42);
 			this->button24->TabIndex = 4;
 			this->button24->Text = L"CONFIRM";
 			this->button24->UseVisualStyleBackColor = false;
@@ -1699,6 +1765,9 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabControl1->Controls->Add(this->tabPage10);
 			this->tabControl1->Controls->Add(this->tabPage11);
 			this->tabControl1->Controls->Add(this->tabPage12);
+			this->tabControl1->Controls->Add(this->tabPage13);
+			this->tabControl1->Controls->Add(this->tabPage14);
+			this->tabControl1->Controls->Add(this->tabPage15);
 			this->tabControl1->Location = System::Drawing::Point(-2, 10);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
@@ -1899,7 +1968,19 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->splitContainer1->Panel1->Controls->Add(this->label20);
 			this->splitContainer1->Panel1->Controls->Add(this->label18);
 			this->splitContainer1->Panel1->Controls->Add(this->label19);
-			this->splitContainer1->Panel1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->splitContainer1->Panel1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			// 
+			// splitContainer1.Panel2
+			// 
+			this->splitContainer1->Panel2->Controls->Add(this->label29);
+			this->splitContainer1->Panel2->Controls->Add(this->label28);
+			this->splitContainer1->Panel2->Controls->Add(this->label27);
+			this->splitContainer1->Panel2->Controls->Add(this->label26);
+			this->splitContainer1->Panel2->Controls->Add(this->label25);
+			this->splitContainer1->Panel2->Controls->Add(this->label24);
+			this->splitContainer1->Panel2->Controls->Add(this->label23);
+			this->splitContainer1->Panel2->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->splitContainer1->Size = System::Drawing::Size(614, 348);
 			this->splitContainer1->SplitterDistance = 204;
@@ -1910,7 +1991,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label22->AutoSize = true;
 			this->label22->Location = System::Drawing::Point(11, 298);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(71, 26);
+			this->label22->Size = System::Drawing::Size(76, 26);
 			this->label22->TabIndex = 7;
 			this->label22->Text = L"Case:";
 			// 
@@ -1919,7 +2000,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label15->AutoSize = true;
 			this->label15->Location = System::Drawing::Point(11, 9);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(58, 26);
+			this->label15->Size = System::Drawing::Size(62, 26);
 			this->label15->TabIndex = 1;
 			this->label15->Text = L"CPU:";
 			// 
@@ -1939,7 +2020,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label17->AutoSize = true;
 			this->label17->Location = System::Drawing::Point(11, 56);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(173, 26);
+			this->label17->Size = System::Drawing::Size(185, 26);
 			this->label17->TabIndex = 2;
 			this->label17->Text = L"MotherBoard:";
 			// 
@@ -1948,7 +2029,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label20->AutoSize = true;
 			this->label20->Location = System::Drawing::Point(11, 201);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(114, 26);
+			this->label20->Size = System::Drawing::Size(122, 26);
 			this->label20->TabIndex = 5;
 			this->label20->Text = L"Storage:";
 			// 
@@ -1957,7 +2038,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label18->AutoSize = true;
 			this->label18->Location = System::Drawing::Point(11, 101);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(62, 26);
+			this->label18->Size = System::Drawing::Size(66, 26);
 			this->label18->TabIndex = 3;
 			this->label18->Text = L"GPU:";
 			// 
@@ -1966,9 +2047,72 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label19->AutoSize = true;
 			this->label19->Location = System::Drawing::Point(11, 152);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(65, 26);
+			this->label19->Size = System::Drawing::Size(69, 26);
 			this->label19->TabIndex = 4;
 			this->label19->Text = L"RAM:";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(12, 298);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(107, 26);
+			this->label29->TabIndex = 6;
+			this->label29->Text = L"label29";
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(12, 250);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(107, 26);
+			this->label28->TabIndex = 5;
+			this->label28->Text = L"label28";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(12, 201);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(107, 26);
+			this->label27->TabIndex = 4;
+			this->label27->Text = L"label27";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(12, 152);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(107, 26);
+			this->label26->TabIndex = 3;
+			this->label26->Text = L"label26";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(12, 101);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(107, 26);
+			this->label25->TabIndex = 2;
+			this->label25->Text = L"label25";
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(12, 56);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(107, 26);
+			this->label24->TabIndex = 1;
+			this->label24->Text = L"label24";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(12, 9);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(107, 26);
+			this->label23->TabIndex = 0;
+			this->label23->Text = L"label23";
 			// 
 			// label14
 			// 
@@ -1981,12 +2125,110 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label14->TabIndex = 0;
 			this->label14->Text = L"Your build";
 			// 
-			// panel11
+			// tabPage13
 			// 
-			this->panel11->Location = System::Drawing::Point(-15, 2);
-			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(1010, 47);
-			this->panel11->TabIndex = 4;
+			this->tabPage13->Controls->Add(this->button25);
+			this->tabPage13->Controls->Add(this->label30);
+			this->tabPage13->Location = System::Drawing::Point(4, 28);
+			this->tabPage13->Name = L"tabPage13";
+			this->tabPage13->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage13->Size = System::Drawing::Size(980, 581);
+			this->tabPage13->TabIndex = 12;
+			this->tabPage13->Text = L"tabPage13";
+			this->tabPage13->UseVisualStyleBackColor = true;
+			// 
+			// button25
+			// 
+			this->button25->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button25->Location = System::Drawing::Point(14, 19);
+			this->button25->Name = L"button25";
+			this->button25->Size = System::Drawing::Size(178, 65);
+			this->button25->TabIndex = 5;
+			this->button25->Text = L"Go Back";
+			this->button25->UseVisualStyleBackColor = true;
+			this->button25->Click += gcnew System::EventHandler(this, &MyForm::button25_Click);
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label30->Location = System::Drawing::Point(298, 28);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(359, 37);
+			this->label30->TabIndex = 0;
+			this->label30->Text = L"gaming pre-builds";
+			// 
+			// tabPage14
+			// 
+			this->tabPage14->Controls->Add(this->button26);
+			this->tabPage14->Controls->Add(this->label31);
+			this->tabPage14->Location = System::Drawing::Point(4, 28);
+			this->tabPage14->Name = L"tabPage14";
+			this->tabPage14->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage14->Size = System::Drawing::Size(980, 581);
+			this->tabPage14->TabIndex = 13;
+			this->tabPage14->Text = L"tabPage14";
+			this->tabPage14->UseVisualStyleBackColor = true;
+			// 
+			// button26
+			// 
+			this->button26->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button26->Location = System::Drawing::Point(6, 12);
+			this->button26->Name = L"button26";
+			this->button26->Size = System::Drawing::Size(178, 65);
+			this->button26->TabIndex = 6;
+			this->button26->Text = L"Go Back";
+			this->button26->UseVisualStyleBackColor = true;
+			this->button26->Click += gcnew System::EventHandler(this, &MyForm::button26_Click);
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label31->Location = System::Drawing::Point(311, 21);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(356, 37);
+			this->label31->TabIndex = 1;
+			this->label31->Text = L"editing pre-builds";
+			// 
+			// tabPage15
+			// 
+			this->tabPage15->Controls->Add(this->button27);
+			this->tabPage15->Controls->Add(this->label32);
+			this->tabPage15->Location = System::Drawing::Point(4, 28);
+			this->tabPage15->Name = L"tabPage15";
+			this->tabPage15->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage15->Size = System::Drawing::Size(980, 581);
+			this->tabPage15->TabIndex = 14;
+			this->tabPage15->Text = L"tabPage15";
+			this->tabPage15->UseVisualStyleBackColor = true;
+			// 
+			// button27
+			// 
+			this->button27->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button27->Location = System::Drawing::Point(6, 10);
+			this->button27->Name = L"button27";
+			this->button27->Size = System::Drawing::Size(178, 65);
+			this->button27->TabIndex = 6;
+			this->button27->Text = L"Go Back";
+			this->button27->UseVisualStyleBackColor = true;
+			this->button27->Click += gcnew System::EventHandler(this, &MyForm::button27_Click);
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label32->Location = System::Drawing::Point(311, 19);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(335, 37);
+			this->label32->TabIndex = 1;
+			this->label32->Text = L"office pre-builds";
 			// 
 			// MyForm
 			// 
@@ -1994,7 +2236,6 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(978, 713);
-			this->Controls->Add(this->panel11);
 			this->Controls->Add(this->cartPanel);
 			this->Controls->Add(this->tabControl1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
@@ -2008,6 +2249,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel2->ResumeLayout(false);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->cartPanel->ResumeLayout(false);
 			this->cartPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->CartGrid))->EndInit();
@@ -2055,8 +2297,16 @@ private: System::Windows::Forms::Panel^ panel11;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->splitContainer1->Panel1->ResumeLayout(false);
 			this->splitContainer1->Panel1->PerformLayout();
+			this->splitContainer1->Panel2->ResumeLayout(false);
+			this->splitContainer1->Panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
 			this->splitContainer1->ResumeLayout(false);
+			this->tabPage13->ResumeLayout(false);
+			this->tabPage13->PerformLayout();
+			this->tabPage14->ResumeLayout(false);
+			this->tabPage14->PerformLayout();
+			this->tabPage15->ResumeLayout(false);
+			this->tabPage15->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2203,6 +2453,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = CaseGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Case Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Case Grid
 			CartGrid->Rows[0]->Cells[7]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			//selectedCase = cases[e->RowIndex]; // Assign selected component to a component object
 		}
 
 	}
@@ -2215,6 +2467,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = CPUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the CPU Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from CPU Grid
 			CartGrid->Rows[0]->Cells[0]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedCPU = CPUs[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2225,6 +2479,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = PSUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the PSU Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from PSU Grid
 			CartGrid->Rows[0]->Cells[6]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedPSU = psu[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2235,6 +2491,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = MotherboardGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Moherboard Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Moherboard Grid
 			CartGrid->Rows[0]->Cells[1]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedMobo = mobo[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2245,6 +2503,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = StorageGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the STorage Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Storage Grid
 			CartGrid->Rows[0]->Cells[4]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedStorage = storage[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2255,6 +2515,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = CoolerGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Cooler Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Cooler Grid
 			CartGrid->Rows[0]->Cells[5]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedCooler = Coolers[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2265,6 +2527,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = RAMGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the RAM Grid
 			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from RAM Grid
 			CartGrid->Rows[0]->Cells[3]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedRAM = ram[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2275,6 +2539,8 @@ private: System::Windows::Forms::Panel^ panel11;
 			DataGridViewCell^ clickedCell = GPUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the GPU Grid
 			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from GPU Grid
 			CartGrid->Rows[0]->Cells[2]->Value = cellValue; // Display the value of the grid in the  Cart
+
+			selectedGPU = gpus[e->RowIndex]; // Assign selected component to a component object
 		}
 	}
 
@@ -2288,17 +2554,42 @@ private: System::Windows::Forms::Panel^ panel11;
 		return true;
 	}
 
-	private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (isCartFull()) {
-			tabControl1->SelectedTab = tabPage12;
+	private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) { 
+		if (isCartFull()) { //Check if all componets selected
+			tabControl1->SelectedTab = tabPage12; //Redirects to final tab
 			cartPanel->Hide();
 		}
-		else {
-			MessageBox::Show("Not all components selected.", "Error", MessageBoxButtons:: OK,  MessageBoxIcon::Error);
+		else { // if not display error message box
+			MessageBox::Show("Not all components selected.", "Error", MessageBoxButtons:: OK,  MessageBoxIcon::Error); 
 
 		}
 
 	}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage13;
+}
+
+
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage14;
+
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabControl1->SelectedTab = tabPage15;
+}
+private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel1->Show();
+	tabControl1->SelectedTab = tabPage11;
+}
+
+private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel1->Show();
+	tabControl1->SelectedTab = tabPage11;
+}
+private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel1->Show();
+	tabControl1->SelectedTab = tabPage11;
+}
 };
 
 }

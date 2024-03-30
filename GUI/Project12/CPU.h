@@ -93,6 +93,7 @@ void CPU::setSocket(const string socket)
 void CPU::Display()
 {
     cout << name << "  Price:$" << price << "  Cores:" << cores << "  Clockspeed:" << clockspeed << "Ghz  Socket:" << socket << "  TDP:" << TDP << "w  Integrated Graphics: " << (graphics ? "Yes" : "No") << endl;
+    
 }
 
-#endif  
+#endif
