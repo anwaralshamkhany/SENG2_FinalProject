@@ -73,6 +73,9 @@ namespace Project12 {
 			AddDataGridView(CoolerGrid, Coolerdata);
 			AddDataGridView(PSUGrid, PSUdata);
 			AddDataGridView(CaseGrid, Casedata);			
+
+			
+			
 		}
 
 	protected:
@@ -127,22 +130,9 @@ namespace Project12 {
 
 	private: System::Windows::Forms::Button^ button20;
 
-
-
-
-
-
-
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Button^ button19;
 	private: System::Windows::Forms::DataGridView^ RAMGrid;
-
-
-
-
-
-
-
 
 	private: System::Windows::Forms::Label^ label4;
 
@@ -152,36 +142,15 @@ namespace Project12 {
 	private: System::Windows::Forms::Panel^ panel6;
 	private: System::Windows::Forms::DataGridView^ StorageGrid;
 
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ button21;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Panel^ panel7;
 	private: System::Windows::Forms::DataGridView^ CoolerGrid;
 
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ button22;
 	private: System::Windows::Forms::Panel^ panel8;
 	private: System::Windows::Forms::DataGridView^ PSUGrid;
-
-
-
-
-
-
-
 
 	private: System::Windows::Forms::Button^ button13;
 	private: System::Windows::Forms::Label^ label7;
@@ -191,119 +160,105 @@ namespace Project12 {
 	private: System::Windows::Forms::Button^ button23;
 	private: System::Windows::Forms::DataGridView^ CaseGrid;
 
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label11;
 
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column21;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column22;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column23;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column24;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column25;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column27;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column20;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column28;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column29;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column30;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column31;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column32;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column33;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column34;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column35;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column36;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column37;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column38;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column39;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column40;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column41;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column42;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column43;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column44;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column45;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column47;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column48;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column49;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column50;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column51;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column52;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column53;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column13;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column15;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column16;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column19;
-private: System::Windows::Forms::DataGridViewButtonColumn^ Column7;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
-private: System::Windows::Forms::Panel^ cartPanel;
-private: System::Windows::Forms::DataGridView^ CartGrid;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column21;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column22;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column23;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column24;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column25;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column26;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column27;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column20;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column28;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column29;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column30;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column31;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column32;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column33;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column34;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column35;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column36;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column37;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column38;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column39;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column40;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column41;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column42;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column43;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column44;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column45;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column46;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column47;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column48;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column49;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column50;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column51;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column52;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column53;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column13;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column15;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column16;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column17;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column18;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column19;
+	private: System::Windows::Forms::DataGridViewButtonColumn^ Column7;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
+	private: System::Windows::Forms::Panel^ cartPanel;
+	private: System::Windows::Forms::DataGridView^ CartGrid;
 
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::TabPage^ tabPage2;
+	private: System::Windows::Forms::TabPage^ tabPage3;
+	private: System::Windows::Forms::TabPage^ tabPage4;
+	private: System::Windows::Forms::TabPage^ tabPage5;
+	private: System::Windows::Forms::TabPage^ tabPage6;
+	private: System::Windows::Forms::TabPage^ tabPage7;
+	private: System::Windows::Forms::TabPage^ tabPage8;
+	private: System::Windows::Forms::TabPage^ tabPage9;
+	private: System::Windows::Forms::TabPage^ tabPage10;
+	private: System::Windows::Forms::TabPage^ tabPage11;
+	private: System::Windows::Forms::Panel^ panel10;
+	private: System::Windows::Forms::Button^ button18;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column54;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column55;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column56;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column57;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column58;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column59;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column60;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column61;
 
+	private: System::Windows::Forms::Button^ button24;
+private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::TabPage^ tabPage12;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::SplitContainer^ splitContainer1;
+private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::Label^ label20;
+private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Label^ label15;
 
-
-
-
-
-
-
-
-
-private: System::Windows::Forms::TextBox^ textBox1;
-private: System::Windows::Forms::Label^ label12;
-private: System::Windows::Forms::TabControl^ tabControl1;
-private: System::Windows::Forms::TabPage^ tabPage1;
-private: System::Windows::Forms::TabPage^ tabPage2;
-private: System::Windows::Forms::TabPage^ tabPage3;
-private: System::Windows::Forms::TabPage^ tabPage4;
-private: System::Windows::Forms::TabPage^ tabPage5;
-private: System::Windows::Forms::TabPage^ tabPage6;
-private: System::Windows::Forms::TabPage^ tabPage7;
-private: System::Windows::Forms::TabPage^ tabPage8;
-private: System::Windows::Forms::TabPage^ tabPage9;
-private: System::Windows::Forms::TabPage^ tabPage10;
-private: System::Windows::Forms::TabPage^ tabPage11;
-private: System::Windows::Forms::Panel^ panel10;
-private: System::Windows::Forms::Button^ button18;
-private: System::Windows::Forms::GroupBox^ groupBox1;
-private: System::Windows::Forms::Label^ label13;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column54;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column55;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column56;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column57;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column58;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column59;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column60;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column61;
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::Panel^ panel11;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	protected:
 
 
@@ -311,9 +266,9 @@ private: System::Windows::Forms::Panel^ panel11;
 		
 		System::ComponentModel::Container^ components;
 
-///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 ///////////CODE GENERATED AUTOMATICALLY BY WINFORMS////////////////
-///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 #pragma region Windows Form Designer generated code
 		/// <summary>
 		/// Required method for Designer support - do not modify
@@ -344,10 +299,19 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->cartPanel = (gcnew System::Windows::Forms::Panel());
+			this->button24 = (gcnew System::Windows::Forms::Button());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->CartGrid = (gcnew System::Windows::Forms::DataGridView());
+			this->Column54 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column55 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column56 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column57 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column58 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column59 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column60 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column61 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->button23 = (gcnew System::Windows::Forms::Button());
@@ -436,6 +400,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
@@ -446,14 +411,18 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabPage9 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage10 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage11 = (gcnew System::Windows::Forms::TabPage());
-			this->Column54 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column55 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column56 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column57 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column58 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column59 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column60 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column61 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->tabPage12 = (gcnew System::Windows::Forms::TabPage());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->splitContainer1 = (gcnew System::Windows::Forms::SplitContainer());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
@@ -479,6 +448,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->panel10->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
@@ -489,6 +459,11 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabPage9->SuspendLayout();
 			this->tabPage10->SuspendLayout();
 			this->tabPage11->SuspendLayout();
+			this->tabPage12->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->BeginInit();
+			this->splitContainer1->Panel1->SuspendLayout();
+			this->splitContainer1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -496,17 +471,21 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(130, 77);
+			this->label1->Location = System::Drawing::Point(129, 66);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(700, 52);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Welcome to PC Part Picker!";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// button1
 			// 
+			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::DimGray;
 			this->button1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(372, 177);
+			this->button1->Location = System::Drawing::Point(138, 183);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(192, 72);
 			this->button1->TabIndex = 1;
@@ -518,7 +497,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(348, 283);
+			this->button2->Location = System::Drawing::Point(138, 315);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(244, 71);
 			this->button2->TabIndex = 2;
@@ -528,6 +507,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			// panel1
 			// 
+			this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			this->panel1->Controls->Add(this->button6);
 			this->panel1->Controls->Add(this->button5);
 			this->panel1->Controls->Add(this->button4);
@@ -536,7 +516,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(3, 3);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(974, 578);
+			this->panel1->Size = System::Drawing::Size(974, 575);
 			this->panel1->TabIndex = 3;
 			this->panel1->Visible = false;
 			// 
@@ -598,17 +578,18 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			// panel2
 			// 
-			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel2->BackColor = System::Drawing::SystemColors::Control;
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel2->Location = System::Drawing::Point(3, 3);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(974, 578);
+			this->panel2->Size = System::Drawing::Size(974, 575);
 			this->panel2->TabIndex = 4;
 			this->panel2->Visible = false;
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::SystemColors::Control;
 			this->groupBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->groupBox1->Controls->Add(this->button16);
 			this->groupBox1->Controls->Add(this->button15);
@@ -620,6 +601,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->groupBox1->Controls->Add(this->button8);
 			this->groupBox1->Controls->Add(this->button7);
 			this->groupBox1->Controls->Add(this->label3);
+			this->groupBox1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->groupBox1->Location = System::Drawing::Point(140, 29);
 			this->groupBox1->Name = L"groupBox1";
@@ -749,6 +731,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// cartPanel
 			// 
 			this->cartPanel->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->cartPanel->Controls->Add(this->button24);
 			this->cartPanel->Controls->Add(this->label13);
 			this->cartPanel->Controls->Add(this->textBox1);
 			this->cartPanel->Controls->Add(this->label12);
@@ -760,12 +743,25 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->cartPanel->TabIndex = 3;
 			this->cartPanel->Visible = false;
 			// 
+			// button24
+			// 
+			this->button24->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button24->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button24->Location = System::Drawing::Point(395, 10);
+			this->button24->Name = L"button24";
+			this->button24->Size = System::Drawing::Size(147, 32);
+			this->button24->TabIndex = 4;
+			this->button24->Text = L"CONFIRM";
+			this->button24->UseVisualStyleBackColor = false;
+			this->button24->Click += gcnew System::EventHandler(this, &MyForm::button24_Click);
+			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label13->Location = System::Drawing::Point(580, 11);
+			this->label13->Location = System::Drawing::Point(608, 13);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(77, 26);
 			this->label13->TabIndex = 3;
@@ -813,6 +809,63 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->CartGrid->TabIndex = 0;
 			this->CartGrid->TabStop = false;
 			// 
+			// Column54
+			// 
+			this->Column54->HeaderText = L"CPU";
+			this->Column54->MinimumWidth = 6;
+			this->Column54->Name = L"Column54";
+			this->Column54->ReadOnly = true;
+			this->Column54->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			// 
+			// Column55
+			// 
+			this->Column55->HeaderText = L"Motherboard";
+			this->Column55->MinimumWidth = 6;
+			this->Column55->Name = L"Column55";
+			this->Column55->ReadOnly = true;
+			// 
+			// Column56
+			// 
+			this->Column56->HeaderText = L"GPU";
+			this->Column56->MinimumWidth = 6;
+			this->Column56->Name = L"Column56";
+			this->Column56->ReadOnly = true;
+			// 
+			// Column57
+			// 
+			this->Column57->HeaderText = L"RAM";
+			this->Column57->MinimumWidth = 6;
+			this->Column57->Name = L"Column57";
+			this->Column57->ReadOnly = true;
+			// 
+			// Column58
+			// 
+			this->Column58->HeaderText = L"Storage";
+			this->Column58->MinimumWidth = 6;
+			this->Column58->Name = L"Column58";
+			this->Column58->ReadOnly = true;
+			// 
+			// Column59
+			// 
+			this->Column59->HeaderText = L"Cooler";
+			this->Column59->MinimumWidth = 6;
+			this->Column59->Name = L"Column59";
+			this->Column59->ReadOnly = true;
+			// 
+			// Column60
+			// 
+			this->Column60->HeaderText = L"PSU";
+			this->Column60->MinimumWidth = 6;
+			this->Column60->Name = L"Column60";
+			this->Column60->ReadOnly = true;
+			// 
+			// Column61
+			// 
+			this->Column61->HeaderText = L"Case";
+			this->Column61->MinimumWidth = 6;
+			this->Column61->Name = L"Column61";
+			this->Column61->ReadOnly = true;
+			// 
 			// panel9
 			// 
 			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
@@ -822,7 +875,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel9->Location = System::Drawing::Point(3, 3);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(974, 578);
+			this->panel9->Size = System::Drawing::Size(974, 575);
 			this->panel9->TabIndex = 18;
 			this->panel9->Visible = false;
 			// 
@@ -921,7 +974,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel8->Location = System::Drawing::Point(3, 3);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(977, 578);
+			this->panel8->Size = System::Drawing::Size(974, 575);
 			this->panel8->TabIndex = 17;
 			this->panel8->Visible = false;
 			// 
@@ -1025,7 +1078,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel7->Location = System::Drawing::Point(3, 3);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(974, 578);
+			this->panel7->Size = System::Drawing::Size(974, 575);
 			this->panel7->TabIndex = 16;
 			this->panel7->Visible = false;
 			// 
@@ -1129,7 +1182,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel6->Location = System::Drawing::Point(3, 3);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(974, 578);
+			this->panel6->Size = System::Drawing::Size(974, 575);
 			this->panel6->TabIndex = 15;
 			this->panel6->Visible = false;
 			// 
@@ -1240,7 +1293,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->MotherBoardPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->MotherBoardPanel->Location = System::Drawing::Point(3, 3);
 			this->MotherBoardPanel->Name = L"MotherBoardPanel";
-			this->MotherBoardPanel->Size = System::Drawing::Size(974, 578);
+			this->MotherBoardPanel->Size = System::Drawing::Size(974, 575);
 			this->MotherBoardPanel->TabIndex = 13;
 			this->MotherBoardPanel->Visible = false;
 			// 
@@ -1346,7 +1399,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel5->Location = System::Drawing::Point(3, 3);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(974, 578);
+			this->panel5->Size = System::Drawing::Size(974, 575);
 			this->panel5->TabIndex = 14;
 			this->panel5->Visible = false;
 			// 
@@ -1445,7 +1498,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel4->Location = System::Drawing::Point(0, 0);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(980, 584);
+			this->panel4->Size = System::Drawing::Size(980, 581);
 			this->panel4->TabIndex = 12;
 			this->panel4->Visible = false;
 			// 
@@ -1540,7 +1593,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel3->Location = System::Drawing::Point(0, 0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(980, 584);
+			this->panel3->Size = System::Drawing::Size(980, 581);
 			this->panel3->TabIndex = 11;
 			this->panel3->Visible = false;
 			// 
@@ -1633,6 +1686,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			// 
 			this->tabControl1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->tabControl1->Appearance = System::Windows::Forms::TabAppearance::FlatButtons;
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Controls->Add(this->tabPage3);
@@ -1644,6 +1698,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabControl1->Controls->Add(this->tabPage9);
 			this->tabControl1->Controls->Add(this->tabPage10);
 			this->tabControl1->Controls->Add(this->tabPage11);
+			this->tabControl1->Controls->Add(this->tabPage12);
 			this->tabControl1->Location = System::Drawing::Point(-2, 10);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
@@ -1653,32 +1708,44 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->panel10);
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
+			this->tabPage1->Location = System::Drawing::Point(4, 28);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(983, 584);
+			this->tabPage1->Size = System::Drawing::Size(980, 581);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"tabPage1";
 			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
 			// panel10
 			// 
+			this->panel10->Controls->Add(this->pictureBox1);
 			this->panel10->Controls->Add(this->button1);
 			this->panel10->Controls->Add(this->button2);
 			this->panel10->Controls->Add(this->label1);
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel10->Location = System::Drawing::Point(3, 3);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(977, 578);
+			this->panel10->Size = System::Drawing::Size(974, 575);
 			this->panel10->TabIndex = 4;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(531, 156);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(288, 230);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 3;
+			this->pictureBox1->TabStop = false;
 			// 
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->panel2);
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Location = System::Drawing::Point(4, 28);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(980, 584);
+			this->tabPage2->Size = System::Drawing::Size(980, 581);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -1686,9 +1753,9 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->panel3);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Location = System::Drawing::Point(4, 28);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(980, 584);
+			this->tabPage3->Size = System::Drawing::Size(980, 581);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"tabPage3";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -1696,9 +1763,9 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage4
 			// 
 			this->tabPage4->Controls->Add(this->panel4);
-			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Location = System::Drawing::Point(4, 28);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(980, 584);
+			this->tabPage4->Size = System::Drawing::Size(980, 581);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"tabPage4";
 			this->tabPage4->UseVisualStyleBackColor = true;
@@ -1706,10 +1773,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage5
 			// 
 			this->tabPage5->Controls->Add(this->panel5);
-			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Location = System::Drawing::Point(4, 28);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage5->Size = System::Drawing::Size(980, 584);
+			this->tabPage5->Size = System::Drawing::Size(980, 581);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"tabPage5";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -1717,10 +1784,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage6
 			// 
 			this->tabPage6->Controls->Add(this->MotherBoardPanel);
-			this->tabPage6->Location = System::Drawing::Point(4, 25);
+			this->tabPage6->Location = System::Drawing::Point(4, 28);
 			this->tabPage6->Name = L"tabPage6";
 			this->tabPage6->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage6->Size = System::Drawing::Size(980, 584);
+			this->tabPage6->Size = System::Drawing::Size(980, 581);
 			this->tabPage6->TabIndex = 5;
 			this->tabPage6->Text = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
@@ -1728,10 +1795,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage7
 			// 
 			this->tabPage7->Controls->Add(this->panel6);
-			this->tabPage7->Location = System::Drawing::Point(4, 25);
+			this->tabPage7->Location = System::Drawing::Point(4, 28);
 			this->tabPage7->Name = L"tabPage7";
 			this->tabPage7->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage7->Size = System::Drawing::Size(980, 584);
+			this->tabPage7->Size = System::Drawing::Size(980, 581);
 			this->tabPage7->TabIndex = 6;
 			this->tabPage7->Text = L"tabPage7";
 			this->tabPage7->UseVisualStyleBackColor = true;
@@ -1739,10 +1806,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage8
 			// 
 			this->tabPage8->Controls->Add(this->panel7);
-			this->tabPage8->Location = System::Drawing::Point(4, 25);
+			this->tabPage8->Location = System::Drawing::Point(4, 28);
 			this->tabPage8->Name = L"tabPage8";
 			this->tabPage8->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage8->Size = System::Drawing::Size(980, 584);
+			this->tabPage8->Size = System::Drawing::Size(980, 581);
 			this->tabPage8->TabIndex = 7;
 			this->tabPage8->Text = L"tabPage8";
 			this->tabPage8->UseVisualStyleBackColor = true;
@@ -1750,10 +1817,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage9
 			// 
 			this->tabPage9->Controls->Add(this->panel8);
-			this->tabPage9->Location = System::Drawing::Point(4, 25);
+			this->tabPage9->Location = System::Drawing::Point(4, 28);
 			this->tabPage9->Name = L"tabPage9";
 			this->tabPage9->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage9->Size = System::Drawing::Size(983, 584);
+			this->tabPage9->Size = System::Drawing::Size(980, 581);
 			this->tabPage9->TabIndex = 8;
 			this->tabPage9->Text = L"tabPage9";
 			this->tabPage9->UseVisualStyleBackColor = true;
@@ -1761,10 +1828,10 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage10
 			// 
 			this->tabPage10->Controls->Add(this->panel9);
-			this->tabPage10->Location = System::Drawing::Point(4, 25);
+			this->tabPage10->Location = System::Drawing::Point(4, 28);
 			this->tabPage10->Name = L"tabPage10";
 			this->tabPage10->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage10->Size = System::Drawing::Size(980, 584);
+			this->tabPage10->Size = System::Drawing::Size(980, 581);
 			this->tabPage10->TabIndex = 9;
 			this->tabPage10->Text = L"tabPage10";
 			this->tabPage10->UseVisualStyleBackColor = true;
@@ -1772,83 +1839,160 @@ private: System::Windows::Forms::Panel^ panel11;
 			// tabPage11
 			// 
 			this->tabPage11->Controls->Add(this->panel1);
-			this->tabPage11->Location = System::Drawing::Point(4, 25);
+			this->tabPage11->Location = System::Drawing::Point(4, 28);
 			this->tabPage11->Name = L"tabPage11";
 			this->tabPage11->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage11->Size = System::Drawing::Size(980, 584);
+			this->tabPage11->Size = System::Drawing::Size(980, 581);
 			this->tabPage11->TabIndex = 10;
 			this->tabPage11->Text = L"tabPage11";
 			this->tabPage11->UseVisualStyleBackColor = true;
 			// 
-			// Column54
+			// tabPage12
 			// 
-			this->Column54->HeaderText = L"CPU";
-			this->Column54->MinimumWidth = 6;
-			this->Column54->Name = L"Column54";
-			this->Column54->ReadOnly = true;
-			this->Column54->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->tabPage12->Controls->Add(this->pictureBox2);
+			this->tabPage12->Controls->Add(this->label16);
+			this->tabPage12->Controls->Add(this->splitContainer1);
+			this->tabPage12->Controls->Add(this->label14);
+			this->tabPage12->Location = System::Drawing::Point(4, 28);
+			this->tabPage12->Name = L"tabPage12";
+			this->tabPage12->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage12->Size = System::Drawing::Size(980, 581);
+			this->tabPage12->TabIndex = 11;
+			this->tabPage12->Text = L"tabPage12";
+			this->tabPage12->UseVisualStyleBackColor = true;
 			// 
-			// Column55
+			// pictureBox2
 			// 
-			this->Column55->HeaderText = L"Motherboard";
-			this->Column55->MinimumWidth = 6;
-			this->Column55->Name = L"Column55";
-			this->Column55->ReadOnly = true;
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(663, 143);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(288, 230);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox2->TabIndex = 4;
+			this->pictureBox2->TabStop = false;
 			// 
-			// Column56
+			// label16
 			// 
-			this->Column56->HeaderText = L"GPU";
-			this->Column56->MinimumWidth = 6;
-			this->Column56->Name = L"Column56";
-			this->Column56->ReadOnly = true;
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label16->Location = System::Drawing::Point(37, 480);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(118, 34);
+			this->label16->TabIndex = 3;
+			this->label16->Text = L"Total: ";
 			// 
-			// Column57
+			// splitContainer1
 			// 
-			this->Column57->HeaderText = L"RAM";
-			this->Column57->MinimumWidth = 6;
-			this->Column57->Name = L"Column57";
-			this->Column57->ReadOnly = true;
+			this->splitContainer1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->splitContainer1->Location = System::Drawing::Point(30, 97);
+			this->splitContainer1->Name = L"splitContainer1";
 			// 
-			// Column58
+			// splitContainer1.Panel1
 			// 
-			this->Column58->HeaderText = L"Storage";
-			this->Column58->MinimumWidth = 6;
-			this->Column58->Name = L"Column58";
-			this->Column58->ReadOnly = true;
+			this->splitContainer1->Panel1->Controls->Add(this->label22);
+			this->splitContainer1->Panel1->Controls->Add(this->label15);
+			this->splitContainer1->Panel1->Controls->Add(this->label21);
+			this->splitContainer1->Panel1->Controls->Add(this->label17);
+			this->splitContainer1->Panel1->Controls->Add(this->label20);
+			this->splitContainer1->Panel1->Controls->Add(this->label18);
+			this->splitContainer1->Panel1->Controls->Add(this->label19);
+			this->splitContainer1->Panel1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->splitContainer1->Size = System::Drawing::Size(614, 348);
+			this->splitContainer1->SplitterDistance = 204;
+			this->splitContainer1->TabIndex = 2;
 			// 
-			// Column59
+			// label22
 			// 
-			this->Column59->HeaderText = L"Cooler";
-			this->Column59->MinimumWidth = 6;
-			this->Column59->Name = L"Column59";
-			this->Column59->ReadOnly = true;
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(11, 298);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(71, 26);
+			this->label22->TabIndex = 7;
+			this->label22->Text = L"Case:";
 			// 
-			// Column60
+			// label15
 			// 
-			this->Column60->HeaderText = L"PSU";
-			this->Column60->MinimumWidth = 6;
-			this->Column60->Name = L"Column60";
-			this->Column60->ReadOnly = true;
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(11, 9);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(58, 26);
+			this->label15->TabIndex = 1;
+			this->label15->Text = L"CPU:";
 			// 
-			// Column61
+			// label21
 			// 
-			this->Column61->HeaderText = L"Case";
-			this->Column61->MinimumWidth = 6;
-			this->Column61->Name = L"Column61";
-			this->Column61->ReadOnly = true;
+			this->label21->AutoSize = true;
+			this->label21->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label21->Location = System::Drawing::Point(11, 250);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(97, 26);
+			this->label21->TabIndex = 6;
+			this->label21->Text = L"Cooler:";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(11, 56);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(173, 26);
+			this->label17->TabIndex = 2;
+			this->label17->Text = L"MotherBoard:";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(11, 201);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(114, 26);
+			this->label20->TabIndex = 5;
+			this->label20->Text = L"Storage:";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(11, 101);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(62, 26);
+			this->label18->TabIndex = 3;
+			this->label18->Text = L"GPU:";
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(11, 152);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(65, 26);
+			this->label19->TabIndex = 4;
+			this->label19->Text = L"RAM:";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label14->Location = System::Drawing::Point(39, 34);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(224, 41);
+			this->label14->TabIndex = 0;
+			this->label14->Text = L"Your build";
 			// 
 			// panel11
 			// 
-			this->panel11->Location = System::Drawing::Point(2, 0);
+			this->panel11->Location = System::Drawing::Point(-15, 2);
 			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(975, 40);
+			this->panel11->Size = System::Drawing::Size(1010, 47);
 			this->panel11->TabIndex = 4;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(978, 713);
 			this->Controls->Add(this->panel11);
 			this->Controls->Add(this->cartPanel);
@@ -1895,6 +2039,7 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabPage1->ResumeLayout(false);
 			this->panel10->ResumeLayout(false);
 			this->panel10->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage4->ResumeLayout(false);
@@ -1905,6 +2050,13 @@ private: System::Windows::Forms::Panel^ panel11;
 			this->tabPage9->ResumeLayout(false);
 			this->tabPage10->ResumeLayout(false);
 			this->tabPage11->ResumeLayout(false);
+			this->tabPage12->ResumeLayout(false);
+			this->tabPage12->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			this->splitContainer1->Panel1->ResumeLayout(false);
+			this->splitContainer1->Panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->splitContainer1))->EndInit();
+			this->splitContainer1->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -1949,7 +2101,7 @@ private: System::Windows::Forms::Panel^ panel11;
 		// Clear existing rows if necessary
 		dataGridView1->Rows->Clear();
 
-		// Iterate over each vector<string> in vector
+		// Iterate over each vector
 		for (int i = 0; i < Data.size(); i++)
 		{
 			// Create a new DataGridViewRow for each entry in vector
@@ -2040,59 +2192,59 @@ private: System::Windows::Forms::Panel^ panel11;
 		tabControl1->SelectedTab = tabPage2;
 	}
 
-	///////////////////////////////////////////////////////////////////////////////////////
-    ////////////////// FUNCTIONS FOR CLICKING BUTTONS ON GRIDS/////////////
-	///////////////////////////////////////////////////////////////////////////////////////
+										///////////////////////////////////////////////////////////////////////////////////////
+										////////////////// FUNCTIONS FOR CLICKING BUTTONS ON GRIDS/////////////
+										///////////////////////////////////////////////////////////////////////////////////////
 
 	private: System::Void CaseGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) // check if valid cell was clicked
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = CaseGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Case Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Case Grid
-			CartGrid->Rows[0]->Cells[7]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Case Grid
+			CartGrid->Rows[0]->Cells[7]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 
 	}
 
 	
 	private: System::Void CPUGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		if (e->RowIndex >= 0 && e->ColumnIndex >= 0)
+		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) // check if valid cell was clicked
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = CPUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the CPU Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from CPU Grid
-			CartGrid->Rows[0]->Cells[0]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from CPU Grid
+			CartGrid->Rows[0]->Cells[0]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
 	private: System::Void PSUGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		if (e->RowIndex >= 0 && e->ColumnIndex >= 0)
+		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) // check if valid cell was clicked
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = PSUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the PSU Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from PSU Grid
-			CartGrid->Rows[0]->Cells[6]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from PSU Grid
+			CartGrid->Rows[0]->Cells[6]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
 	private: System::Void MotherboardGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		if (e->RowIndex >= 0 && e->ColumnIndex >= 0)
+		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) // check if valid cell was clicked
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = MotherboardGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Moherboard Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Moherboard Grid
-			CartGrid->Rows[0]->Cells[1]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Moherboard Grid
+			CartGrid->Rows[0]->Cells[1]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
 	private: System::Void StorageGrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-		if (e->RowIndex >= 0 && e->ColumnIndex >= 0)
+		if (e->RowIndex >= 0 && e->ColumnIndex >= 0) // check if valid cell was clicked
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = StorageGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the STorage Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Storage Grid
-			CartGrid->Rows[0]->Cells[4]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Storage Grid
+			CartGrid->Rows[0]->Cells[4]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
@@ -2101,8 +2253,8 @@ private: System::Windows::Forms::Panel^ panel11;
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = CoolerGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the Cooler Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Cooler Grid
-			CartGrid->Rows[0]->Cells[5]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from Cooler Grid
+			CartGrid->Rows[0]->Cells[5]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
@@ -2111,8 +2263,8 @@ private: System::Windows::Forms::Panel^ panel11;
 		{
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = RAMGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the RAM Grid
-			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from RAM Grid
-			CartGrid->Rows[0]->Cells[3]->Value = cellValue;
+			Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from RAM Grid
+			CartGrid->Rows[0]->Cells[3]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
@@ -2122,17 +2274,31 @@ private: System::Windows::Forms::Panel^ panel11;
 			cartPanel->Show();
 			DataGridViewCell^ clickedCell = GPUGrid->Rows[e->RowIndex]->Cells[e->ColumnIndex];  // Defining clicked cell on the GPU Grid
 			System::Object^ cellValue = clickedCell->Value;  // Obtaining value of the cell from GPU Grid
-			CartGrid->Rows[0]->Cells[2]->Value = cellValue;
+			CartGrid->Rows[0]->Cells[2]->Value = cellValue; // Display the value of the grid in the  Cart
 		}
 	}
 
+	private: System::Boolean isCartFull() { // Check if user added all components to cart 
+		for (int i = 0; i < CartGrid->ColumnCount; i++) {
+			Object^ cellValue = CartGrid->Rows[0]->Cells[i] -> Value;
+			if (cellValue == nullptr || cellValue->ToString() == " ") {
+				return false;
+			}
+		}
+		return true;
+	}
 
-	
+	private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (isCartFull()) {
+			tabControl1->SelectedTab = tabPage12;
+			cartPanel->Hide();
+		}
+		else {
+			MessageBox::Show("Not all components selected.", "Error", MessageBoxButtons:: OK,  MessageBoxIcon::Error);
 
+		}
 
-
-
-
+	}
 };
 
 }
