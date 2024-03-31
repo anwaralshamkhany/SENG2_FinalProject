@@ -30,8 +30,8 @@ vector<string> split(const string& s, char delimiter)
     return tokens;
 }
 
-void ReadCPU(std::vector<vector<string>>& CPUdata,std::vector<CPU>& CPUs)
-{    
+void ReadCPU(std::vector<vector<string>>& CPUdata, std::vector<CPU>& CPUs)
+{
     // Open the CSV file
     ifstream cpuf("CPU.csv");
     if (!cpuf.is_open())
@@ -40,7 +40,7 @@ void ReadCPU(std::vector<vector<string>>& CPUdata,std::vector<CPU>& CPUs)
     }
     else
     {
-        std::cout<<"CPU.csv is open"<<endl;
+        std::cout << "CPU.csv is open" << endl;
     }
     // Vectors to store data for each column
     std::string line;
@@ -61,7 +61,7 @@ void ReadCPU(std::vector<vector<string>>& CPUdata,std::vector<CPU>& CPUs)
     }
 }
 
-void ReadCooler(std::vector<std::vector<std::string>>& Coolerdata,std::vector<Cooler>& Coolers)
+void ReadCooler(std::vector<std::vector<std::string>>& Coolerdata, std::vector<Cooler>& Coolers)
 {
     // Open the CSV file    
     ifstream coolerf("Cooler.csv");
@@ -85,7 +85,7 @@ void ReadCooler(std::vector<std::vector<std::string>>& Coolerdata,std::vector<Co
     }
 }
 
-void ReadMobo(std::vector<std::vector<std::string>>&Mobodata,std::vector<Motherboard>&Mobo)
+void ReadMobo(std::vector<std::vector<std::string>>& Mobodata, std::vector<Motherboard>& Mobo)
 {
     // Open the CSV file
     ifstream mobof("Motherboard.csv");
@@ -109,7 +109,7 @@ void ReadMobo(std::vector<std::vector<std::string>>&Mobodata,std::vector<Motherb
     }
 }
 
-void ReadRam(std::vector<std::vector<std::string>>& Ramdata,std::vector<Ram>&ram)
+void ReadRam(std::vector<std::vector<std::string>>& Ramdata, std::vector<Ram>& ram)
 {
     // Open the CSV file
     ifstream ramf("Ram.csv");
@@ -132,7 +132,7 @@ void ReadRam(std::vector<std::vector<std::string>>& Ramdata,std::vector<Ram>&ram
     }
 }
 
-void ReadStorage(std::vector<std::vector<std::string>>&Storagedata,std::vector<Storage>&storage)
+void ReadStorage(std::vector<std::vector<std::string>>& Storagedata, std::vector<Storage>& storage)
 {
     // Open the CSV file
     ifstream Storagef("HardDrive.csv");
@@ -156,7 +156,7 @@ void ReadStorage(std::vector<std::vector<std::string>>&Storagedata,std::vector<S
     }
 }
 
-void ReadPSU(std::vector<std::vector<std::string>>&PSUdata,std::vector<PSU>& psus)
+void ReadPSU(std::vector<std::vector<std::string>>& PSUdata, std::vector<PSU>& psus)
 {
     // Open the CSV file
     ifstream PSUf("Power Supply.csv");
@@ -179,7 +179,7 @@ void ReadPSU(std::vector<std::vector<std::string>>&PSUdata,std::vector<PSU>& psu
     }
 }
 
-void ReadGPU(std::vector<std::vector<std::string>>& GPUdata,std::vector<GPU>&gpus )
+void ReadGPU(std::vector<std::vector<std::string>>& GPUdata, std::vector<GPU>& gpus)
 {
     // Open the CSV file
     ifstream GPUf("GPU.csv");
@@ -203,7 +203,7 @@ void ReadGPU(std::vector<std::vector<std::string>>& GPUdata,std::vector<GPU>&gpu
     }
 }
 
-void ReadCase(std::vector<std::vector<std::string>>& Casedata,std::vector<Case>Cases)
+void ReadCase(std::vector<std::vector<std::string>>& Casedata, std::vector<Case>Cases)
 {
     // Open the CSV file
     ifstream Casef("Case.csv");

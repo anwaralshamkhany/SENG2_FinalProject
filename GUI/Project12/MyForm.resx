@@ -1471,48 +1471,6 @@
         R7m/QuVDbwMGDHiNip/8HlX82n8K6PHx8UFUPoKm0fw/PsxdgoiCrgAAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Column54.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column55.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column56.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column57.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column58.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column59.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column60.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column61.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
@@ -3989,6 +3947,106 @@
         8+a9eTsQ+lALF65whStc4QpXuB3lHnvssTd1J6Fj/e3CCy+83cKFK1zhCle4whVuRzlWuReEXrjC7Uqu
         R4//D12GekWbT7nWAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>CPU: 
+Intel Core i7-12700K	
+
+Motherboard: 
+MSI PRO Z790-A MAX WIFI
+
+GPU: 
+EVGA FTW3 ULTRA GAMING
+
+RAM: 
+Corsair Vengeance 32 GB
+
+Storage:
+Samsung 980 Pro
+
+Cooler: 
+Corsair iCUE H100i RGB ELITE
+
+PSU: 
+MSI MAG A850GL PCIE5
+
+Case: 
+NZXT H7 Flow</value>
+  </data>
+  <data name="label55.Text" xml:space="preserve">
+    <value>CPU: 
+Intel Core i7-12700K	
+
+Motherboard: 
+MSI PRO Z790-A MAX WIFI
+
+GPU: 
+EVGA FTW3 ULTRA GAMING
+
+RAM: 
+Corsair Vengeance 32 GB
+
+Storage:
+Samsung 980 Pro
+
+Cooler: 
+Corsair iCUE H100i RGB ELITE
+
+PSU: 
+MSI MAG A850GL PCIE5
+
+Case: 
+NZXT H7 Flow</value>
+  </data>
+  <data name="label54.Text" xml:space="preserve">
+    <value>cpu:
+AMD Ryzen 9 7950X
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+Sapphire NITRO+ Radeon RX 7800 XT
+
+ram:
+Corsair Vengeance 32 GB
+
+storage:
+Samsung 980 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+PSU:
+Gigabyte UD750GM
+
+case:
+Lian Li O11 Dynamic Mini Snow Edition</value>
+  </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>cpu:
+AMD Ryzen 9 7900X3D
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX
+
+ram:
+Corsair Vengeance 64 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+be quiet! Dark Power 13
+
+case:
+Corsair 5000D AIRFLOW</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6467,9 +6525,6 @@
         R4//D12GekWbT7nWAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAABgYAAABACAAiAkAAL4EAAAgIAAAAQAgAKgQAABGDgAAMDAAAAEA

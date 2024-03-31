@@ -1,3 +1,4 @@
+
 #pragma once
 #ifndef RAM_H
 #define RAM_H
@@ -81,6 +82,10 @@ string Ram::getPPG()
 string Ram::getColor()
 {
 	return color;
+}
+bool Ram::getDDR5()
+{
+	return ddr5;
 }
 //define the mutator functions for the ram class
 void Ram::setSpeed(const string speed)

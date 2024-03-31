@@ -13,7 +13,7 @@ private:
 	//declare the data fields for the PSU class
 	string size;
 	string rating;
-	string wattage;
+	int wattage;
 	string modular;
 	string color;
 
@@ -24,7 +24,7 @@ public:
 	//declare accessor functions for the PSU class
 	string getSize();
 	string getRating();
-	string getWattage();
+	int getWattage();
 	string getModular();
 	string getColor();
 	//declare Mutator functions for the PSU class
@@ -39,7 +39,7 @@ PSU::PSU()
 {
 	this->size = "";
 	this->rating = "";
-	this->wattage = "";
+	this->wattage = 0;
 	this->modular = "";
 	this->color = "";
 }
@@ -63,7 +63,7 @@ string PSU::getRating()
 {
 	return rating;
 }
-string PSU::getWattage()
+int PSU::getWattage()
 {
 	return wattage;
 }
@@ -86,7 +86,7 @@ void PSU::setRating(const string rating)
 }
 void PSU::setWattage(const string wattage)
 {
-	this->wattage = wattage;
+	this->wattage = stoi(wattage);
 }
 void PSU::setModular(const string modular)
 {
