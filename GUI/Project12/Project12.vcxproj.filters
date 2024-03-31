@@ -44,8 +44,4 @@
       <UniqueIdentifier>{2feda6c6-4d9a-4080-a8f8-9ff532cbbbb1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <Font Include="..\..\..\..\..\Documents\dspixelcyr.ttf" />
-    <Font Include="dspixelcyr.ttf" />
-  </ItemGroup>
 </Project>
