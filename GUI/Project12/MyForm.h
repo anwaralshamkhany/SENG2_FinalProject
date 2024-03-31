@@ -353,6 +353,12 @@ private: System::Windows::Forms::Label^ label53;
 private: System::Windows::Forms::Label^ label58;
 private: System::Windows::Forms::Label^ label57;
 private: System::Windows::Forms::Label^ label56;
+private: System::Windows::Forms::Label^ label61;
+private: System::Windows::Forms::Label^ label60;
+private: System::Windows::Forms::Label^ label59;
+private: System::Windows::Forms::Button^ button38;
+private: System::Windows::Forms::Button^ button37;
+private: System::Windows::Forms::Button^ button36;
 
 
 
@@ -598,6 +604,12 @@ private: System::Windows::Forms::Label^ label56;
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->label59 = (gcnew System::Windows::Forms::Label());
+			this->label60 = (gcnew System::Windows::Forms::Label());
+			this->label61 = (gcnew System::Windows::Forms::Label());
+			this->button36 = (gcnew System::Windows::Forms::Button());
+			this->button37 = (gcnew System::Windows::Forms::Button());
+			this->button38 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -678,7 +690,7 @@ private: System::Windows::Forms::Label^ label56;
 			this->button1->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Teal;
 			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Turquoise;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->Location = System::Drawing::Point(138, 183);
@@ -2378,8 +2390,16 @@ private: System::Windows::Forms::Label^ label56;
 			// 
 			// tabPage15
 			// 
+			this->tabPage15->Controls->Add(this->button38);
+			this->tabPage15->Controls->Add(this->button37);
+			this->tabPage15->Controls->Add(this->button36);
+			this->tabPage15->Controls->Add(this->label61);
+			this->tabPage15->Controls->Add(this->label60);
+			this->tabPage15->Controls->Add(this->label59);
 			this->tabPage15->Controls->Add(this->button27);
 			this->tabPage15->Controls->Add(this->label32);
+			this->tabPage15->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->tabPage15->Location = System::Drawing::Point(4, 28);
 			this->tabPage15->Name = L"tabPage15";
 			this->tabPage15->Padding = System::Windows::Forms::Padding(3);
@@ -2990,6 +3010,72 @@ private: System::Windows::Forms::Label^ label56;
 			this->pictureBox2->TabIndex = 4;
 			this->pictureBox2->TabStop = false;
 			// 
+			// label59
+			// 
+			this->label59->Location = System::Drawing::Point(339, 184);
+			this->label59->Name = L"label59";
+			this->label59->Size = System::Drawing::Size(291, 381);
+			this->label59->TabIndex = 15;
+			this->label59->Text = resources->GetString(L"label59.Text");
+			// 
+			// label60
+			// 
+			this->label60->Location = System::Drawing::Point(11, 184);
+			this->label60->Name = L"label60";
+			this->label60->Size = System::Drawing::Size(291, 381);
+			this->label60->TabIndex = 16;
+			this->label60->Text = resources->GetString(L"label60.Text");
+			// 
+			// label61
+			// 
+			this->label61->Location = System::Drawing::Point(673, 184);
+			this->label61->Name = L"label61";
+			this->label61->Size = System::Drawing::Size(291, 381);
+			this->label61->TabIndex = 17;
+			this->label61->Text = resources->GetString(L"label61.Text");
+			// 
+			// button36
+			// 
+			this->button36->BackColor = System::Drawing::Color::SkyBlue;
+			this->button36->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button36->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button36->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->button36->Location = System::Drawing::Point(14, 110);
+			this->button36->Name = L"button36";
+			this->button36->Size = System::Drawing::Size(278, 57);
+			this->button36->TabIndex = 18;
+			this->button36->Text = L"low-budget";
+			this->button36->UseVisualStyleBackColor = false;
+			// 
+			// button37
+			// 
+			this->button37->BackColor = System::Drawing::Color::SkyBlue;
+			this->button37->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button37->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button37->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->button37->Location = System::Drawing::Point(342, 110);
+			this->button37->Name = L"button37";
+			this->button37->Size = System::Drawing::Size(278, 57);
+			this->button37->TabIndex = 19;
+			this->button37->Text = L"low-budget";
+			this->button37->UseVisualStyleBackColor = false;
+			// 
+			// button38
+			// 
+			this->button38->BackColor = System::Drawing::Color::SkyBlue;
+			this->button38->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button38->Font = (gcnew System::Drawing::Font(L"DS Pixel Cyr", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button38->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->button38->Location = System::Drawing::Point(671, 110);
+			this->button38->Name = L"button38";
+			this->button38->Size = System::Drawing::Size(278, 57);
+			this->button38->TabIndex = 20;
+			this->button38->Text = L"low-budget";
+			this->button38->UseVisualStyleBackColor = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -3004,6 +3090,7 @@ private: System::Windows::Forms::Label^ label56;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"PC Part Picker";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);
@@ -3546,6 +3633,8 @@ private: System::Windows::Forms::Label^ label56;
 
 
 	
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 
 

@@ -1471,6 +1471,81 @@
         R7m/QuVDbwMGDHiNip/8HlX82n8K6PHx8UFUPoKm0fw/PsxdgoiCrgAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="label61.Text" xml:space="preserve">
+    <value>cpu:
+AMD Ryzen 9 7900X3D
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX
+
+ram:
+Corsair Vengeance 64 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+be quiet! Dark Power 13
+
+case:
+Corsair 5000D AIRFLOW</value>
+  </data>
+  <data name="label60.Text" xml:space="preserve">
+    <value>cpu:
+AMD Ryzen 9 7900X3D
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX
+
+ram:
+Corsair Vengeance 64 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+be quiet! Dark Power 13
+
+case:
+Corsair 5000D AIRFLOW</value>
+  </data>
+  <data name="label59.Text" xml:space="preserve">
+    <value>cpu:
+AMD Ryzen 9 7900X3D
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+XFX Speedster MERC 310 Black Edition Radeon RX 7900 XTX
+
+ram:
+Corsair Vengeance 64 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+be quiet! Dark Power 13
+
+case:
+Corsair 5000D AIRFLOW</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
