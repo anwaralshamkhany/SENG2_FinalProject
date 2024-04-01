@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-class Cooler :ComputerParts
+class Cooler :public ComputerParts
 {
 private:
 	string RPM;
@@ -15,7 +15,7 @@ private:
 
 public:
 	Cooler();
-	Cooler(const string name, const string price, const string rpm,const string noise,const string color, const string AIO, const string size);
+	Cooler(const string name, const string price, const string rpm, const string noise, const string color, const string AIO, const string size);
 
 	string getRPM();
 	string getNoise();
@@ -27,7 +27,7 @@ public:
 	void setNoise(const string noise);
 	void setColor(const string color);
 	void setAIO(const string AIO);
-	void setSize(const string size);	
+	void setSize(const string size);
 };
 
 Cooler::Cooler()
@@ -40,7 +40,7 @@ Cooler::Cooler()
 	this->size = "";
 	this->price = 0;
 }
-Cooler::Cooler(const string name, const string price, const string RPM,const string noise,const string color, const string AIO, const string size)
+Cooler::Cooler(const string name, const string price, const string RPM, const string noise, const string color, const string AIO, const string size)
 {
 	setName(name);
 	setPrice(price);

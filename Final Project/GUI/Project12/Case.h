@@ -1,10 +1,12 @@
 #pragma once
+#pragma once
 #ifndef CASE_H
 #define CASE_H
 #include "ComputerParts.h"
 #include <iostream>
 #include <string>
 using namespace std;
+
 
 class Case :public ComputerParts
 {

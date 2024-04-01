@@ -1,10 +1,11 @@
+#pragma once
 #ifndef MOTHERBOARD_H
 #define MOTHERBOARD_H
 #include <string>
 #include "ComputerParts.h"
 using namespace std;
 
-class Motherboard:public ComputerParts
+class Motherboard :public ComputerParts
 {
 private:
 	string socket;
@@ -15,7 +16,7 @@ private:
 
 public:
 	Motherboard();
-	Motherboard(const string name, const string price, const string socket, const string form, const string chipset, const string wifi,const string color);
+	Motherboard(const string name, const string price, const string socket, const string form, const string chipset, const string wifi, const string color);
 	string getSocket();
 	string getForm();
 	string getChipset();
@@ -37,7 +38,7 @@ Motherboard::Motherboard()
 	this->wifi = false;
 	this->color = "";
 }
-Motherboard::Motherboard(const string name, const string price, const string socket, const string form, const string chipset, const string wifi,const string color)
+Motherboard::Motherboard(const string name, const string price, const string socket, const string form, const string chipset, const string wifi, const string color)
 {
 	setName(name);
 	setPrice(price);

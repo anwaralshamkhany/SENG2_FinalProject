@@ -1,4 +1,6 @@
 #pragma once
+
+#pragma once
 #ifndef COMPUTERPARTS_H
 #define COMPUTERPARTS_H
 
@@ -29,7 +31,7 @@ ComputerParts::ComputerParts()
 	price = 0;
 }
 
-ComputerParts::ComputerParts(const string name,const string price)
+ComputerParts::ComputerParts(const string name, const string price)
 {
 	setName(name);
 	setPrice(price);
@@ -50,7 +52,7 @@ void ComputerParts::setName(const string name)
 }
 void ComputerParts::setPrice(const string price)
 {
-		this->price = stoi(price);
+	this->price = stoi(price);
 }
 
 void ComputerParts::Display()
