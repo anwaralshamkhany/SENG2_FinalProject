@@ -1,0 +1,23 @@
+cpu:
+Intel Core i5-13400F
+
+motherboard:
+MSI B760 GAMING PLUS WIFI
+
+gpu:
+MSI VENTUS 2X XS OC GeForce RTX 3050
+
+ram:
+Kingston FURY Beast 32 GB
+
+storage:
+Crucial P3 Plus
+
+cooler:
+Noctua NH-U12S chromax.black
+
+psu:
+MSI MAG A650BN
+
+case:
+MagniumGear NEO AIR (2023)

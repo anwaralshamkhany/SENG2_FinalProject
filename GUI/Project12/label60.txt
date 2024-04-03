@@ -1,0 +1,23 @@
+cpu:
+AMD Ryzen 5 8500G
+
+motherboard:
+MSI B650 GAMING PLUS WIFI
+
+gpu:
+ASRock Phantom Gaming D OC Radeon RX 6500 XT
+
+ram:
+Kingston FURY Beast 16 GB
+
+storage:
+Kingston NV2
+
+cooler:
+Cooler Master Hyper 212 RGB Black Edition
+
+psu:
+Apevia Galaxy 650w
+
+case:
+Montech AIR 903 MAX

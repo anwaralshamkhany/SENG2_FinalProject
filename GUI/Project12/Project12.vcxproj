@@ -144,6 +144,23 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="label50.txt" />
+    <Text Include="label51.txt" />
+    <Text Include="label52.txt" />
+    <Text Include="label53.txt" />
+    <Text Include="label54.txt" />
+    <Text Include="label55.txt" />
+    <Text Include="label59.txt" />
+    <Text Include="label60.txt" />
+    <Text Include="label61.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="dspixelcyr.ttf">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Font>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

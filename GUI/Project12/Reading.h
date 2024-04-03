@@ -203,7 +203,7 @@ void ReadGPU(std::vector<std::vector<std::string>>& GPUdata, std::vector<GPU>& g
     }
 }
 
-void ReadCase(std::vector<std::vector<std::string>>& Casedata, std::vector<Case>Cases)
+void ReadCase(std::vector<std::vector<std::string>>& Casedata, std::vector<Case>&Cases)
 {
     // Open the CSV file
     ifstream Casef("Case.csv");

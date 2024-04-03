@@ -1,0 +1,23 @@
+cpu:
+AMD Ryzen 9 7950X3D 
+
+motherboard:
+Gigabyte X670E AORUS PRO X
+
+gpu:
+Zotac Gaming Trinity GeForce RTX 4080 Super
+
+ram:
+G.Skill Trident Z5 RGB 64 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+Corsair HX1500i (2023)
+
+case:
+Lian Li O11 Dynamic EVO

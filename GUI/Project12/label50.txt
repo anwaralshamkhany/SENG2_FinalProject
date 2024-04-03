@@ -1,0 +1,23 @@
+cpu:
+AMD Ryzen 7 7800X3D
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+NVIDIA Founders Edition GeForce RTX 3080 Ti
+
+ram:
+G.Skill Trident Z5 RGB 32 GB
+
+storage:
+Samsung 990 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+psu:
+Corsair RM1000e (2023)
+
+case:
+NZXT H9 Flow

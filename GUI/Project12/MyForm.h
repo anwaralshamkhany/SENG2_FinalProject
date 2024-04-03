@@ -25,7 +25,6 @@ namespace Project12 {
 	using namespace System::Drawing;
 	using namespace System::Collections::Generic;
 
-
 	/////////////////////////////////////////////////////////////////
 	///////////2D VECTORS WITH ALL DATA FOR ALL COMPONENTS///////////
 	/////////////////////////////////////////////////////////////////
@@ -63,7 +62,7 @@ namespace Project12 {
 		MyForm() // MAIN FUNCTION 
 		{
 			InitializeComponent(); //Initializaton and declaration of all GUI elements
-
+			
 
 			ReadCPU(CPUdata, CPUs);
 			ReadGPU(GPUdata, gpus);
@@ -378,7 +377,8 @@ namespace Project12 {
 	private: System::Windows::Forms::Label^ label67;
 	private: System::Windows::Forms::Button^ button39;
 	private: System::Windows::Forms::Label^ label51;
-	private: System::Windows::Forms::Panel^ panel31;
+private: System::Windows::Forms::Panel^ panel31;
+
 
 
 
@@ -527,7 +527,6 @@ namespace Project12 {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
-			this->panel31 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
@@ -642,6 +641,7 @@ namespace Project12 {
 			this->label66 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label65 = (gcnew System::Windows::Forms::Label());
+			this->panel31 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
@@ -711,26 +711,25 @@ namespace Project12 {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(97, 69);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(129, 85);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(516, 44);
+			this->label1->Size = System::Drawing::Size(643, 55);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Welcome to PC Part Picker!";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->button1->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Teal;
 			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Turquoise;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(104, 171);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Location = System::Drawing::Point(130, 210);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(144, 58);
+			this->button1->Size = System::Drawing::Size(253, 93);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Pre-Builds";
 			this->button1->UseVisualStyleBackColor = false;
@@ -738,15 +737,16 @@ namespace Project12 {
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::MediumTurquoise;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(104, 300);
-			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Location = System::Drawing::Point(139, 346);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(183, 58);
+			this->button2->Size = System::Drawing::Size(244, 94);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Make Your Own";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// panel1
@@ -758,10 +758,10 @@ namespace Project12 {
 			this->panel1->Controls->Add(this->button3);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel1->Location = System::Drawing::Point(2, 2);
-			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->Location = System::Drawing::Point(3, 2);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(729, 488);
+			this->panel1->Size = System::Drawing::Size(974, 605);
 			this->panel1->TabIndex = 3;
 			this->panel1->Visible = false;
 			// 
@@ -769,10 +769,10 @@ namespace Project12 {
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button6->Location = System::Drawing::Point(282, 350);
-			this->button6->Margin = System::Windows::Forms::Padding(2);
+			this->button6->Location = System::Drawing::Point(376, 431);
+			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(134, 53);
+			this->button6->Size = System::Drawing::Size(179, 65);
 			this->button6->TabIndex = 4;
 			this->button6->Text = L"Go Back";
 			this->button6->UseVisualStyleBackColor = true;
@@ -780,13 +780,14 @@ namespace Project12 {
 			// 
 			// button5
 			// 
-			this->button5->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->button5->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button5->Location = System::Drawing::Point(282, 178);
-			this->button5->Margin = System::Windows::Forms::Padding(2);
+			this->button5->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button5->Location = System::Drawing::Point(376, 219);
+			this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(134, 56);
+			this->button5->Size = System::Drawing::Size(179, 69);
 			this->button5->TabIndex = 3;
 			this->button5->Text = L"Editing";
 			this->button5->UseVisualStyleBackColor = false;
@@ -794,13 +795,14 @@ namespace Project12 {
 			// 
 			// button4
 			// 
-			this->button4->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->button4->BackColor = System::Drawing::Color::SlateBlue;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(282, 259);
-			this->button4->Margin = System::Windows::Forms::Padding(2);
+			this->button4->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button4->Location = System::Drawing::Point(376, 319);
+			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(134, 58);
+			this->button4->Size = System::Drawing::Size(179, 71);
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"Office";
 			this->button4->UseVisualStyleBackColor = false;
@@ -808,13 +810,14 @@ namespace Project12 {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->button3->BackColor = System::Drawing::Color::MediumTurquoise;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button3->Location = System::Drawing::Point(282, 91);
-			this->button3->Margin = System::Windows::Forms::Padding(2);
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button3->Location = System::Drawing::Point(376, 112);
+			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(134, 55);
+			this->button3->Size = System::Drawing::Size(179, 68);
 			this->button3->TabIndex = 1;
 			this->button3->Text = L"Gaming";
 			this->button3->UseVisualStyleBackColor = false;
@@ -825,10 +828,9 @@ namespace Project12 {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(217, 43);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(289, 53);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(256, 29);
+			this->label2->Size = System::Drawing::Size(317, 36);
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Choose your Pre-Build";
 			// 
@@ -837,10 +839,10 @@ namespace Project12 {
 			this->panel2->BackColor = System::Drawing::SystemColors::Control;
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel2->Location = System::Drawing::Point(2, 2);
-			this->panel2->Margin = System::Windows::Forms::Padding(2);
+			this->panel2->Location = System::Drawing::Point(3, 2);
+			this->panel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(729, 488);
+			this->panel2->Size = System::Drawing::Size(974, 605);
 			this->panel2->TabIndex = 4;
 			this->panel2->Visible = false;
 			// 
@@ -863,11 +865,11 @@ namespace Project12 {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->groupBox1->Location = System::Drawing::Point(105, 24);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox1->Location = System::Drawing::Point(140, 30);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox1->Size = System::Drawing::Size(509, 409);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->groupBox1->Size = System::Drawing::Size(679, 503);
 			this->groupBox1->TabIndex = 11;
 			this->groupBox1->TabStop = false;
 			// 
@@ -875,10 +877,10 @@ namespace Project12 {
 			// 
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(341, 232);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox3->Location = System::Drawing::Point(455, 286);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(132, 136);
+			this->pictureBox3->Size = System::Drawing::Size(176, 167);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 11;
 			this->pictureBox3->TabStop = false;
@@ -887,10 +889,10 @@ namespace Project12 {
 			// 
 			this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button16->Location = System::Drawing::Point(187, 338);
-			this->button16->Margin = System::Windows::Forms::Padding(2);
+			this->button16->Location = System::Drawing::Point(249, 416);
+			this->button16->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(112, 49);
+			this->button16->Size = System::Drawing::Size(149, 60);
 			this->button16->TabIndex = 10;
 			this->button16->Text = L"Go Back";
 			this->button16->UseVisualStyleBackColor = true;
@@ -898,106 +900,119 @@ namespace Project12 {
 			// 
 			// button15
 			// 
+			this->button15->BackColor = System::Drawing::Color::MediumSlateBlue;
 			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button15->Location = System::Drawing::Point(352, 158);
-			this->button15->Margin = System::Windows::Forms::Padding(2);
+			this->button15->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button15->Location = System::Drawing::Point(469, 194);
+			this->button15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(112, 49);
+			this->button15->Size = System::Drawing::Size(149, 60);
 			this->button15->TabIndex = 9;
 			this->button15->Text = L"Case";
-			this->button15->UseVisualStyleBackColor = true;
+			this->button15->UseVisualStyleBackColor = false;
 			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
 			// button14
 			// 
+			this->button14->BackColor = System::Drawing::Color::LightSteelBlue;
 			this->button14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button14->Location = System::Drawing::Point(352, 72);
-			this->button14->Margin = System::Windows::Forms::Padding(2);
+			this->button14->Location = System::Drawing::Point(469, 89);
+			this->button14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(112, 49);
+			this->button14->Size = System::Drawing::Size(149, 60);
 			this->button14->TabIndex = 8;
 			this->button14->Text = L"PSU";
-			this->button14->UseVisualStyleBackColor = true;
+			this->button14->UseVisualStyleBackColor = false;
 			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
 			// 
 			// button12
 			// 
+			this->button12->BackColor = System::Drawing::Color::RoyalBlue;
 			this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button12->Location = System::Drawing::Point(187, 250);
-			this->button12->Margin = System::Windows::Forms::Padding(2);
+			this->button12->ForeColor = System::Drawing::SystemColors::Control;
+			this->button12->Location = System::Drawing::Point(249, 308);
+			this->button12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(112, 49);
+			this->button12->Size = System::Drawing::Size(149, 60);
 			this->button12->TabIndex = 6;
 			this->button12->Text = L"Cooler";
-			this->button12->UseVisualStyleBackColor = true;
+			this->button12->UseVisualStyleBackColor = false;
 			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
 			// 
 			// button11
 			// 
+			this->button11->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button11->Location = System::Drawing::Point(187, 158);
-			this->button11->Margin = System::Windows::Forms::Padding(2);
+			this->button11->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button11->Location = System::Drawing::Point(249, 194);
+			this->button11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(112, 49);
+			this->button11->Size = System::Drawing::Size(149, 60);
 			this->button11->TabIndex = 5;
 			this->button11->Text = L"Storage";
-			this->button11->UseVisualStyleBackColor = true;
+			this->button11->UseVisualStyleBackColor = false;
 			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
 			// 
 			// button10
 			// 
-			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button10->BackColor = System::Drawing::Color::DarkTurquoise;
+			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button10->Location = System::Drawing::Point(24, 158);
-			this->button10->Margin = System::Windows::Forms::Padding(2);
+			this->button10->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->button10->Location = System::Drawing::Point(32, 194);
+			this->button10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(112, 49);
+			this->button10->Size = System::Drawing::Size(149, 60);
 			this->button10->TabIndex = 4;
 			this->button10->Text = L"Motherboard";
-			this->button10->UseVisualStyleBackColor = true;
+			this->button10->UseVisualStyleBackColor = false;
 			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// button9
 			// 
+			this->button9->BackColor = System::Drawing::Color::LightBlue;
 			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button9->Location = System::Drawing::Point(187, 72);
-			this->button9->Margin = System::Windows::Forms::Padding(2);
+			this->button9->Location = System::Drawing::Point(249, 89);
+			this->button9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(112, 49);
+			this->button9->Size = System::Drawing::Size(149, 60);
 			this->button9->TabIndex = 3;
 			this->button9->Text = L"RAM";
-			this->button9->UseVisualStyleBackColor = true;
+			this->button9->UseVisualStyleBackColor = false;
 			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			// 
 			// button8
 			// 
+			this->button8->BackColor = System::Drawing::Color::DarkCyan;
 			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button8->Location = System::Drawing::Point(24, 250);
-			this->button8->Margin = System::Windows::Forms::Padding(2);
+			this->button8->ForeColor = System::Drawing::SystemColors::Control;
+			this->button8->Location = System::Drawing::Point(32, 308);
+			this->button8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(112, 49);
+			this->button8->Size = System::Drawing::Size(149, 60);
 			this->button8->TabIndex = 2;
 			this->button8->Text = L"GPU";
-			this->button8->UseVisualStyleBackColor = true;
+			this->button8->UseVisualStyleBackColor = false;
 			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
 			// button7
 			// 
+			this->button7->BackColor = System::Drawing::Color::PaleTurquoise;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button7->Location = System::Drawing::Point(24, 72);
-			this->button7->Margin = System::Windows::Forms::Padding(2);
+			this->button7->Location = System::Drawing::Point(32, 89);
+			this->button7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(112, 49);
+			this->button7->Size = System::Drawing::Size(149, 60);
 			this->button7->TabIndex = 1;
 			this->button7->Text = L"CPU";
-			this->button7->UseVisualStyleBackColor = true;
+			this->button7->UseVisualStyleBackColor = false;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// label3
@@ -1005,26 +1020,25 @@ namespace Project12 {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(163, 18);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(217, 22);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(150, 29);
+			this->label3->Size = System::Drawing::Size(185, 36);
 			this->label3->TabIndex = 0;
 			this->label3->Text = L"PC Part List";
 			// 
 			// cartPanel
 			// 
-			this->cartPanel->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->cartPanel->BackColor = System::Drawing::Color::MediumTurquoise;
 			this->cartPanel->Controls->Add(this->button24);
 			this->cartPanel->Controls->Add(this->label13);
 			this->cartPanel->Controls->Add(this->textBox1);
 			this->cartPanel->Controls->Add(this->label12);
 			this->cartPanel->Controls->Add(this->CartGrid);
 			this->cartPanel->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->cartPanel->Location = System::Drawing::Point(0, 525);
-			this->cartPanel->Margin = System::Windows::Forms::Padding(2);
+			this->cartPanel->Location = System::Drawing::Point(0, 647);
+			this->cartPanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->cartPanel->Name = L"cartPanel";
-			this->cartPanel->Size = System::Drawing::Size(734, 84);
+			this->cartPanel->Size = System::Drawing::Size(979, 103);
 			this->cartPanel->TabIndex = 3;
 			this->cartPanel->Visible = false;
 			// 
@@ -1033,10 +1047,10 @@ namespace Project12 {
 			this->button24->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button24->Location = System::Drawing::Point(274, 6);
-			this->button24->Margin = System::Windows::Forms::Padding(2);
+			this->button24->Location = System::Drawing::Point(346, 6);
+			this->button24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button24->Name = L"button24";
-			this->button24->Size = System::Drawing::Size(126, 34);
+			this->button24->Size = System::Drawing::Size(244, 42);
 			this->button24->TabIndex = 4;
 			this->button24->Text = L"CONFIRM";
 			this->button24->UseVisualStyleBackColor = false;
@@ -1047,10 +1061,9 @@ namespace Project12 {
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label13->Location = System::Drawing::Point(482, 11);
-			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label13->Location = System::Drawing::Point(643, 14);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(74, 24);
+			this->label13->Size = System::Drawing::Size(97, 29);
 			this->label13->TabIndex = 3;
 			this->label13->Text = L"subtotal";
 			// 
@@ -1058,11 +1071,11 @@ namespace Project12 {
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(598, 9);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Location = System::Drawing::Point(797, 11);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(128, 28);
+			this->textBox1->Size = System::Drawing::Size(169, 34);
 			this->textBox1->TabIndex = 2;
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
@@ -1072,10 +1085,9 @@ namespace Project12 {
 			this->label12->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label12->Location = System::Drawing::Point(8, 9);
-			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label12->Location = System::Drawing::Point(11, 11);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(164, 24);
+			this->label12->Size = System::Drawing::Size(210, 29);
 			this->label12->TabIndex = 1;
 			this->label12->Text = L"Your Current Build";
 			// 
@@ -1091,15 +1103,15 @@ namespace Project12 {
 				this->Column54, this->Column55,
 					this->Column56, this->Column57, this->Column58, this->Column59, this->Column60, this->Column61
 			});
-			this->CartGrid->Location = System::Drawing::Point(-2, 42);
-			this->CartGrid->Margin = System::Windows::Forms::Padding(2);
+			this->CartGrid->Location = System::Drawing::Point(-3, 52);
+			this->CartGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->CartGrid->MultiSelect = false;
 			this->CartGrid->Name = L"CartGrid";
 			this->CartGrid->ReadOnly = true;
 			this->CartGrid->RowHeadersWidth = 51;
 			this->CartGrid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::DisableResizing;
 			this->CartGrid->RowTemplate->Height = 24;
-			this->CartGrid->Size = System::Drawing::Size(735, 109);
+			this->CartGrid->Size = System::Drawing::Size(980, 134);
 			this->CartGrid->TabIndex = 0;
 			this->CartGrid->TabStop = false;
 			// 
@@ -1166,10 +1178,10 @@ namespace Project12 {
 			this->panel9->Controls->Add(this->button23);
 			this->panel9->Controls->Add(this->CaseGrid);
 			this->panel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel9->Location = System::Drawing::Point(2, 2);
-			this->panel9->Margin = System::Windows::Forms::Padding(2);
+			this->panel9->Location = System::Drawing::Point(3, 2);
+			this->panel9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(729, 488);
+			this->panel9->Size = System::Drawing::Size(974, 605);
 			this->panel9->TabIndex = 18;
 			this->panel9->Visible = false;
 			// 
@@ -1178,10 +1190,9 @@ namespace Project12 {
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label10->Location = System::Drawing::Point(338, 8);
-			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label10->Location = System::Drawing::Point(451, 10);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(53, 24);
+			this->label10->Size = System::Drawing::Size(69, 29);
 			this->label10->TabIndex = 2;
 			this->label10->Text = L"Case";
 			// 
@@ -1189,10 +1200,10 @@ namespace Project12 {
 			// 
 			this->button23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button23->Location = System::Drawing::Point(4, 5);
-			this->button23->Margin = System::Windows::Forms::Padding(2);
+			this->button23->Location = System::Drawing::Point(5, 6);
+			this->button23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(112, 30);
+			this->button23->Size = System::Drawing::Size(149, 37);
 			this->button23->TabIndex = 1;
 			this->button23->Text = L"Go Back";
 			this->button23->UseVisualStyleBackColor = true;
@@ -1209,12 +1220,12 @@ namespace Project12 {
 				this->Column48, this->Column49,
 					this->Column50, this->Column51, this->Column52, this->Column53
 			});
-			this->CaseGrid->Location = System::Drawing::Point(0, 41);
-			this->CaseGrid->Margin = System::Windows::Forms::Padding(2);
+			this->CaseGrid->Location = System::Drawing::Point(0, 50);
+			this->CaseGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->CaseGrid->Name = L"CaseGrid";
 			this->CaseGrid->RowHeadersWidth = 51;
 			this->CaseGrid->RowTemplate->Height = 24;
-			this->CaseGrid->Size = System::Drawing::Size(749, 406);
+			this->CaseGrid->Size = System::Drawing::Size(1001, 500);
 			this->CaseGrid->TabIndex = 0;
 			this->CaseGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::CaseGrid_CellContentClick);
 			// 
@@ -1268,10 +1279,10 @@ namespace Project12 {
 			this->panel8->Controls->Add(this->button13);
 			this->panel8->Controls->Add(this->PSUGrid);
 			this->panel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel8->Location = System::Drawing::Point(2, 2);
-			this->panel8->Margin = System::Windows::Forms::Padding(2);
+			this->panel8->Location = System::Drawing::Point(3, 2);
+			this->panel8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(729, 488);
+			this->panel8->Size = System::Drawing::Size(974, 605);
 			this->panel8->TabIndex = 17;
 			this->panel8->Visible = false;
 			// 
@@ -1280,10 +1291,9 @@ namespace Project12 {
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label11->Location = System::Drawing::Point(338, 8);
-			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label11->Location = System::Drawing::Point(451, 10);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(47, 24);
+			this->label11->Size = System::Drawing::Size(62, 29);
 			this->label11->TabIndex = 2;
 			this->label11->Text = L"PSU";
 			// 
@@ -1291,10 +1301,10 @@ namespace Project12 {
 			// 
 			this->button13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button13->Location = System::Drawing::Point(4, 6);
-			this->button13->Margin = System::Windows::Forms::Padding(2);
+			this->button13->Location = System::Drawing::Point(5, 7);
+			this->button13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(112, 30);
+			this->button13->Size = System::Drawing::Size(149, 37);
 			this->button13->TabIndex = 1;
 			this->button13->Text = L"Go Back";
 			this->button13->UseVisualStyleBackColor = true;
@@ -1309,12 +1319,12 @@ namespace Project12 {
 				this->Column41, this->Column42,
 					this->Column43, this->Column44, this->Column45, this->Column46, this->Column47
 			});
-			this->PSUGrid->Location = System::Drawing::Point(0, 41);
-			this->PSUGrid->Margin = System::Windows::Forms::Padding(2);
+			this->PSUGrid->Location = System::Drawing::Point(0, 50);
+			this->PSUGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PSUGrid->Name = L"PSUGrid";
 			this->PSUGrid->RowHeadersWidth = 51;
 			this->PSUGrid->RowTemplate->Height = 24;
-			this->PSUGrid->Size = System::Drawing::Size(750, 406);
+			this->PSUGrid->Size = System::Drawing::Size(1000, 500);
 			this->PSUGrid->TabIndex = 0;
 			this->PSUGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::PSUGrid_CellContentClick);
 			// 
@@ -1375,10 +1385,10 @@ namespace Project12 {
 			this->panel7->Controls->Add(this->button22);
 			this->panel7->Controls->Add(this->CoolerGrid);
 			this->panel7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel7->Location = System::Drawing::Point(2, 2);
-			this->panel7->Margin = System::Windows::Forms::Padding(2);
+			this->panel7->Location = System::Drawing::Point(3, 2);
+			this->panel7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(729, 488);
+			this->panel7->Size = System::Drawing::Size(974, 605);
 			this->panel7->TabIndex = 16;
 			this->panel7->Visible = false;
 			// 
@@ -1387,10 +1397,9 @@ namespace Project12 {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(327, 8);
-			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label7->Location = System::Drawing::Point(436, 10);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(66, 24);
+			this->label7->Size = System::Drawing::Size(86, 29);
 			this->label7->TabIndex = 2;
 			this->label7->Text = L"Cooler";
 			// 
@@ -1398,10 +1407,10 @@ namespace Project12 {
 			// 
 			this->button22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button22->Location = System::Drawing::Point(4, 6);
-			this->button22->Margin = System::Windows::Forms::Padding(2);
+			this->button22->Location = System::Drawing::Point(5, 7);
+			this->button22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button22->Name = L"button22";
-			this->button22->Size = System::Drawing::Size(112, 30);
+			this->button22->Size = System::Drawing::Size(149, 37);
 			this->button22->TabIndex = 1;
 			this->button22->Text = L"Go Back";
 			this->button22->UseVisualStyleBackColor = true;
@@ -1416,12 +1425,12 @@ namespace Project12 {
 				this->Column34,
 					this->Column35, this->Column36, this->Column37, this->Column38, this->Column39, this->Column40
 			});
-			this->CoolerGrid->Location = System::Drawing::Point(0, 41);
-			this->CoolerGrid->Margin = System::Windows::Forms::Padding(2);
+			this->CoolerGrid->Location = System::Drawing::Point(0, 50);
+			this->CoolerGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->CoolerGrid->Name = L"CoolerGrid";
 			this->CoolerGrid->RowHeadersWidth = 51;
 			this->CoolerGrid->RowTemplate->Height = 24;
-			this->CoolerGrid->Size = System::Drawing::Size(750, 406);
+			this->CoolerGrid->Size = System::Drawing::Size(1000, 500);
 			this->CoolerGrid->TabIndex = 0;
 			this->CoolerGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::CoolerGrid_CellContentClick);
 			// 
@@ -1482,10 +1491,10 @@ namespace Project12 {
 			this->panel6->Controls->Add(this->button21);
 			this->panel6->Controls->Add(this->StorageGrid);
 			this->panel6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel6->Location = System::Drawing::Point(2, 2);
-			this->panel6->Margin = System::Windows::Forms::Padding(2);
+			this->panel6->Location = System::Drawing::Point(3, 2);
+			this->panel6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(729, 488);
+			this->panel6->Size = System::Drawing::Size(974, 605);
 			this->panel6->TabIndex = 15;
 			this->panel6->Visible = false;
 			// 
@@ -1494,10 +1503,9 @@ namespace Project12 {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label5->Location = System::Drawing::Point(320, 8);
-			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label5->Location = System::Drawing::Point(427, 10);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(75, 24);
+			this->label5->Size = System::Drawing::Size(98, 29);
 			this->label5->TabIndex = 2;
 			this->label5->Text = L"Storage";
 			// 
@@ -1505,10 +1513,10 @@ namespace Project12 {
 			// 
 			this->button21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button21->Location = System::Drawing::Point(4, 8);
-			this->button21->Margin = System::Windows::Forms::Padding(2);
+			this->button21->Location = System::Drawing::Point(5, 10);
+			this->button21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button21->Name = L"button21";
-			this->button21->Size = System::Drawing::Size(112, 28);
+			this->button21->Size = System::Drawing::Size(149, 34);
 			this->button21->TabIndex = 1;
 			this->button21->Text = L"Go Back";
 			this->button21->UseVisualStyleBackColor = true;
@@ -1530,12 +1538,12 @@ namespace Project12 {
 					this->Column28, this->Column29, this->Column30, this->Column31, this->Column32, this->Column33
 			});
 			this->StorageGrid->EditMode = System::Windows::Forms::DataGridViewEditMode::EditOnEnter;
-			this->StorageGrid->Location = System::Drawing::Point(0, 41);
-			this->StorageGrid->Margin = System::Windows::Forms::Padding(2);
+			this->StorageGrid->Location = System::Drawing::Point(0, 50);
+			this->StorageGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->StorageGrid->Name = L"StorageGrid";
 			this->StorageGrid->RowHeadersWidth = 51;
 			this->StorageGrid->RowTemplate->Height = 24;
-			this->StorageGrid->Size = System::Drawing::Size(749, 406);
+			this->StorageGrid->Size = System::Drawing::Size(1001, 500);
 			this->StorageGrid->TabIndex = 0;
 			this->StorageGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::StorageGrid_CellContentClick);
 			// 
@@ -1596,10 +1604,10 @@ namespace Project12 {
 			this->MotherBoardPanel->Controls->Add(this->button20);
 			this->MotherBoardPanel->Controls->Add(this->MotherboardGrid);
 			this->MotherBoardPanel->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->MotherBoardPanel->Location = System::Drawing::Point(2, 2);
-			this->MotherBoardPanel->Margin = System::Windows::Forms::Padding(2);
+			this->MotherBoardPanel->Location = System::Drawing::Point(3, 2);
+			this->MotherBoardPanel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MotherBoardPanel->Name = L"MotherBoardPanel";
-			this->MotherBoardPanel->Size = System::Drawing::Size(729, 488);
+			this->MotherBoardPanel->Size = System::Drawing::Size(974, 605);
 			this->MotherBoardPanel->TabIndex = 13;
 			this->MotherBoardPanel->Visible = false;
 			// 
@@ -1608,10 +1616,9 @@ namespace Project12 {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label9->Location = System::Drawing::Point(302, 9);
-			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Location = System::Drawing::Point(403, 11);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(118, 24);
+			this->label9->Size = System::Drawing::Size(151, 29);
 			this->label9->TabIndex = 2;
 			this->label9->Text = L"Motherboard";
 			// 
@@ -1619,10 +1626,10 @@ namespace Project12 {
 			// 
 			this->button20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button20->Location = System::Drawing::Point(5, 6);
-			this->button20->Margin = System::Windows::Forms::Padding(2);
+			this->button20->Location = System::Drawing::Point(7, 7);
+			this->button20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(112, 28);
+			this->button20->Size = System::Drawing::Size(149, 34);
 			this->button20->TabIndex = 1;
 			this->button20->Text = L"Go Back";
 			this->button20->UseVisualStyleBackColor = true;
@@ -1639,12 +1646,12 @@ namespace Project12 {
 				this->Column21,
 					this->Column22, this->Column23, this->Column24, this->Column25, this->Column26, this->Column27
 			});
-			this->MotherboardGrid->Location = System::Drawing::Point(0, 41);
-			this->MotherboardGrid->Margin = System::Windows::Forms::Padding(2);
+			this->MotherboardGrid->Location = System::Drawing::Point(0, 50);
+			this->MotherboardGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MotherboardGrid->Name = L"MotherboardGrid";
 			this->MotherboardGrid->RowHeadersWidth = 51;
 			this->MotherboardGrid->RowTemplate->Height = 24;
-			this->MotherboardGrid->Size = System::Drawing::Size(731, 406);
+			this->MotherboardGrid->Size = System::Drawing::Size(977, 500);
 			this->MotherboardGrid->TabIndex = 0;
 			this->MotherboardGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::MotherboardGrid_CellContentClick);
 			// 
@@ -1705,10 +1712,10 @@ namespace Project12 {
 			this->panel5->Controls->Add(this->button19);
 			this->panel5->Controls->Add(this->RAMGrid);
 			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel5->Location = System::Drawing::Point(2, 2);
-			this->panel5->Margin = System::Windows::Forms::Padding(2);
+			this->panel5->Location = System::Drawing::Point(3, 2);
+			this->panel5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(729, 488);
+			this->panel5->Size = System::Drawing::Size(974, 605);
 			this->panel5->TabIndex = 14;
 			this->panel5->Visible = false;
 			// 
@@ -1717,10 +1724,9 @@ namespace Project12 {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(338, 8);
-			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label4->Location = System::Drawing::Point(451, 10);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(52, 24);
+			this->label4->Size = System::Drawing::Size(65, 29);
 			this->label4->TabIndex = 2;
 			this->label4->Text = L"RAM";
 			// 
@@ -1728,10 +1734,10 @@ namespace Project12 {
 			// 
 			this->button19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button19->Location = System::Drawing::Point(4, 6);
-			this->button19->Margin = System::Windows::Forms::Padding(2);
+			this->button19->Location = System::Drawing::Point(5, 7);
+			this->button19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(112, 30);
+			this->button19->Size = System::Drawing::Size(149, 37);
 			this->button19->TabIndex = 1;
 			this->button19->Text = L"Go Back";
 			this->button19->UseVisualStyleBackColor = true;
@@ -1748,12 +1754,12 @@ namespace Project12 {
 				this->Column13, this->Column14,
 					this->Column15, this->Column16, this->Column17, this->Column18, this->Column19, this->Column64
 			});
-			this->RAMGrid->Location = System::Drawing::Point(0, 41);
-			this->RAMGrid->Margin = System::Windows::Forms::Padding(2);
+			this->RAMGrid->Location = System::Drawing::Point(0, 50);
+			this->RAMGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->RAMGrid->Name = L"RAMGrid";
 			this->RAMGrid->RowHeadersWidth = 51;
 			this->RAMGrid->RowTemplate->Height = 24;
-			this->RAMGrid->Size = System::Drawing::Size(729, 406);
+			this->RAMGrid->Size = System::Drawing::Size(974, 500);
 			this->RAMGrid->TabIndex = 0;
 			this->RAMGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::RAMGrid_CellContentClick);
 			// 
@@ -1815,9 +1821,9 @@ namespace Project12 {
 			this->panel4->Controls->Add(this->label8);
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel4->Location = System::Drawing::Point(0, 0);
-			this->panel4->Margin = System::Windows::Forms::Padding(2);
+			this->panel4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(733, 492);
+			this->panel4->Size = System::Drawing::Size(980, 609);
 			this->panel4->TabIndex = 12;
 			this->panel4->Visible = false;
 			// 
@@ -1825,10 +1831,10 @@ namespace Project12 {
 			// 
 			this->button18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button18->Location = System::Drawing::Point(2, 6);
-			this->button18->Margin = System::Windows::Forms::Padding(2);
+			this->button18->Location = System::Drawing::Point(3, 7);
+			this->button18->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(112, 30);
+			this->button18->Size = System::Drawing::Size(149, 37);
 			this->button18->TabIndex = 1;
 			this->button18->Text = L"Go Back";
 			this->button18->UseVisualStyleBackColor = true;
@@ -1843,12 +1849,12 @@ namespace Project12 {
 				this->Column7, this->Column8,
 					this->Column9, this->Column10, this->Column11, this->Column12, this->Column63
 			});
-			this->GPUGrid->Location = System::Drawing::Point(0, 41);
-			this->GPUGrid->Margin = System::Windows::Forms::Padding(2);
+			this->GPUGrid->Location = System::Drawing::Point(0, 50);
+			this->GPUGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->GPUGrid->Name = L"GPUGrid";
 			this->GPUGrid->RowHeadersWidth = 51;
 			this->GPUGrid->RowTemplate->Height = 24;
-			this->GPUGrid->Size = System::Drawing::Size(750, 406);
+			this->GPUGrid->Size = System::Drawing::Size(1000, 500);
 			this->GPUGrid->TabIndex = 0;
 			this->GPUGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::GPUGrid_CellContentClick);
 			// 
@@ -1906,10 +1912,9 @@ namespace Project12 {
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label8->Location = System::Drawing::Point(338, 8);
-			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label8->Location = System::Drawing::Point(451, 10);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(49, 24);
+			this->label8->Size = System::Drawing::Size(64, 29);
 			this->label8->TabIndex = 2;
 			this->label8->Text = L"GPU";
 			// 
@@ -1920,9 +1925,9 @@ namespace Project12 {
 			this->panel3->Controls->Add(this->CPUGrid);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel3->Location = System::Drawing::Point(0, 0);
-			this->panel3->Margin = System::Windows::Forms::Padding(2);
+			this->panel3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(733, 492);
+			this->panel3->Size = System::Drawing::Size(980, 609);
 			this->panel3->TabIndex = 11;
 			this->panel3->Visible = false;
 			// 
@@ -1931,10 +1936,9 @@ namespace Project12 {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label6->Location = System::Drawing::Point(338, 8);
-			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label6->Location = System::Drawing::Point(451, 10);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(48, 24);
+			this->label6->Size = System::Drawing::Size(63, 29);
 			this->label6->TabIndex = 2;
 			this->label6->Text = L"CPU";
 			// 
@@ -1942,10 +1946,10 @@ namespace Project12 {
 			// 
 			this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button17->Location = System::Drawing::Point(2, 6);
-			this->button17->Margin = System::Windows::Forms::Padding(2);
+			this->button17->Location = System::Drawing::Point(3, 7);
+			this->button17->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(112, 30);
+			this->button17->Size = System::Drawing::Size(149, 37);
 			this->button17->TabIndex = 1;
 			this->button17->Text = L"Go Back";
 			this->button17->UseVisualStyleBackColor = true;
@@ -1963,12 +1967,12 @@ namespace Project12 {
 					this->Column3, this->Column4, this->Column5, this->Column6, this->Column62
 			});
 			this->CPUGrid->GridColor = System::Drawing::Color::IndianRed;
-			this->CPUGrid->Location = System::Drawing::Point(0, 41);
-			this->CPUGrid->Margin = System::Windows::Forms::Padding(2);
+			this->CPUGrid->Location = System::Drawing::Point(0, 50);
+			this->CPUGrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->CPUGrid->Name = L"CPUGrid";
 			this->CPUGrid->RowHeadersWidth = 51;
 			this->CPUGrid->RowTemplate->Height = 24;
-			this->CPUGrid->Size = System::Drawing::Size(750, 406);
+			this->CPUGrid->Size = System::Drawing::Size(1000, 500);
 			this->CPUGrid->TabIndex = 0;
 			this->CPUGrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::CPUGrid_CellContentClick);
 			// 
@@ -2043,21 +2047,21 @@ namespace Project12 {
 			this->tabControl1->Controls->Add(this->tabPage15);
 			this->tabControl1->Controls->Add(this->tabPage12);
 			this->tabControl1->Controls->Add(this->tabPage16);
-			this->tabControl1->Location = System::Drawing::Point(-2, 8);
-			this->tabControl1->Margin = System::Windows::Forms::Padding(2);
+			this->tabControl1->Location = System::Drawing::Point(-3, 10);
+			this->tabControl1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(741, 521);
+			this->tabControl1->Size = System::Drawing::Size(988, 641);
 			this->tabControl1->TabIndex = 3;
 			// 
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->panel10);
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
-			this->tabPage1->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage1->Location = System::Drawing::Point(4, 28);
+			this->tabPage1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage1->Size = System::Drawing::Size(733, 492);
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage1->Size = System::Drawing::Size(980, 609);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"tabPage1";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -2071,28 +2075,20 @@ namespace Project12 {
 			this->panel10->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->panel10->Location = System::Drawing::Point(2, 2);
-			this->panel10->Margin = System::Windows::Forms::Padding(2);
+			this->panel10->Location = System::Drawing::Point(3, 2);
+			this->panel10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(729, 488);
+			this->panel10->Size = System::Drawing::Size(974, 605);
 			this->panel10->TabIndex = 4;
-			// 
-			// panel31
-			// 
-			this->panel31->Location = System::Drawing::Point(2, 8);
-			this->panel31->Margin = System::Windows::Forms::Padding(2);
-			this->panel31->Name = L"panel31";
-			this->panel31->Size = System::Drawing::Size(748, 36);
-			this->panel31->TabIndex = 4;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(406, 171);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox1->Location = System::Drawing::Point(541, 210);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(216, 187);
+			this->pictureBox1->Size = System::Drawing::Size(288, 230);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 3;
 			this->pictureBox1->TabStop = false;
@@ -2100,11 +2096,11 @@ namespace Project12 {
 			// tabPage2
 			// 
 			this->tabPage2->Controls->Add(this->panel2);
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
-			this->tabPage2->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage2->Location = System::Drawing::Point(4, 28);
+			this->tabPage2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage2->Size = System::Drawing::Size(733, 492);
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage2->Size = System::Drawing::Size(980, 609);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -2112,10 +2108,10 @@ namespace Project12 {
 			// tabPage3
 			// 
 			this->tabPage3->Controls->Add(this->panel3);
-			this->tabPage3->Location = System::Drawing::Point(4, 25);
-			this->tabPage3->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage3->Location = System::Drawing::Point(4, 28);
+			this->tabPage3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(733, 492);
+			this->tabPage3->Size = System::Drawing::Size(980, 609);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"tabPage3";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -2123,10 +2119,10 @@ namespace Project12 {
 			// tabPage4
 			// 
 			this->tabPage4->Controls->Add(this->panel4);
-			this->tabPage4->Location = System::Drawing::Point(4, 25);
-			this->tabPage4->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage4->Location = System::Drawing::Point(4, 28);
+			this->tabPage4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(733, 492);
+			this->tabPage4->Size = System::Drawing::Size(980, 609);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"tabPage4";
 			this->tabPage4->UseVisualStyleBackColor = true;
@@ -2134,11 +2130,11 @@ namespace Project12 {
 			// tabPage5
 			// 
 			this->tabPage5->Controls->Add(this->panel5);
-			this->tabPage5->Location = System::Drawing::Point(4, 25);
-			this->tabPage5->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage5->Location = System::Drawing::Point(4, 28);
+			this->tabPage5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage5->Size = System::Drawing::Size(733, 492);
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage5->Size = System::Drawing::Size(980, 609);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"tabPage5";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -2146,11 +2142,11 @@ namespace Project12 {
 			// tabPage6
 			// 
 			this->tabPage6->Controls->Add(this->MotherBoardPanel);
-			this->tabPage6->Location = System::Drawing::Point(4, 25);
-			this->tabPage6->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage6->Location = System::Drawing::Point(4, 28);
+			this->tabPage6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage6->Name = L"tabPage6";
-			this->tabPage6->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage6->Size = System::Drawing::Size(733, 492);
+			this->tabPage6->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage6->Size = System::Drawing::Size(980, 609);
 			this->tabPage6->TabIndex = 5;
 			this->tabPage6->Text = L"tabPage6";
 			this->tabPage6->UseVisualStyleBackColor = true;
@@ -2158,11 +2154,11 @@ namespace Project12 {
 			// tabPage7
 			// 
 			this->tabPage7->Controls->Add(this->panel6);
-			this->tabPage7->Location = System::Drawing::Point(4, 25);
-			this->tabPage7->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage7->Location = System::Drawing::Point(4, 28);
+			this->tabPage7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage7->Name = L"tabPage7";
-			this->tabPage7->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage7->Size = System::Drawing::Size(733, 492);
+			this->tabPage7->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage7->Size = System::Drawing::Size(980, 609);
 			this->tabPage7->TabIndex = 6;
 			this->tabPage7->Text = L"tabPage7";
 			this->tabPage7->UseVisualStyleBackColor = true;
@@ -2170,11 +2166,11 @@ namespace Project12 {
 			// tabPage8
 			// 
 			this->tabPage8->Controls->Add(this->panel7);
-			this->tabPage8->Location = System::Drawing::Point(4, 25);
-			this->tabPage8->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage8->Location = System::Drawing::Point(4, 28);
+			this->tabPage8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage8->Name = L"tabPage8";
-			this->tabPage8->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage8->Size = System::Drawing::Size(733, 492);
+			this->tabPage8->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage8->Size = System::Drawing::Size(980, 609);
 			this->tabPage8->TabIndex = 7;
 			this->tabPage8->Text = L"tabPage8";
 			this->tabPage8->UseVisualStyleBackColor = true;
@@ -2182,11 +2178,11 @@ namespace Project12 {
 			// tabPage9
 			// 
 			this->tabPage9->Controls->Add(this->panel8);
-			this->tabPage9->Location = System::Drawing::Point(4, 25);
-			this->tabPage9->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage9->Location = System::Drawing::Point(4, 28);
+			this->tabPage9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage9->Name = L"tabPage9";
-			this->tabPage9->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage9->Size = System::Drawing::Size(733, 492);
+			this->tabPage9->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage9->Size = System::Drawing::Size(980, 609);
 			this->tabPage9->TabIndex = 8;
 			this->tabPage9->Text = L"tabPage9";
 			this->tabPage9->UseVisualStyleBackColor = true;
@@ -2194,11 +2190,11 @@ namespace Project12 {
 			// tabPage10
 			// 
 			this->tabPage10->Controls->Add(this->panel9);
-			this->tabPage10->Location = System::Drawing::Point(4, 25);
-			this->tabPage10->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage10->Location = System::Drawing::Point(4, 28);
+			this->tabPage10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage10->Name = L"tabPage10";
-			this->tabPage10->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage10->Size = System::Drawing::Size(733, 492);
+			this->tabPage10->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage10->Size = System::Drawing::Size(980, 609);
 			this->tabPage10->TabIndex = 9;
 			this->tabPage10->Text = L"tabPage10";
 			this->tabPage10->UseVisualStyleBackColor = true;
@@ -2206,11 +2202,11 @@ namespace Project12 {
 			// tabPage11
 			// 
 			this->tabPage11->Controls->Add(this->panel1);
-			this->tabPage11->Location = System::Drawing::Point(4, 25);
-			this->tabPage11->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage11->Location = System::Drawing::Point(4, 28);
+			this->tabPage11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage11->Name = L"tabPage11";
-			this->tabPage11->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage11->Size = System::Drawing::Size(733, 492);
+			this->tabPage11->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage11->Size = System::Drawing::Size(980, 609);
 			this->tabPage11->TabIndex = 10;
 			this->tabPage11->Text = L"tabPage11";
 			this->tabPage11->UseVisualStyleBackColor = true;
@@ -2230,11 +2226,11 @@ namespace Project12 {
 			this->tabPage13->Controls->Add(this->label30);
 			this->tabPage13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tabPage13->Location = System::Drawing::Point(4, 25);
-			this->tabPage13->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage13->Location = System::Drawing::Point(4, 28);
+			this->tabPage13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage13->Name = L"tabPage13";
-			this->tabPage13->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage13->Size = System::Drawing::Size(733, 492);
+			this->tabPage13->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage13->Size = System::Drawing::Size(980, 609);
 			this->tabPage13->TabIndex = 12;
 			this->tabPage13->Text = L"tabPage13";
 			this->tabPage13->UseVisualStyleBackColor = true;
@@ -2245,22 +2241,19 @@ namespace Project12 {
 			this->label50->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label50->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label50->Location = System::Drawing::Point(495, 133);
-			this->label50->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label50->Location = System::Drawing::Point(660, 164);
 			this->label50->Name = L"label50";
-			this->label50->Size = System::Drawing::Size(228, 355);
+			this->label50->Size = System::Drawing::Size(303, 436);
 			this->label50->TabIndex = 12;
-			this->label50->Text = resources->GetString(L"label50.Text");
 			// 
 			// label52
 			// 
 			this->label52->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label52->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label52->Location = System::Drawing::Point(22, 133);
-			this->label52->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label52->Location = System::Drawing::Point(29, 164);
 			this->label52->Name = L"label52";
-			this->label52->Size = System::Drawing::Size(231, 354);
+			this->label52->Size = System::Drawing::Size(307, 435);
 			this->label52->TabIndex = 14;
 			// 
 			// label51
@@ -2268,10 +2261,9 @@ namespace Project12 {
 			this->label51->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label51->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label51->Location = System::Drawing::Point(260, 133);
-			this->label51->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label51->Location = System::Drawing::Point(347, 164);
 			this->label51->Name = L"label51";
-			this->label51->Size = System::Drawing::Size(232, 355);
+			this->label51->Size = System::Drawing::Size(309, 436);
 			this->label51->TabIndex = 13;
 			// 
 			// label49
@@ -2279,10 +2271,9 @@ namespace Project12 {
 			this->label49->AutoSize = true;
 			this->label49->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label49->Location = System::Drawing::Point(557, 56);
-			this->label49->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label49->Location = System::Drawing::Point(743, 69);
 			this->label49->Name = L"label49";
-			this->label49->Size = System::Drawing::Size(113, 26);
+			this->label49->Size = System::Drawing::Size(145, 32);
 			this->label49->TabIndex = 11;
 			this->label49->Text = L"USD 2577";
 			// 
@@ -2291,10 +2282,9 @@ namespace Project12 {
 			this->label48->AutoSize = true;
 			this->label48->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label48->Location = System::Drawing::Point(322, 56);
-			this->label48->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label48->Location = System::Drawing::Point(429, 69);
 			this->label48->Name = L"label48";
-			this->label48->Size = System::Drawing::Size(113, 26);
+			this->label48->Size = System::Drawing::Size(145, 32);
 			this->label48->TabIndex = 10;
 			this->label48->Text = L"USD 1624";
 			// 
@@ -2303,10 +2293,9 @@ namespace Project12 {
 			this->label47->AutoSize = true;
 			this->label47->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label47->Location = System::Drawing::Point(79, 56);
-			this->label47->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label47->Location = System::Drawing::Point(105, 69);
 			this->label47->Name = L"label47";
-			this->label47->Size = System::Drawing::Size(113, 26);
+			this->label47->Size = System::Drawing::Size(145, 32);
 			this->label47->TabIndex = 9;
 			this->label47->Text = L"USD 1075";
 			// 
@@ -2318,10 +2307,10 @@ namespace Project12 {
 			this->button30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button30->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button30->Location = System::Drawing::Point(495, 84);
-			this->button30->Margin = System::Windows::Forms::Padding(2);
+			this->button30->Location = System::Drawing::Point(660, 103);
+			this->button30->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button30->Name = L"button30";
-			this->button30->Size = System::Drawing::Size(209, 46);
+			this->button30->Size = System::Drawing::Size(279, 57);
 			this->button30->TabIndex = 8;
 			this->button30->Text = L"high-budget";
 			this->button30->UseVisualStyleBackColor = false;
@@ -2334,10 +2323,10 @@ namespace Project12 {
 			this->button29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button29->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button29->Location = System::Drawing::Point(260, 84);
-			this->button29->Margin = System::Windows::Forms::Padding(2);
+			this->button29->Location = System::Drawing::Point(347, 103);
+			this->button29->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button29->Name = L"button29";
-			this->button29->Size = System::Drawing::Size(213, 46);
+			this->button29->Size = System::Drawing::Size(284, 57);
 			this->button29->TabIndex = 7;
 			this->button29->Text = L"medium-budget";
 			this->button29->UseVisualStyleBackColor = false;
@@ -2350,10 +2339,10 @@ namespace Project12 {
 			this->button28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button28->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button28->Location = System::Drawing::Point(22, 84);
-			this->button28->Margin = System::Windows::Forms::Padding(2);
+			this->button28->Location = System::Drawing::Point(29, 103);
+			this->button28->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button28->Name = L"button28";
-			this->button28->Size = System::Drawing::Size(208, 46);
+			this->button28->Size = System::Drawing::Size(277, 57);
 			this->button28->TabIndex = 6;
 			this->button28->Text = L"low-budget";
 			this->button28->UseVisualStyleBackColor = false;
@@ -2364,10 +2353,10 @@ namespace Project12 {
 			this->button25->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->button25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button25->Location = System::Drawing::Point(8, 8);
-			this->button25->Margin = System::Windows::Forms::Padding(2);
+			this->button25->Location = System::Drawing::Point(11, 10);
+			this->button25->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button25->Name = L"button25";
-			this->button25->Size = System::Drawing::Size(112, 28);
+			this->button25->Size = System::Drawing::Size(149, 34);
 			this->button25->TabIndex = 5;
 			this->button25->Text = L"Go Back";
 			this->button25->UseVisualStyleBackColor = false;
@@ -2378,10 +2367,9 @@ namespace Project12 {
 			this->label30->AutoSize = true;
 			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label30->Location = System::Drawing::Point(234, 8);
-			this->label30->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label30->Location = System::Drawing::Point(312, 10);
 			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(245, 31);
+			this->label30->Size = System::Drawing::Size(292, 38);
 			this->label30->TabIndex = 0;
 			this->label30->Text = L"gaming pre-builds";
 			// 
@@ -2400,11 +2388,11 @@ namespace Project12 {
 			this->tabPage14->Controls->Add(this->label31);
 			this->tabPage14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tabPage14->Location = System::Drawing::Point(4, 25);
-			this->tabPage14->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage14->Location = System::Drawing::Point(4, 28);
+			this->tabPage14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage14->Name = L"tabPage14";
-			this->tabPage14->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage14->Size = System::Drawing::Size(733, 492);
+			this->tabPage14->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage14->Size = System::Drawing::Size(980, 609);
 			this->tabPage14->TabIndex = 13;
 			this->tabPage14->Text = L"tabPage14";
 			this->tabPage14->UseVisualStyleBackColor = true;
@@ -2414,10 +2402,9 @@ namespace Project12 {
 			this->label58->AutoSize = true;
 			this->label58->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label58->Location = System::Drawing::Point(556, 57);
-			this->label58->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label58->Location = System::Drawing::Point(741, 70);
 			this->label58->Name = L"label58";
-			this->label58->Size = System::Drawing::Size(113, 26);
+			this->label58->Size = System::Drawing::Size(145, 32);
 			this->label58->TabIndex = 22;
 			this->label58->Text = L"USD 3266";
 			// 
@@ -2426,10 +2413,9 @@ namespace Project12 {
 			this->label57->AutoSize = true;
 			this->label57->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label57->Location = System::Drawing::Point(298, 57);
-			this->label57->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label57->Location = System::Drawing::Point(397, 70);
 			this->label57->Name = L"label57";
-			this->label57->Size = System::Drawing::Size(113, 26);
+			this->label57->Size = System::Drawing::Size(145, 32);
 			this->label57->TabIndex = 21;
 			this->label57->Text = L"USD 2545";
 			// 
@@ -2438,10 +2424,9 @@ namespace Project12 {
 			this->label56->AutoSize = true;
 			this->label56->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label56->Location = System::Drawing::Point(68, 57);
-			this->label56->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label56->Location = System::Drawing::Point(91, 70);
 			this->label56->Name = L"label56";
-			this->label56->Size = System::Drawing::Size(113, 26);
+			this->label56->Size = System::Drawing::Size(145, 32);
 			this->label56->TabIndex = 20;
 			this->label56->Text = L"USD 2002";
 			// 
@@ -2452,10 +2437,10 @@ namespace Project12 {
 			this->button35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button35->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button35->Location = System::Drawing::Point(503, 85);
-			this->button35->Margin = System::Windows::Forms::Padding(2);
+			this->button35->Location = System::Drawing::Point(671, 105);
+			this->button35->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button35->Name = L"button35";
-			this->button35->Size = System::Drawing::Size(208, 46);
+			this->button35->Size = System::Drawing::Size(277, 57);
 			this->button35->TabIndex = 19;
 			this->button35->Text = L"high-budget";
 			this->button35->UseVisualStyleBackColor = false;
@@ -2468,10 +2453,10 @@ namespace Project12 {
 			this->button34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button34->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button34->Location = System::Drawing::Point(257, 85);
-			this->button34->Margin = System::Windows::Forms::Padding(2);
+			this->button34->Location = System::Drawing::Point(343, 105);
+			this->button34->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button34->Name = L"button34";
-			this->button34->Size = System::Drawing::Size(208, 46);
+			this->button34->Size = System::Drawing::Size(277, 57);
 			this->button34->TabIndex = 18;
 			this->button34->Text = L"medium-budget";
 			this->button34->UseVisualStyleBackColor = false;
@@ -2484,10 +2469,10 @@ namespace Project12 {
 			this->button33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button33->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button33->Location = System::Drawing::Point(16, 85);
-			this->button33->Margin = System::Windows::Forms::Padding(2);
+			this->button33->Location = System::Drawing::Point(21, 105);
+			this->button33->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button33->Name = L"button33";
-			this->button33->Size = System::Drawing::Size(208, 46);
+			this->button33->Size = System::Drawing::Size(277, 57);
 			this->button33->TabIndex = 17;
 			this->button33->Text = L"low-budget";
 			this->button33->UseVisualStyleBackColor = false;
@@ -2498,10 +2483,9 @@ namespace Project12 {
 			this->label55->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label55->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label55->Location = System::Drawing::Point(503, 134);
-			this->label55->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label55->Location = System::Drawing::Point(671, 165);
 			this->label55->Name = L"label55";
-			this->label55->Size = System::Drawing::Size(219, 358);
+			this->label55->Size = System::Drawing::Size(291, 440);
 			this->label55->TabIndex = 16;
 			// 
 			// label54
@@ -2509,10 +2493,9 @@ namespace Project12 {
 			this->label54->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label54->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label54->Location = System::Drawing::Point(16, 134);
-			this->label54->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label54->Location = System::Drawing::Point(21, 165);
 			this->label54->Name = L"label54";
-			this->label54->Size = System::Drawing::Size(219, 358);
+			this->label54->Size = System::Drawing::Size(291, 440);
 			this->label54->TabIndex = 15;
 			// 
 			// label53
@@ -2520,20 +2503,19 @@ namespace Project12 {
 			this->label53->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label53->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label53->Location = System::Drawing::Point(257, 134);
-			this->label53->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label53->Location = System::Drawing::Point(343, 165);
 			this->label53->Name = L"label53";
-			this->label53->Size = System::Drawing::Size(219, 358);
+			this->label53->Size = System::Drawing::Size(291, 440);
 			this->label53->TabIndex = 14;
 			// 
 			// button26
 			// 
 			this->button26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button26->Location = System::Drawing::Point(10, 12);
-			this->button26->Margin = System::Windows::Forms::Padding(2);
+			this->button26->Location = System::Drawing::Point(13, 15);
+			this->button26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button26->Name = L"button26";
-			this->button26->Size = System::Drawing::Size(112, 28);
+			this->button26->Size = System::Drawing::Size(149, 34);
 			this->button26->TabIndex = 6;
 			this->button26->Text = L"Go Back";
 			this->button26->UseVisualStyleBackColor = true;
@@ -2544,10 +2526,9 @@ namespace Project12 {
 			this->label31->AutoSize = true;
 			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label31->Location = System::Drawing::Point(232, 12);
-			this->label31->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label31->Location = System::Drawing::Point(309, 15);
 			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(238, 31);
+			this->label31->Size = System::Drawing::Size(282, 38);
 			this->label31->TabIndex = 1;
 			this->label31->Text = L"editing pre-builds";
 			// 
@@ -2566,11 +2547,11 @@ namespace Project12 {
 			this->tabPage15->Controls->Add(this->label32);
 			this->tabPage15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tabPage15->Location = System::Drawing::Point(4, 25);
-			this->tabPage15->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage15->Location = System::Drawing::Point(4, 28);
+			this->tabPage15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage15->Name = L"tabPage15";
-			this->tabPage15->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage15->Size = System::Drawing::Size(733, 492);
+			this->tabPage15->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage15->Size = System::Drawing::Size(980, 609);
 			this->tabPage15->TabIndex = 14;
 			this->tabPage15->Text = L"tabPage15";
 			this->tabPage15->UseVisualStyleBackColor = true;
@@ -2580,10 +2561,9 @@ namespace Project12 {
 			this->label60->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label60->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label60->Location = System::Drawing::Point(10, 125);
-			this->label60->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label60->Location = System::Drawing::Point(13, 154);
 			this->label60->Name = L"label60";
-			this->label60->Size = System::Drawing::Size(219, 365);
+			this->label60->Size = System::Drawing::Size(291, 449);
 			this->label60->TabIndex = 16;
 			// 
 			// label59
@@ -2591,10 +2571,9 @@ namespace Project12 {
 			this->label59->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label59->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label59->Location = System::Drawing::Point(249, 125);
-			this->label59->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label59->Location = System::Drawing::Point(332, 154);
 			this->label59->Name = L"label59";
-			this->label59->Size = System::Drawing::Size(230, 367);
+			this->label59->Size = System::Drawing::Size(306, 451);
 			this->label59->TabIndex = 15;
 			// 
 			// label61
@@ -2602,10 +2581,9 @@ namespace Project12 {
 			this->label61->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label61->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.999999F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label61->Location = System::Drawing::Point(494, 125);
-			this->label61->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label61->Location = System::Drawing::Point(659, 154);
 			this->label61->Name = L"label61";
-			this->label61->Size = System::Drawing::Size(230, 367);
+			this->label61->Size = System::Drawing::Size(306, 451);
 			this->label61->TabIndex = 17;
 			// 
 			// label64
@@ -2613,10 +2591,9 @@ namespace Project12 {
 			this->label64->AutoSize = true;
 			this->label64->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label64->Location = System::Drawing::Point(555, 48);
-			this->label64->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label64->Location = System::Drawing::Point(740, 59);
 			this->label64->Name = L"label64";
-			this->label64->Size = System::Drawing::Size(113, 26);
+			this->label64->Size = System::Drawing::Size(145, 32);
 			this->label64->TabIndex = 24;
 			this->label64->Text = L"USD 1341";
 			// 
@@ -2625,10 +2602,9 @@ namespace Project12 {
 			this->label63->AutoSize = true;
 			this->label63->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label63->Location = System::Drawing::Point(54, 48);
-			this->label63->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label63->Location = System::Drawing::Point(72, 59);
 			this->label63->Name = L"label63";
-			this->label63->Size = System::Drawing::Size(101, 26);
+			this->label63->Size = System::Drawing::Size(129, 32);
 			this->label63->TabIndex = 23;
 			this->label63->Text = L"USD 829";
 			// 
@@ -2637,10 +2613,9 @@ namespace Project12 {
 			this->label62->AutoSize = true;
 			this->label62->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label62->Location = System::Drawing::Point(302, 48);
-			this->label62->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label62->Location = System::Drawing::Point(403, 59);
 			this->label62->Name = L"label62";
-			this->label62->Size = System::Drawing::Size(113, 26);
+			this->label62->Size = System::Drawing::Size(145, 32);
 			this->label62->TabIndex = 22;
 			this->label62->Text = L"USD 1020";
 			// 
@@ -2651,10 +2626,10 @@ namespace Project12 {
 			this->button38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button38->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button38->Location = System::Drawing::Point(494, 76);
-			this->button38->Margin = System::Windows::Forms::Padding(2);
+			this->button38->Location = System::Drawing::Point(659, 94);
+			this->button38->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button38->Name = L"button38";
-			this->button38->Size = System::Drawing::Size(208, 46);
+			this->button38->Size = System::Drawing::Size(277, 57);
 			this->button38->TabIndex = 20;
 			this->button38->Text = L"high-budget";
 			this->button38->UseVisualStyleBackColor = false;
@@ -2667,10 +2642,10 @@ namespace Project12 {
 			this->button37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button37->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button37->Location = System::Drawing::Point(249, 76);
-			this->button37->Margin = System::Windows::Forms::Padding(2);
+			this->button37->Location = System::Drawing::Point(332, 94);
+			this->button37->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button37->Name = L"button37";
-			this->button37->Size = System::Drawing::Size(208, 46);
+			this->button37->Size = System::Drawing::Size(277, 57);
 			this->button37->TabIndex = 19;
 			this->button37->Text = L"medium-budget";
 			this->button37->UseVisualStyleBackColor = false;
@@ -2683,10 +2658,10 @@ namespace Project12 {
 			this->button36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button36->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button36->Location = System::Drawing::Point(10, 76);
-			this->button36->Margin = System::Windows::Forms::Padding(2);
+			this->button36->Location = System::Drawing::Point(13, 94);
+			this->button36->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button36->Name = L"button36";
-			this->button36->Size = System::Drawing::Size(208, 46);
+			this->button36->Size = System::Drawing::Size(277, 57);
 			this->button36->TabIndex = 18;
 			this->button36->Text = L"low-budget";
 			this->button36->UseVisualStyleBackColor = false;
@@ -2696,10 +2671,10 @@ namespace Project12 {
 			// 
 			this->button27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button27->Location = System::Drawing::Point(4, 5);
-			this->button27->Margin = System::Windows::Forms::Padding(2);
+			this->button27->Location = System::Drawing::Point(5, 6);
+			this->button27->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button27->Name = L"button27";
-			this->button27->Size = System::Drawing::Size(112, 28);
+			this->button27->Size = System::Drawing::Size(149, 34);
 			this->button27->TabIndex = 6;
 			this->button27->Text = L"Go Back";
 			this->button27->UseVisualStyleBackColor = true;
@@ -2710,10 +2685,9 @@ namespace Project12 {
 			this->label32->AutoSize = true;
 			this->label32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label32->Location = System::Drawing::Point(237, 5);
-			this->label32->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label32->Location = System::Drawing::Point(316, 6);
 			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(223, 31);
+			this->label32->Size = System::Drawing::Size(264, 38);
 			this->label32->TabIndex = 1;
 			this->label32->Text = L"office pre-builds";
 			// 
@@ -2729,11 +2703,11 @@ namespace Project12 {
 			this->tabPage12->Controls->Add(this->pictureBox2);
 			this->tabPage12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tabPage12->Location = System::Drawing::Point(4, 25);
-			this->tabPage12->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage12->Location = System::Drawing::Point(4, 28);
+			this->tabPage12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage12->Name = L"tabPage12";
-			this->tabPage12->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage12->Size = System::Drawing::Size(733, 492);
+			this->tabPage12->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage12->Size = System::Drawing::Size(980, 609);
 			this->tabPage12->TabIndex = 11;
 			this->tabPage12->Text = L"tabPage12";
 			this->tabPage12->UseVisualStyleBackColor = true;
@@ -2744,10 +2718,10 @@ namespace Project12 {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
 			this->button32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button32->Location = System::Drawing::Point(596, 356);
-			this->button32->Margin = System::Windows::Forms::Padding(2);
+			this->button32->Location = System::Drawing::Point(795, 438);
+			this->button32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button32->Name = L"button32";
-			this->button32->Size = System::Drawing::Size(116, 83);
+			this->button32->Size = System::Drawing::Size(155, 102);
 			this->button32->TabIndex = 18;
 			this->button32->Text = L"pay now";
 			this->button32->UseVisualStyleBackColor = false;
@@ -2758,10 +2732,10 @@ namespace Project12 {
 			this->button31->BackColor = System::Drawing::Color::SkyBlue;
 			this->button31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button31->Location = System::Drawing::Point(22, 5);
-			this->button31->Margin = System::Windows::Forms::Padding(2);
+			this->button31->Location = System::Drawing::Point(29, 6);
+			this->button31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button31->Name = L"button31";
-			this->button31->Size = System::Drawing::Size(144, 28);
+			this->button31->Size = System::Drawing::Size(192, 34);
 			this->button31->TabIndex = 17;
 			this->button31->Text = L"edit build";
 			this->button31->UseVisualStyleBackColor = false;
@@ -2778,10 +2752,10 @@ namespace Project12 {
 			this->panel14->Controls->Add(this->panel28);
 			this->panel14->Controls->Add(this->panel29);
 			this->panel14->Controls->Add(this->panel30);
-			this->panel14->Location = System::Drawing::Point(172, 71);
-			this->panel14->Margin = System::Windows::Forms::Padding(2);
+			this->panel14->Location = System::Drawing::Point(229, 87);
+			this->panel14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel14->Name = L"panel14";
-			this->panel14->Size = System::Drawing::Size(369, 271);
+			this->panel14->Size = System::Drawing::Size(492, 334);
 			this->panel14->TabIndex = 16;
 			// 
 			// panel23
@@ -2790,31 +2764,28 @@ namespace Project12 {
 			this->panel23->Controls->Add(this->label46);
 			this->panel23->Controls->Add(this->label23);
 			this->panel23->Controls->Add(this->label40);
-			this->panel23->Location = System::Drawing::Point(-3, 0);
-			this->panel23->Margin = System::Windows::Forms::Padding(2);
+			this->panel23->Location = System::Drawing::Point(-4, 0);
+			this->panel23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel23->Name = L"panel23";
-			this->panel23->Size = System::Drawing::Size(372, 24);
+			this->panel23->Size = System::Drawing::Size(496, 30);
 			this->panel23->TabIndex = 20;
 			// 
 			// label46
 			// 
 			this->label46->AutoSize = true;
-			this->label46->Location = System::Drawing::Point(239, 3);
-			this->label46->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label46->Location = System::Drawing::Point(319, 4);
 			this->label46->Name = L"label46";
-			this->label46->Size = System::Drawing::Size(13, 13);
+			this->label46->Size = System::Drawing::Size(0, 17);
 			this->label46->TabIndex = 17;
-			this->label46->Text = L"$";
 			// 
 			// label23
 			// 
 			this->label23->AutoSize = true;
 			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label23->Location = System::Drawing::Point(2, 6);
-			this->label23->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label23->Location = System::Drawing::Point(3, 7);
 			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(54, 17);
+			this->label23->Size = System::Drawing::Size(62, 20);
 			this->label23->TabIndex = 0;
 			this->label23->Text = L"label23";
 			// 
@@ -2823,10 +2794,9 @@ namespace Project12 {
 			this->label40->AutoSize = true;
 			this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label40->Location = System::Drawing::Point(292, 2);
-			this->label40->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label40->Location = System::Drawing::Point(389, 2);
 			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(70, 24);
+			this->label40->Size = System::Drawing::Size(92, 29);
 			this->label40->TabIndex = 7;
 			this->label40->Text = L"label40";
 			// 
@@ -2835,10 +2805,10 @@ namespace Project12 {
 			this->panel24->BackColor = System::Drawing::Color::LightGray;
 			this->panel24->Controls->Add(this->label24);
 			this->panel24->Controls->Add(this->label39);
-			this->panel24->Location = System::Drawing::Point(-3, 29);
-			this->panel24->Margin = System::Windows::Forms::Padding(2);
+			this->panel24->Location = System::Drawing::Point(-4, 36);
+			this->panel24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel24->Name = L"panel24";
-			this->panel24->Size = System::Drawing::Size(372, 25);
+			this->panel24->Size = System::Drawing::Size(496, 31);
 			this->panel24->TabIndex = 20;
 			// 
 			// label24
@@ -2846,10 +2816,9 @@ namespace Project12 {
 			this->label24->AutoSize = true;
 			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label24->Location = System::Drawing::Point(2, 4);
-			this->label24->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label24->Location = System::Drawing::Point(3, 5);
 			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(54, 17);
+			this->label24->Size = System::Drawing::Size(62, 20);
 			this->label24->TabIndex = 1;
 			this->label24->Text = L"label24";
 			// 
@@ -2858,10 +2827,9 @@ namespace Project12 {
 			this->label39->AutoSize = true;
 			this->label39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label39->Location = System::Drawing::Point(292, 0);
-			this->label39->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label39->Location = System::Drawing::Point(389, 0);
 			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(70, 24);
+			this->label39->Size = System::Drawing::Size(92, 29);
 			this->label39->TabIndex = 8;
 			this->label39->Text = L"label39";
 			// 
@@ -2870,10 +2838,10 @@ namespace Project12 {
 			this->panel25->BackColor = System::Drawing::Color::DarkGray;
 			this->panel25->Controls->Add(this->label25);
 			this->panel25->Controls->Add(this->label38);
-			this->panel25->Location = System::Drawing::Point(-3, 59);
-			this->panel25->Margin = System::Windows::Forms::Padding(2);
+			this->panel25->Location = System::Drawing::Point(-4, 73);
+			this->panel25->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel25->Name = L"panel25";
-			this->panel25->Size = System::Drawing::Size(372, 29);
+			this->panel25->Size = System::Drawing::Size(496, 36);
 			this->panel25->TabIndex = 21;
 			// 
 			// label25
@@ -2881,10 +2849,9 @@ namespace Project12 {
 			this->label25->AutoSize = true;
 			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label25->Location = System::Drawing::Point(0, 8);
-			this->label25->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label25->Location = System::Drawing::Point(0, 10);
 			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(54, 17);
+			this->label25->Size = System::Drawing::Size(62, 20);
 			this->label25->TabIndex = 2;
 			this->label25->Text = L"label25";
 			// 
@@ -2893,10 +2860,9 @@ namespace Project12 {
 			this->label38->AutoSize = true;
 			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label38->Location = System::Drawing::Point(292, 4);
-			this->label38->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label38->Location = System::Drawing::Point(389, 5);
 			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(70, 24);
+			this->label38->Size = System::Drawing::Size(92, 29);
 			this->label38->TabIndex = 9;
 			this->label38->Text = L"label38";
 			// 
@@ -2905,10 +2871,10 @@ namespace Project12 {
 			this->panel26->BackColor = System::Drawing::Color::LightGray;
 			this->panel26->Controls->Add(this->label26);
 			this->panel26->Controls->Add(this->label37);
-			this->panel26->Location = System::Drawing::Point(-3, 95);
-			this->panel26->Margin = System::Windows::Forms::Padding(2);
+			this->panel26->Location = System::Drawing::Point(-4, 117);
+			this->panel26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel26->Name = L"panel26";
-			this->panel26->Size = System::Drawing::Size(372, 32);
+			this->panel26->Size = System::Drawing::Size(496, 39);
 			this->panel26->TabIndex = 22;
 			// 
 			// label26
@@ -2916,10 +2882,9 @@ namespace Project12 {
 			this->label26->AutoSize = true;
 			this->label26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label26->Location = System::Drawing::Point(2, 8);
-			this->label26->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label26->Location = System::Drawing::Point(3, 10);
 			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(54, 17);
+			this->label26->Size = System::Drawing::Size(62, 20);
 			this->label26->TabIndex = 3;
 			this->label26->Text = L"label26";
 			// 
@@ -2928,10 +2893,9 @@ namespace Project12 {
 			this->label37->AutoSize = true;
 			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label37->Location = System::Drawing::Point(292, 8);
-			this->label37->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label37->Location = System::Drawing::Point(389, 10);
 			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(70, 24);
+			this->label37->Size = System::Drawing::Size(92, 29);
 			this->label37->TabIndex = 10;
 			this->label37->Text = L"label37";
 			// 
@@ -2940,10 +2904,10 @@ namespace Project12 {
 			this->panel27->BackColor = System::Drawing::Color::DarkGray;
 			this->panel27->Controls->Add(this->label27);
 			this->panel27->Controls->Add(this->label36);
-			this->panel27->Location = System::Drawing::Point(-3, 132);
-			this->panel27->Margin = System::Windows::Forms::Padding(2);
+			this->panel27->Location = System::Drawing::Point(-4, 162);
+			this->panel27->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel27->Name = L"panel27";
-			this->panel27->Size = System::Drawing::Size(372, 29);
+			this->panel27->Size = System::Drawing::Size(496, 36);
 			this->panel27->TabIndex = 23;
 			// 
 			// label27
@@ -2951,10 +2915,9 @@ namespace Project12 {
 			this->label27->AutoSize = true;
 			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label27->Location = System::Drawing::Point(2, 8);
-			this->label27->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label27->Location = System::Drawing::Point(3, 10);
 			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(54, 17);
+			this->label27->Size = System::Drawing::Size(62, 20);
 			this->label27->TabIndex = 4;
 			this->label27->Text = L"label27";
 			// 
@@ -2963,10 +2926,9 @@ namespace Project12 {
 			this->label36->AutoSize = true;
 			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label36->Location = System::Drawing::Point(292, 3);
-			this->label36->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label36->Location = System::Drawing::Point(389, 4);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(70, 24);
+			this->label36->Size = System::Drawing::Size(92, 29);
 			this->label36->TabIndex = 11;
 			this->label36->Text = L"label36";
 			// 
@@ -2975,10 +2937,10 @@ namespace Project12 {
 			this->panel28->BackColor = System::Drawing::Color::LightGray;
 			this->panel28->Controls->Add(this->label28);
 			this->panel28->Controls->Add(this->label35);
-			this->panel28->Location = System::Drawing::Point(-3, 166);
-			this->panel28->Margin = System::Windows::Forms::Padding(2);
+			this->panel28->Location = System::Drawing::Point(-4, 204);
+			this->panel28->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel28->Name = L"panel28";
-			this->panel28->Size = System::Drawing::Size(372, 29);
+			this->panel28->Size = System::Drawing::Size(496, 36);
 			this->panel28->TabIndex = 24;
 			// 
 			// label28
@@ -2986,10 +2948,9 @@ namespace Project12 {
 			this->label28->AutoSize = true;
 			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label28->Location = System::Drawing::Point(2, 8);
-			this->label28->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label28->Location = System::Drawing::Point(3, 10);
 			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(54, 17);
+			this->label28->Size = System::Drawing::Size(62, 20);
 			this->label28->TabIndex = 5;
 			this->label28->Text = L"label28";
 			// 
@@ -2998,10 +2959,9 @@ namespace Project12 {
 			this->label35->AutoSize = true;
 			this->label35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label35->Location = System::Drawing::Point(292, 4);
-			this->label35->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label35->Location = System::Drawing::Point(389, 5);
 			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(70, 24);
+			this->label35->Size = System::Drawing::Size(92, 29);
 			this->label35->TabIndex = 12;
 			this->label35->Text = L"label35";
 			// 
@@ -3010,10 +2970,10 @@ namespace Project12 {
 			this->panel29->BackColor = System::Drawing::Color::DarkGray;
 			this->panel29->Controls->Add(this->label29);
 			this->panel29->Controls->Add(this->label34);
-			this->panel29->Location = System::Drawing::Point(-1, 202);
-			this->panel29->Margin = System::Windows::Forms::Padding(2);
+			this->panel29->Location = System::Drawing::Point(-1, 249);
+			this->panel29->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel29->Name = L"panel29";
-			this->panel29->Size = System::Drawing::Size(380, 29);
+			this->panel29->Size = System::Drawing::Size(507, 36);
 			this->panel29->TabIndex = 25;
 			// 
 			// label29
@@ -3021,10 +2981,9 @@ namespace Project12 {
 			this->label29->AutoSize = true;
 			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label29->Location = System::Drawing::Point(0, 8);
-			this->label29->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label29->Location = System::Drawing::Point(0, 10);
 			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(54, 17);
+			this->label29->Size = System::Drawing::Size(62, 20);
 			this->label29->TabIndex = 6;
 			this->label29->Text = L"label29";
 			// 
@@ -3033,10 +2992,9 @@ namespace Project12 {
 			this->label34->AutoSize = true;
 			this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label34->Location = System::Drawing::Point(290, 4);
-			this->label34->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label34->Location = System::Drawing::Point(387, 5);
 			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(70, 24);
+			this->label34->Size = System::Drawing::Size(92, 29);
 			this->label34->TabIndex = 13;
 			this->label34->Text = L"label34";
 			// 
@@ -3045,10 +3003,10 @@ namespace Project12 {
 			this->panel30->BackColor = System::Drawing::Color::LightGray;
 			this->panel30->Controls->Add(this->label45);
 			this->panel30->Controls->Add(this->label44);
-			this->panel30->Location = System::Drawing::Point(-3, 239);
-			this->panel30->Margin = System::Windows::Forms::Padding(2);
+			this->panel30->Location = System::Drawing::Point(-4, 294);
+			this->panel30->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel30->Name = L"panel30";
-			this->panel30->Size = System::Drawing::Size(382, 32);
+			this->panel30->Size = System::Drawing::Size(509, 39);
 			this->panel30->TabIndex = 26;
 			// 
 			// label45
@@ -3056,10 +3014,9 @@ namespace Project12 {
 			this->label45->AutoSize = true;
 			this->label45->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label45->Location = System::Drawing::Point(292, 7);
-			this->label45->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label45->Location = System::Drawing::Point(389, 9);
 			this->label45->Name = L"label45";
-			this->label45->Size = System::Drawing::Size(70, 24);
+			this->label45->Size = System::Drawing::Size(92, 29);
 			this->label45->TabIndex = 15;
 			this->label45->Text = L"label45";
 			// 
@@ -3068,10 +3025,9 @@ namespace Project12 {
 			this->label44->AutoSize = true;
 			this->label44->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label44->Location = System::Drawing::Point(2, 7);
-			this->label44->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label44->Location = System::Drawing::Point(3, 9);
 			this->label44->Name = L"label44";
-			this->label44->Size = System::Drawing::Size(54, 17);
+			this->label44->Size = System::Drawing::Size(62, 20);
 			this->label44->TabIndex = 14;
 			this->label44->Text = L"label44";
 			// 
@@ -3088,29 +3044,28 @@ namespace Project12 {
 			this->panel13->Controls->Add(this->panel16);
 			this->panel13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->panel13->Location = System::Drawing::Point(24, 71);
-			this->panel13->Margin = System::Windows::Forms::Padding(2);
+			this->panel13->Location = System::Drawing::Point(32, 87);
+			this->panel13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel13->Name = L"panel13";
-			this->panel13->Size = System::Drawing::Size(141, 271);
+			this->panel13->Size = System::Drawing::Size(188, 334);
 			this->panel13->TabIndex = 9;
 			// 
 			// panel22
 			// 
 			this->panel22->BackColor = System::Drawing::Color::LightGray;
 			this->panel22->Controls->Add(this->label22);
-			this->panel22->Location = System::Drawing::Point(0, 239);
-			this->panel22->Margin = System::Windows::Forms::Padding(2);
+			this->panel22->Location = System::Drawing::Point(0, 294);
+			this->panel22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel22->Name = L"panel22";
-			this->panel22->Size = System::Drawing::Size(143, 41);
+			this->panel22->Size = System::Drawing::Size(191, 50);
 			this->panel22->TabIndex = 24;
 			// 
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(1, 7);
-			this->label22->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label22->Location = System::Drawing::Point(1, 9);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(58, 24);
+			this->label22->Size = System::Drawing::Size(75, 29);
 			this->label22->TabIndex = 7;
 			this->label22->Text = L"Case:";
 			// 
@@ -3118,19 +3073,18 @@ namespace Project12 {
 			// 
 			this->panel21->BackColor = System::Drawing::Color::DarkGray;
 			this->panel21->Controls->Add(this->label43);
-			this->panel21->Location = System::Drawing::Point(0, 202);
-			this->panel21->Margin = System::Windows::Forms::Padding(2);
+			this->panel21->Location = System::Drawing::Point(0, 249);
+			this->panel21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel21->Name = L"panel21";
-			this->panel21->Size = System::Drawing::Size(143, 29);
+			this->panel21->Size = System::Drawing::Size(191, 36);
 			this->panel21->TabIndex = 23;
 			// 
 			// label43
 			// 
 			this->label43->AutoSize = true;
-			this->label43->Location = System::Drawing::Point(1, 4);
-			this->label43->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label43->Location = System::Drawing::Point(1, 5);
 			this->label43->Name = L"label43";
-			this->label43->Size = System::Drawing::Size(52, 24);
+			this->label43->Size = System::Drawing::Size(68, 29);
 			this->label43->TabIndex = 8;
 			this->label43->Text = L"PSU:";
 			// 
@@ -3138,10 +3092,10 @@ namespace Project12 {
 			// 
 			this->panel20->BackColor = System::Drawing::Color::LightGray;
 			this->panel20->Controls->Add(this->label21);
-			this->panel20->Location = System::Drawing::Point(0, 166);
-			this->panel20->Margin = System::Windows::Forms::Padding(2);
+			this->panel20->Location = System::Drawing::Point(0, 204);
+			this->panel20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel20->Name = L"panel20";
-			this->panel20->Size = System::Drawing::Size(143, 29);
+			this->panel20->Size = System::Drawing::Size(191, 36);
 			this->panel20->TabIndex = 22;
 			// 
 			// label21
@@ -3149,10 +3103,9 @@ namespace Project12 {
 			this->label21->AutoSize = true;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label21->Location = System::Drawing::Point(1, 8);
-			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label21->Location = System::Drawing::Point(1, 10);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(71, 24);
+			this->label21->Size = System::Drawing::Size(92, 29);
 			this->label21->TabIndex = 6;
 			this->label21->Text = L"Cooler:";
 			// 
@@ -3160,19 +3113,18 @@ namespace Project12 {
 			// 
 			this->panel19->BackColor = System::Drawing::Color::DarkGray;
 			this->panel19->Controls->Add(this->label20);
-			this->panel19->Location = System::Drawing::Point(0, 132);
-			this->panel19->Margin = System::Windows::Forms::Padding(2);
+			this->panel19->Location = System::Drawing::Point(0, 162);
+			this->panel19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel19->Name = L"panel19";
-			this->panel19->Size = System::Drawing::Size(141, 29);
+			this->panel19->Size = System::Drawing::Size(188, 36);
 			this->panel19->TabIndex = 21;
 			// 
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(2, 8);
-			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label20->Location = System::Drawing::Point(3, 10);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(80, 24);
+			this->label20->Size = System::Drawing::Size(104, 29);
 			this->label20->TabIndex = 5;
 			this->label20->Text = L"Storage:";
 			// 
@@ -3180,19 +3132,18 @@ namespace Project12 {
 			// 
 			this->panel18->BackColor = System::Drawing::Color::LightGray;
 			this->panel18->Controls->Add(this->label19);
-			this->panel18->Location = System::Drawing::Point(0, 95);
-			this->panel18->Margin = System::Windows::Forms::Padding(2);
+			this->panel18->Location = System::Drawing::Point(0, 117);
+			this->panel18->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel18->Name = L"panel18";
-			this->panel18->Size = System::Drawing::Size(141, 32);
+			this->panel18->Size = System::Drawing::Size(188, 39);
 			this->panel18->TabIndex = 20;
 			// 
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(1, 8);
-			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label19->Location = System::Drawing::Point(1, 10);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(57, 24);
+			this->label19->Size = System::Drawing::Size(71, 29);
 			this->label19->TabIndex = 4;
 			this->label19->Text = L"RAM:";
 			// 
@@ -3200,19 +3151,18 @@ namespace Project12 {
 			// 
 			this->panel17->BackColor = System::Drawing::Color::DarkGray;
 			this->panel17->Controls->Add(this->label18);
-			this->panel17->Location = System::Drawing::Point(-2, 59);
-			this->panel17->Margin = System::Windows::Forms::Padding(2);
+			this->panel17->Location = System::Drawing::Point(-3, 73);
+			this->panel17->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel17->Name = L"panel17";
-			this->panel17->Size = System::Drawing::Size(142, 29);
+			this->panel17->Size = System::Drawing::Size(189, 36);
 			this->panel17->TabIndex = 19;
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(3, 5);
-			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label18->Location = System::Drawing::Point(4, 6);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(54, 24);
+			this->label18->Size = System::Drawing::Size(70, 29);
 			this->label18->TabIndex = 3;
 			this->label18->Text = L"GPU:";
 			// 
@@ -3220,19 +3170,18 @@ namespace Project12 {
 			// 
 			this->panel15->BackColor = System::Drawing::SystemColors::AppWorkspace;
 			this->panel15->Controls->Add(this->label15);
-			this->panel15->Location = System::Drawing::Point(-11, -18);
-			this->panel15->Margin = System::Windows::Forms::Padding(2);
+			this->panel15->Location = System::Drawing::Point(-15, -22);
+			this->panel15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(152, 42);
+			this->panel15->Size = System::Drawing::Size(203, 52);
 			this->panel15->TabIndex = 17;
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(12, 21);
-			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label15->Location = System::Drawing::Point(16, 26);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(53, 24);
+			this->label15->Size = System::Drawing::Size(69, 29);
 			this->label15->TabIndex = 1;
 			this->label15->Text = L"CPU:";
 			// 
@@ -3240,20 +3189,19 @@ namespace Project12 {
 			// 
 			this->panel16->BackColor = System::Drawing::Color::LightGray;
 			this->panel16->Controls->Add(this->label17);
-			this->panel16->Location = System::Drawing::Point(-2, 29);
-			this->panel16->Margin = System::Windows::Forms::Padding(2);
+			this->panel16->Location = System::Drawing::Point(-3, 36);
+			this->panel16->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel16->Name = L"panel16";
-			this->panel16->Size = System::Drawing::Size(146, 25);
+			this->panel16->Size = System::Drawing::Size(195, 31);
 			this->panel16->TabIndex = 18;
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
 			this->label17->BackColor = System::Drawing::Color::LightGray;
-			this->label17->Location = System::Drawing::Point(2, 4);
-			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label17->Location = System::Drawing::Point(3, 5);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(124, 24);
+			this->label17->Size = System::Drawing::Size(159, 29);
 			this->label17->TabIndex = 2;
 			this->label17->Text = L"MotherBoard:";
 			// 
@@ -3262,10 +3210,10 @@ namespace Project12 {
 			this->panel12->BackColor = System::Drawing::Color::Snow;
 			this->panel12->Controls->Add(this->label16);
 			this->panel12->Controls->Add(this->label42);
-			this->panel12->Location = System::Drawing::Point(22, 398);
-			this->panel12->Margin = System::Windows::Forms::Padding(2);
+			this->panel12->Location = System::Drawing::Point(29, 490);
+			this->panel12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel12->Name = L"panel12";
-			this->panel12->Size = System::Drawing::Size(548, 41);
+			this->panel12->Size = System::Drawing::Size(731, 50);
 			this->panel12->TabIndex = 9;
 			// 
 			// label16
@@ -3273,10 +3221,9 @@ namespace Project12 {
 			this->label16->AutoSize = true;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label16->Location = System::Drawing::Point(8, 10);
-			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label16->Location = System::Drawing::Point(11, 12);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(80, 29);
+			this->label16->Size = System::Drawing::Size(97, 36);
 			this->label16->TabIndex = 3;
 			this->label16->Text = L"Total: ";
 			// 
@@ -3285,10 +3232,9 @@ namespace Project12 {
 			this->label42->AutoSize = true;
 			this->label42->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label42->Location = System::Drawing::Point(438, 10);
-			this->label42->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label42->Location = System::Drawing::Point(584, 12);
 			this->label42->Name = L"label42";
-			this->label42->Size = System::Drawing::Size(92, 29);
+			this->label42->Size = System::Drawing::Size(112, 36);
 			this->label42->TabIndex = 7;
 			this->label42->Text = L"label42";
 			// 
@@ -3297,10 +3243,10 @@ namespace Project12 {
 			this->panel11->BackColor = System::Drawing::Color::Snow;
 			this->panel11->Controls->Add(this->label33);
 			this->panel11->Controls->Add(this->label41);
-			this->panel11->Location = System::Drawing::Point(22, 356);
-			this->panel11->Margin = System::Windows::Forms::Padding(2);
+			this->panel11->Location = System::Drawing::Point(29, 438);
+			this->panel11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel11->Name = L"panel11";
-			this->panel11->Size = System::Drawing::Size(548, 37);
+			this->panel11->Size = System::Drawing::Size(731, 46);
 			this->panel11->TabIndex = 8;
 			// 
 			// label33
@@ -3308,10 +3254,9 @@ namespace Project12 {
 			this->label33->AutoSize = true;
 			this->label33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label33->Location = System::Drawing::Point(5, 3);
-			this->label33->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label33->Location = System::Drawing::Point(7, 4);
 			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(119, 29);
+			this->label33->Size = System::Drawing::Size(146, 36);
 			this->label33->TabIndex = 5;
 			this->label33->Text = L"subTotal: ";
 			// 
@@ -3320,10 +3265,9 @@ namespace Project12 {
 			this->label41->AutoSize = true;
 			this->label41->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label41->Location = System::Drawing::Point(438, 3);
-			this->label41->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label41->Location = System::Drawing::Point(584, 4);
 			this->label41->Name = L"label41";
-			this->label41->Size = System::Drawing::Size(92, 29);
+			this->label41->Size = System::Drawing::Size(112, 36);
 			this->label41->TabIndex = 6;
 			this->label41->Text = L"label41";
 			// 
@@ -3332,10 +3276,9 @@ namespace Project12 {
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label14->Location = System::Drawing::Point(19, 35);
-			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label14->Location = System::Drawing::Point(25, 43);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(162, 36);
+			this->label14->Size = System::Drawing::Size(200, 44);
 			this->label14->TabIndex = 0;
 			this->label14->Text = L"Your build";
 			// 
@@ -3343,10 +3286,10 @@ namespace Project12 {
 			// 
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(544, 136);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox2->Location = System::Drawing::Point(725, 167);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(191, 187);
+			this->pictureBox2->Size = System::Drawing::Size(255, 230);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 4;
 			this->pictureBox2->TabStop = false;
@@ -3367,11 +3310,11 @@ namespace Project12 {
 			this->tabPage16->Controls->Add(this->label65);
 			this->tabPage16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->tabPage16->Location = System::Drawing::Point(4, 25);
-			this->tabPage16->Margin = System::Windows::Forms::Padding(2);
+			this->tabPage16->Location = System::Drawing::Point(4, 28);
+			this->tabPage16->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage16->Name = L"tabPage16";
-			this->tabPage16->Padding = System::Windows::Forms::Padding(2);
-			this->tabPage16->Size = System::Drawing::Size(733, 492);
+			this->tabPage16->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage16->Size = System::Drawing::Size(980, 609);
 			this->tabPage16->TabIndex = 15;
 			this->tabPage16->Text = L"tabPage16";
 			this->tabPage16->UseVisualStyleBackColor = true;
@@ -3379,10 +3322,10 @@ namespace Project12 {
 			// button39
 			// 
 			this->button39->BackColor = System::Drawing::Color::MediumTurquoise;
-			this->button39->Location = System::Drawing::Point(22, 420);
-			this->button39->Margin = System::Windows::Forms::Padding(2);
+			this->button39->Location = System::Drawing::Point(29, 517);
+			this->button39->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button39->Name = L"button39";
-			this->button39->Size = System::Drawing::Size(322, 58);
+			this->button39->Size = System::Drawing::Size(429, 71);
 			this->button39->TabIndex = 11;
 			this->button39->Text = L"submit payment";
 			this->button39->UseVisualStyleBackColor = false;
@@ -3393,80 +3336,75 @@ namespace Project12 {
 			this->label71->AutoSize = true;
 			this->label71->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label71->Location = System::Drawing::Point(416, 373);
-			this->label71->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label71->Location = System::Drawing::Point(555, 459);
 			this->label71->Name = L"label71";
-			this->label71->Size = System::Drawing::Size(266, 20);
+			this->label71->Size = System::Drawing::Size(328, 25);
 			this->label71->TabIndex = 10;
 			this->label71->Text = L"*3-digit code on the back of you card";
 			// 
 			// textBox5
 			// 
 			this->textBox5->ForeColor = System::Drawing::Color::DarkGray;
-			this->textBox5->Location = System::Drawing::Point(418, 335);
-			this->textBox5->Margin = System::Windows::Forms::Padding(2);
+			this->textBox5->Location = System::Drawing::Point(557, 412);
+			this->textBox5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(134, 37);
+			this->textBox5->Size = System::Drawing::Size(177, 45);
 			this->textBox5->TabIndex = 9;
 			this->textBox5->Text = L"123";
 			// 
 			// textBox4
 			// 
 			this->textBox4->ForeColor = System::Drawing::Color::DarkGray;
-			this->textBox4->Location = System::Drawing::Point(22, 335);
-			this->textBox4->Margin = System::Windows::Forms::Padding(2);
+			this->textBox4->Location = System::Drawing::Point(29, 412);
+			this->textBox4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(231, 37);
+			this->textBox4->Size = System::Drawing::Size(307, 45);
 			this->textBox4->TabIndex = 8;
 			this->textBox4->Text = L"MM/YYYY";
 			// 
 			// textBox3
 			// 
 			this->textBox3->ForeColor = System::Drawing::Color::DarkGray;
-			this->textBox3->Location = System::Drawing::Point(22, 228);
-			this->textBox3->Margin = System::Windows::Forms::Padding(2);
+			this->textBox3->Location = System::Drawing::Point(29, 281);
+			this->textBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(534, 37);
+			this->textBox3->Size = System::Drawing::Size(711, 45);
 			this->textBox3->TabIndex = 7;
 			this->textBox3->Text = L"1234 5678 9012 3456";
 			// 
 			// label70
 			// 
 			this->label70->AutoSize = true;
-			this->label70->Location = System::Drawing::Point(413, 291);
-			this->label70->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label70->Location = System::Drawing::Point(551, 358);
 			this->label70->Name = L"label70";
-			this->label70->Size = System::Drawing::Size(71, 31);
+			this->label70->Size = System::Drawing::Size(85, 38);
 			this->label70->TabIndex = 6;
 			this->label70->Text = L"cvv*";
 			// 
 			// label69
 			// 
 			this->label69->AutoSize = true;
-			this->label69->Location = System::Drawing::Point(16, 291);
-			this->label69->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label69->Location = System::Drawing::Point(21, 358);
 			this->label69->Name = L"label69";
-			this->label69->Size = System::Drawing::Size(206, 31);
+			this->label69->Size = System::Drawing::Size(245, 38);
 			this->label69->TabIndex = 5;
 			this->label69->Text = L"expiration date";
 			// 
 			// label68
 			// 
 			this->label68->AutoSize = true;
-			this->label68->Location = System::Drawing::Point(16, 184);
-			this->label68->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label68->Location = System::Drawing::Point(21, 226);
 			this->label68->Name = L"label68";
-			this->label68->Size = System::Drawing::Size(176, 31);
+			this->label68->Size = System::Drawing::Size(211, 38);
 			this->label68->TabIndex = 4;
 			this->label68->Text = L"card number";
 			// 
 			// label67
 			// 
 			this->label67->AutoSize = true;
-			this->label67->Location = System::Drawing::Point(16, 89);
-			this->label67->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label67->Location = System::Drawing::Point(21, 110);
 			this->label67->Name = L"label67";
-			this->label67->Size = System::Drawing::Size(239, 31);
+			this->label67->Size = System::Drawing::Size(286, 38);
 			this->label67->TabIndex = 3;
 			this->label67->Text = L"card holder name";
 			// 
@@ -3475,20 +3413,19 @@ namespace Project12 {
 			this->label66->AutoSize = true;
 			this->label66->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label66->Location = System::Drawing::Point(19, 59);
-			this->label66->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label66->Location = System::Drawing::Point(25, 73);
 			this->label66->Name = L"label66";
-			this->label66->Size = System::Drawing::Size(254, 20);
+			this->label66->Size = System::Drawing::Size(312, 25);
 			this->label66->TabIndex = 2;
 			this->label66->Text = L"please enter you credit card details";
 			// 
 			// textBox2
 			// 
 			this->textBox2->ForeColor = System::Drawing::Color::DarkGray;
-			this->textBox2->Location = System::Drawing::Point(22, 132);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Location = System::Drawing::Point(29, 162);
+			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(534, 37);
+			this->textBox2->Size = System::Drawing::Size(711, 45);
 			this->textBox2->TabIndex = 1;
 			this->textBox2->Text = L"John doe";
 			// 
@@ -3497,25 +3434,31 @@ namespace Project12 {
 			this->label65->AutoSize = true;
 			this->label65->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label65->Location = System::Drawing::Point(16, 10);
-			this->label65->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label65->Location = System::Drawing::Point(21, 12);
 			this->label65->Name = L"label65";
-			this->label65->Size = System::Drawing::Size(409, 39);
+			this->label65->Size = System::Drawing::Size(502, 51);
 			this->label65->TabIndex = 0;
 			this->label65->Text = L"CREdit card information";
 			// 
+			// panel31
+			// 
+			this->panel31->Location = System::Drawing::Point(1, 0);
+			this->panel31->Name = L"panel31";
+			this->panel31->Size = System::Drawing::Size(979, 38);
+			this->panel31->TabIndex = 4;
+			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(734, 609);
+			this->ClientSize = System::Drawing::Size(979, 750);
 			this->Controls->Add(this->panel31);
 			this->Controls->Add(this->cartPanel);
 			this->Controls->Add(this->tabControl1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -4392,7 +4335,12 @@ namespace Project12 {
 		Application::Exit(); // Close application 
 	}
 
-	};
+
+	
+	
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 
 
 

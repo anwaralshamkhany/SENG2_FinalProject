@@ -1,0 +1,23 @@
+CPU: 
+Intel Core i7-12700K	
+
+Motherboard: 
+MSI PRO Z790-A MAX WIFI
+
+GPU: 
+Gigabyte Vision OC GeForce RTX 3070
+
+RAM: 
+Corsair Vengeance 32 GB
+
+Storage:
+Samsung 980 Pro
+
+Cooler: 
+Corsair iCUE H100i RGB ELITE
+
+PSU: 
+MSI MAG A850GL PCIE5
+
+Case: 
+NZXT H7 Flow

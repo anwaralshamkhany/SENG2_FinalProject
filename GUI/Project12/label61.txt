@@ -1,0 +1,23 @@
+cpu:
+AMD Ryzen 7 8700G
+
+motherboard:
+Asus ROG STRIX B650-A GAMING WIFI
+
+gpu:
+Intel Arc A770
+
+ram:
+TEAMGROUP T-Force Delta RGB 32 GB
+
+storage:
+Western Digital Black SN770
+
+cooler:
+Cooler Master Hyper 212 RGB Black Edition
+
+PSU:
+Corsair RM750e (2023)
+
+case:
+NZXT H6 Flow

@@ -1,0 +1,23 @@
+cpu:
+Intel Core i5-12600KF
+
+motherboard:
+Asus ROG STRIX B550-A GAMING
+
+gpu:
+Intel Arc A750
+
+ram:
+Corsair Vengeance LPX 16 GB
+
+storage:
+Kingston NV2
+
+cooler:
+Cooler Master Hyper 212 RGB Black Edition	
+
+psu:
+Corsair RM750e (2023)
+
+case:
+NZXT H5 Flow

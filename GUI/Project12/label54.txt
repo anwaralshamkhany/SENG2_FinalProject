@@ -1,0 +1,23 @@
+cpu:
+AMD Ryzen 9 7950X
+
+motherboard:
+MSI MAG X670E TOMAHAWK WIFI
+
+gpu:
+Sapphire NITRO+ Radeon RX 7800 XT
+
+ram:
+Corsair Vengeance 32 GB
+
+storage:
+Samsung 980 Pro
+
+cooler:
+Noctua NH-D15 chromax.black
+
+PSU:
+Gigabyte UD750GM
+
+case:
+Lian Li O11 Dynamic Mini Snow Edition
